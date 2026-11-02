@@ -1,0 +1,4 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Domain: saf kavramlar ve kurallar. HİÇBİR projeye ya da pakete bağımlı olmaz (mimari testle korunur). -->
+</Project>
