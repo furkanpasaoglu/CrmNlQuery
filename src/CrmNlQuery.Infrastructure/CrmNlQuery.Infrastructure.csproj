@@ -1,0 +1,15 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Infrastructure: dış dünyaya açılan gerçeklemeler. Application'daki portları uygular; teknoloji alt klasörlerle ayrılır:
+       Crm (Dynamics Web API), Llm (Ollama, Claude), Postgres (depolar), Memory (bellek içi depolar).
+       YALNIZ Application ve Domain'e bağımlıdır; teknolojiler birbirini kullanamaz (mimari testle korunur). -->
+  <ItemGroup>
+    <ProjectReference Include="..\CrmNlQuery.Application\CrmNlQuery.Application.csproj" />
+    <ProjectReference Include="..\CrmNlQuery.Domain\CrmNlQuery.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Npgsql" />
+  </ItemGroup>
+
+</Project>
