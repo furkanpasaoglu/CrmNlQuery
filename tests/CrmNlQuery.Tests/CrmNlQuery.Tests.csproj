@@ -1,0 +1,30 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="coverlet.collector" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc.Testing" />
+    <PackageReference Include="DocumentFormat.OpenXml" />
+    <PackageReference Include="Microsoft.NET.Test.Sdk" />
+    <PackageReference Include="Npgsql" />
+    <PackageReference Include="xunit" />
+    <PackageReference Include="xunit.runner.visualstudio" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Xunit" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\src\CrmNlQuery.Domain\CrmNlQuery.Domain.csproj" />
+    <ProjectReference Include="..\..\src\CrmNlQuery.Application\CrmNlQuery.Application.csproj" />
+    <ProjectReference Include="..\..\src\CrmNlQuery.Infrastructure\CrmNlQuery.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\src\CrmNlQuery.Composition\CrmNlQuery.Composition.csproj" />
+    <ProjectReference Include="..\..\src\CrmNlQuery.Web\CrmNlQuery.Web.csproj" />
+    <ProjectReference Include="..\..\src\CrmNlQuery.Eval\CrmNlQuery.Eval.csproj" />
+  </ItemGroup>
+
+</Project>
