@@ -6,7 +6,9 @@
 
 CrmNlQuery adds a chat window to Dynamics 365 (on-premises) pages. A business analyst types "show accounts in Istanbul with open opportunities over 100k", and a local language model turns it into a validated, read-only FetchXML query that runs **as that user**, so the CRM's own security still decides what they can see. The result appears as a table, a chart or a summary.
 
-> Screenshots and a short demo are in [`docs/images`](docs/images) *(added after the first public release)*.
+![A table answer in the chat window](docs/images/chat-table-answer.jpg)
+
+More screenshots of the chat window and the administration panel are in [docs/screenshots.md](docs/screenshots.md).
 
 ## Why it exists
 

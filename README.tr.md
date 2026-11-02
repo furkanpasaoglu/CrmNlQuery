@@ -6,7 +6,9 @@
 
 CrmNlQuery, Dynamics 365 (on-premises) sayfalarına bir sohbet penceresi ekler. İş analisti "İstanbul'daki, 100 binin üzerinde açık fırsatı olan hesapları göster" yazar; yerel bir dil modeli bunu doğrulanmış, salt okur bir FetchXML sorgusuna çevirir ve sorgu **o kullanıcı adına** çalışır. Kullanıcının neyi göreceğine yine CRM'in kendi güvenliği karar verir. Sonuç tablo, grafik ya da özet olarak gelir.
 
-> Ekran görüntüleri ve kısa tanıtım [`docs/images`](docs/images) klasöründedir *(ilk herkese açık sürümden sonra eklenir)*.
+![Sohbet penceresinde tablo cevabı](docs/images/chat-table-answer.jpg)
+
+Sohbet penceresi ve yönetim panelinin daha fazla ekran görüntüsü [docs/screenshots.md](docs/screenshots.md) dosyasındadır (İngilizce).
 
 ## Neden var
 
