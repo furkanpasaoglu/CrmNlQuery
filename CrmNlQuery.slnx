@@ -1,0 +1,19 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+  </Folder>
+  <Folder Name="/src/">
+    <Project Path="src/CrmNlQuery.Composition/CrmNlQuery.Composition.csproj" />
+    <Project Path="src/CrmNlQuery.Application/CrmNlQuery.Application.csproj" />
+    <Project Path="src/CrmNlQuery.Domain/CrmNlQuery.Domain.csproj" />
+    <Project Path="src/CrmNlQuery.Eval/CrmNlQuery.Eval.csproj" />
+    <Project Path="src/CrmNlQuery.Infrastructure/CrmNlQuery.Infrastructure.csproj" />
+    <Project Path="src/CrmNlQuery.Web/CrmNlQuery.Web.csproj" />
+  </Folder>
+  <Folder Name="/tests/">
+    <Project Path="tests/CrmNlQuery.Tests/CrmNlQuery.Tests.csproj" />
+  </Folder>
+</Solution>

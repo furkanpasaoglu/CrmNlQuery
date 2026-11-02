@@ -1,0 +1,25 @@
+# Build output
+bin/
+obj/
+.vs/
+*.user
+node_modules/
+
+# Local settings and secrets: never commit
+.env
+appsettings.Local.json
+
+# Local assistant files
+CLAUDE.md
+.claude/
+
+# Runtime files
+metadata-cache/
+/logs/
+/src/CrmNlQuery.Web/logs/
+eval/results/
+eval/generated/
+tools/seed-eval-state.json
+
+# Built admin panel (npm run build writes it here)
+src/CrmNlQuery.Web/wwwroot/admin-next/
