@@ -1,0 +1,50 @@
+{
+  "note": "Ozel tablo taban testi semasi (lab). Etiketler Turkce: musteri kendi dilinde adlandirmis gibi. optionsFrom = tools/custom-data.json icindeki options anahtari. Create-CustomTables.ps1 okur.",
+  "entities": [
+    {
+      "schema": "new_model", "display": "Model", "plural": "Modeller", "description": "Arac modeli (uydurma demo)",
+      "primary": { "schema": "new_name", "display": "Model adı" },
+      "attributes": [
+        { "schema": "new_marka", "display": "Marka", "type": "picklist", "optionsFrom": "marka" },
+        { "schema": "new_yil", "display": "Model yılı", "type": "integer", "min": 1990, "max": 2100 },
+        { "schema": "new_kasa", "display": "Kasa tipi", "type": "picklist", "optionsFrom": "kasa" },
+        { "schema": "new_motor", "display": "Motor hacmi (litre)", "type": "decimal", "precision": 1 }
+      ]
+    },
+    {
+      "schema": "new_aksesuar", "display": "Aksesuar", "plural": "Aksesuarlar", "description": "Arac aksesuari (uydurma demo)",
+      "primary": { "schema": "new_name", "display": "Aksesuar adı" },
+      "attributes": []
+    },
+    {
+      "schema": "new_arac", "display": "Araç", "plural": "Araçlar", "description": "Musteri araci (uydurma demo)",
+      "primary": { "schema": "new_plaka", "display": "Plaka" },
+      "attributes": [
+        { "schema": "new_yakit", "display": "Yakıt tipi", "type": "picklist", "optionsFrom": "yakit" },
+        { "schema": "new_garantili", "display": "Garanti devam ediyor", "type": "boolean", "trueLabel": "Evet", "falseLabel": "Hayır" },
+        { "schema": "new_kilometre", "display": "Kilometre", "type": "integer", "min": 0, "max": 2000000 },
+        { "schema": "new_alimtarihi", "display": "Alım tarihi", "type": "dateonly" },
+        { "schema": "new_ozellikler", "display": "Özellikler", "type": "multiselect", "optionsFrom": "ozellikler", "optional": true },
+        { "schema": "new_aciklama", "display": "Açıklama", "type": "memo" }
+      ]
+    },
+    {
+      "schema": "new_servis_kaydi", "display": "Servis Kaydı", "plural": "Servis Kayıtları", "description": "Arac servis kaydi (uydurma demo)",
+      "primary": { "schema": "new_baslik", "display": "Başlık" },
+      "attributes": [
+        { "schema": "new_servistarihi", "display": "Servis tarihi", "type": "dateonly" },
+        { "schema": "new_tutar", "display": "Tutar", "type": "decimal", "precision": 2 },
+        { "schema": "new_islemturu", "display": "İşlem türü", "type": "picklist", "optionsFrom": "islem" },
+        { "schema": "new_tamamlandi", "display": "Tamamlandı", "type": "boolean", "trueLabel": "Evet", "falseLabel": "Hayır" }
+      ]
+    }
+  ],
+  "lookups": [
+    { "relationship": "new_model_new_arac", "referenced": "new_model", "referencing": "new_arac", "schema": "new_modelid", "display": "Model" },
+    { "relationship": "new_account_new_arac", "referenced": "account", "referencing": "new_arac", "schema": "new_musteriid", "display": "Müşteri" },
+    { "relationship": "new_arac_new_servis_kaydi", "referenced": "new_arac", "referencing": "new_servis_kaydi", "schema": "new_aracid", "display": "Araç" }
+  ],
+  "manyToMany": [
+    { "schema": "new_arac_aksesuar", "entity1": "new_arac", "entity2": "new_aksesuar", "label1": "Aksesuarlar", "label2": "Araçlar" }
+  ]
+}

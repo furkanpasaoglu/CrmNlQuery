@@ -1,0 +1,54 @@
+[
+  {
+    "id": "d01-followup-en",
+    "question": "Write a follow-up email to Brightwave Appliances Ltd",
+    "expect": { "finalKind": "draft", "entity": "account", "mustContainAny": ["dear", "hello", "hi "] }
+  },
+  {
+    "id": "d02-followup-tr",
+    "question": "Brightwave Appliances Ltd için takip e-postası yaz",
+    "expect": { "finalKind": "draft", "entity": "account", "mustContainAny": ["merhaba", "sayın", "iyi günler", "saygılarımla", "selamlar"] }
+  },
+  {
+    "id": "d03-contact-short",
+    "question": "Freya Testwell için kısa bir tanışma e-postası hazırla",
+    "expect": { "finalKind": "draft", "entity": "contact" }
+  },
+  {
+    "id": "d04-no-invented-history-en",
+    "question": "Write a follow-up email to Brightwave Appliances Ltd",
+    "note": "The request mentions no earlier contact: the template must not invent one.",
+    "expect": { "finalKind": "draft", "entity": "account", "mustNotContain": ["last week", "as we discussed", "our meeting", "our call", "yesterday", "last month"] }
+  },
+  {
+    "id": "d05-no-invented-history-tr",
+    "question": "Brightwave Appliances Ltd için takip e-postası yaz",
+    "note": "The request mentions no earlier contact: the template must not invent one.",
+    "expect": { "finalKind": "draft", "entity": "account", "mustNotContain": ["geçen hafta", "görüştüğümüz", "toplantımız", "görüşmemiz", "dün", "geçen ay"] }
+  },
+  {
+    "id": "d06-warm-en",
+    "question": "Write a friendly email to Brightwave Appliances Ltd to say hello",
+    "expect": { "finalKind": "draft", "entity": "account", "mustContainAny": ["dear", "hello", "hi "] }
+  },
+  {
+    "id": "d07-contract-renewal-tr",
+    "question": "Brightwave Appliances Ltd için sözleşme yenileme hatırlatması e-postası hazırla",
+    "expect": { "finalKind": "draft", "entity": "account", "mustContainAny": ["sözleşme", "sozlesme", "contract"] }
+  },
+  {
+    "id": "d08-trap-list-emails",
+    "question": "Show contacts that have an email address",
+    "expect": { "finalKind": "not-draft" }
+  },
+  {
+    "id": "d09-trap-email-address-tr",
+    "question": "Brightwave Appliances Ltd firmasının kişilerinin e-posta adreslerini getir",
+    "expect": { "finalKind": "not-draft" }
+  },
+  {
+    "id": "d10-trap-summary",
+    "question": "Summarize Brightwave Appliances Ltd",
+    "expect": { "finalKind": "not-draft" }
+  }
+]

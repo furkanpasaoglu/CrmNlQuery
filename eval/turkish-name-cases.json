@@ -1,0 +1,115 @@
+[
+  {
+    "id": "t01-ornekova-nin",
+    "question": "Örnekova'nın contractlarını getir",
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Iyelik eki apostrofla: mention 'Örnekova' olmali ('Örnekova'nın' degil).",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contract",
+      "rowCount": 1,
+      "mustContain": [
+        "Örnekova Support Contract"
+      ]
+    }
+  },
+  {
+    "id": "t02-ornekova-da",
+    "question": "Örnekova'daki contractları getir",
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Bulunma eki (-da) apostrofla.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contract",
+      "rowCount": 1,
+      "mustContain": [
+        "Örnekova Support Contract"
+      ]
+    }
+  },
+  {
+    "id": "t03-ornekova-nin-satirlari",
+    "question": "Örnekova'nın contractlarının satırlarını getir",
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Iki ek bir arada: Örnekova'nın contractlarının.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contractdetail",
+      "rowCount": 2,
+      "mustContain": [
+        "Örnekova Support Line A",
+        "Örnekova Support Line B"
+      ]
+    }
+  },
+  {
+    "id": "t04-zkv-nin",
+    "question": "ZKV'nin contractlarını getir",
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Kisa ad + ek: ZKV Örnek Sistemleri A.S.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contract",
+      "rowCount": 1,
+      "mustContain": [
+        "ZKV Annual Contract"
+      ]
+    }
+  },
+  {
+    "id": "t05-brightwave-in",
+    "question": "Brightwave'in fırsatlarını getir",
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Ünlü ile biten ad + ek: Brightwave'in -> Brightwave Appliances Ltd; 3 firsati var (renewal 3, 4, 8).",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "opportunity",
+      "rowCount": 3,
+      "mustContain": [
+        "renewal 3",
+        "renewal 4",
+        "renewal 8"
+      ]
+    }
+  },
+  {
+    "id": "t06-ornekova-dan",
+    "question": "Örnekova'dan sonra Denema'nın contractlarını getir",
+    "answers": {
+      "columns": "default"
+    },
+    "pickChoice": 0,
+    "note": "Iki ad, her biri ekli. Örnekova'dan bir kayit adi degil, cumlenin parcasi: yalnizca Denema kaydi aranmali (Denema belirsiz: secim sorusu).",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contract",
+      "minRows": 1
+    }
+  },
+  {
+    "id": "t07-brightwave-daki-kisiler",
+    "question": "Brightwave'daki kişileri getir",
+    "answers": {
+      "columns": "default"
+    },
+    "note": "-daki eki yer adı sanılıp mention atlanmamalı (t02 ile aynı sınıf). Brightwave'in 2 kişisi var (lab verisi, 22 Eki).",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contact",
+      "rowCount": 2,
+      "mustContain": [
+        "Fakeman"
+      ]
+    }
+  }
+]

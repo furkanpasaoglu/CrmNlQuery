@@ -1,0 +1,22 @@
+{
+  "defaultTables": [
+    "account",
+    "contact",
+    "opportunity",
+    "product"
+  ],
+  "rules": [
+    {
+      "kind": "field",
+      "entity": "account",
+      "attribute": "telephone1",
+      "allowed": false
+    },
+    {
+      "kind": "field",
+      "entity": "contact",
+      "attribute": "mobilephone",
+      "allowed": false
+    }
+  ]
+}

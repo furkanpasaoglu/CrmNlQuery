@@ -1,0 +1,1952 @@
+{
+  "note": "Fictional lab data (single source). Company and person names are clearly made up, phone numbers use the fictional +1-202-555-01xx range, e-mail addresses end in .example. Records are looked up by name and updated or created by tools/Seed-EvalData.ps1.",
+  "tables": {
+    "accounts": [
+      {
+        "name": "Alpine Pharma Distribution",
+        "telephone1": "+1-202-555-0100",
+        "emailaddress1": "info@alpine-pharma.example",
+        "websiteurl": "https://www.alpine-pharma.example",
+        "address1_line1": "783 Demo Street",
+        "address1_city": "Vienna",
+        "address1_stateorprovince": "Vienna",
+        "address1_postalcode": "63018",
+        "address1_country": "Austria",
+        "numberofemployees": 478,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "ZKV Örnek Sistemleri A.Ş.",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "name": "Blue Meridian Electronics",
+        "telephone1": "+1-202-555-0101",
+        "emailaddress1": "info@blue-meridian.example",
+        "websiteurl": "https://www.blue-meridian.example",
+        "address1_line1": "607 Demo Street",
+        "address1_city": "Toronto",
+        "address1_stateorprovince": "ON",
+        "address1_postalcode": "52074",
+        "address1_country": "Canada",
+        "numberofemployees": 222,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "Brightwave Appliances Ltd",
+        "telephone1": "+1-202-555-0102",
+        "emailaddress1": "info@brightwave.example",
+        "websiteurl": "https://www.brightwave.example",
+        "address1_line1": "670 Demo Street",
+        "address1_city": "London",
+        "address1_stateorprovince": "England",
+        "address1_postalcode": "14949",
+        "address1_country": "UK",
+        "numberofemployees": 519,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "Denema Sağlık Sigorta",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "name": "Denema Sigorta A.Ş.",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "name": "Coastal Home Furnishings",
+        "telephone1": "+1-202-555-0103",
+        "emailaddress1": "info@coastal-home.example",
+        "websiteurl": "https://www.coastal-home.example",
+        "address1_line1": "274 Demo Street",
+        "address1_city": "Sydney",
+        "address1_stateorprovince": "NSW",
+        "address1_postalcode": "07797",
+        "address1_country": "Australia",
+        "numberofemployees": 2878,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "Hamburg Logistik GmbH",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "name": "Harbor Logistics GmbH",
+        "telephone1": "+1-202-555-0104",
+        "emailaddress1": "info@harbor-log.example",
+        "websiteurl": "https://www.harbor-log.example",
+        "address1_line1": "762 Demo Street",
+        "address1_city": "Hamburg",
+        "address1_stateorprovince": "Hamburg",
+        "address1_postalcode": "24224",
+        "address1_country": "Germany",
+        "numberofemployees": 1044,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "Iberia Mobility S.L.",
+        "telephone1": "+1-202-555-0105",
+        "emailaddress1": "info@iberia-mob.example",
+        "websiteurl": "https://www.iberia-mob.example",
+        "address1_line1": "988 Demo Street",
+        "address1_city": "Madrid",
+        "address1_stateorprovince": "Madrid",
+        "address1_postalcode": "65431",
+        "address1_country": "Spain",
+        "numberofemployees": 116,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "Ironclad Fleet Services",
+        "telephone1": "+1-202-555-0106",
+        "emailaddress1": "info@ironclad.example",
+        "websiteurl": "https://www.ironclad.example",
+        "address1_line1": "504 Demo Street",
+        "address1_city": "Dallas",
+        "address1_stateorprovince": "TX",
+        "address1_postalcode": "01886",
+        "address1_country": "USA",
+        "numberofemployees": 3318,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "Lumina Retail Group",
+        "telephone1": "+1-202-555-0107",
+        "emailaddress1": "info@lumina-retail.example",
+        "websiteurl": "https://www.lumina-retail.example",
+        "address1_line1": "928 Demo Street",
+        "address1_city": "Amsterdam",
+        "address1_stateorprovince": "NH",
+        "address1_postalcode": "46657",
+        "address1_country": "Netherlands",
+        "numberofemployees": 1513,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "Maple Leaf Cold Chain",
+        "telephone1": "+1-202-555-0108",
+        "emailaddress1": "info@mapleleaf.example",
+        "websiteurl": "https://www.mapleleaf.example",
+        "address1_line1": "223 Demo Street",
+        "address1_city": "Vancouver",
+        "address1_stateorprovince": "BC",
+        "address1_postalcode": "59640",
+        "address1_country": "Canada",
+        "numberofemployees": 1700,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "Nordbeispiel Insurance AG",
+        "telephone1": "+1-202-555-0109",
+        "emailaddress1": "info@nordbeispiel.example",
+        "websiteurl": "https://www.nordbeispiel.example",
+        "address1_line1": "713 Demo Street",
+        "address1_city": "Zurich",
+        "address1_stateorprovince": "ZH",
+        "address1_postalcode": "15628",
+        "address1_country": "Switzerland",
+        "numberofemployees": 3626,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "Oakridge Hardware Co",
+        "telephone1": "+1-202-555-0110",
+        "emailaddress1": "info@oakridge.example",
+        "websiteurl": "https://www.oakridge.example",
+        "address1_line1": "339 Demo Street",
+        "address1_city": "Manchester",
+        "address1_stateorprovince": "England",
+        "address1_postalcode": "71358",
+        "address1_country": "UK",
+        "numberofemployees": 666,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "Pacific Fuel Partners Inc",
+        "telephone1": "+1-202-555-0111",
+        "emailaddress1": "info@pacific-fuel.example",
+        "websiteurl": "https://www.pacific-fuel.example",
+        "address1_line1": "822 Demo Street",
+        "address1_city": "Portland",
+        "address1_stateorprovince": "OR",
+        "address1_postalcode": "01391",
+        "address1_country": "USA",
+        "numberofemployees": 2152,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "Örnekova Holding A.Ş.",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "name": "Sakura Home Tech KK",
+        "telephone1": "+1-202-555-0112",
+        "emailaddress1": "info@sakura-home.example",
+        "websiteurl": "https://www.sakura-home.example",
+        "address1_line1": "223 Demo Street",
+        "address1_city": "Osaka",
+        "address1_stateorprovince": "Osaka",
+        "address1_postalcode": "59573",
+        "address1_country": "Japan",
+        "numberofemployees": 2061,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "Summit Tire & Auto Supply",
+        "telephone1": "+1-202-555-0113",
+        "emailaddress1": "info@summit-tire.example",
+        "websiteurl": "https://www.summit-tire.example",
+        "address1_line1": "815 Demo Street",
+        "address1_city": "Denver",
+        "address1_stateorprovince": "CO",
+        "address1_postalcode": "58141",
+        "address1_country": "USA",
+        "numberofemployees": 1601,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "Vertest Medical Supplies",
+        "telephone1": "+1-202-555-0114",
+        "emailaddress1": "info@vertest-med.example",
+        "websiteurl": "https://www.vertest-med.example",
+        "address1_line1": "536 Demo Street",
+        "address1_city": "Dublin",
+        "address1_stateorprovince": "Leinster",
+        "address1_postalcode": "40668",
+        "address1_country": "Ireland",
+        "numberofemployees": 1203,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo account (seed script)."
+      },
+      {
+        "name": "XSS <b>Probe</b> Ltd",
+        "statecode": 0,
+        "statuscode": 1
+      }
+    ],
+    "contacts": [
+      {
+        "firstname": "Freya",
+        "lastname": "Testwell",
+        "jobtitle": "Service Coordinator",
+        "emailaddress1": "freya.testwell@brightwave.example",
+        "telephone1": "+1-202-555-0115",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Brightwave Appliances Ltd",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Hiroshi",
+        "lastname": "Demoson",
+        "jobtitle": "Customer Care Lead",
+        "emailaddress1": "hiroshi.demoson@blue-meridian.example",
+        "telephone1": "+1-202-555-0116",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Blue Meridian Electronics",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Freya",
+        "lastname": "Samplefield",
+        "jobtitle": "Operations Director",
+        "emailaddress1": "freya.samplefield@harbor-log.example",
+        "telephone1": "+1-202-555-0117",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Harbor Logistics GmbH",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Emma",
+        "lastname": "Samplefield",
+        "jobtitle": "Customer Care Lead",
+        "emailaddress1": "emma.samplefield@nordbeispiel.example",
+        "telephone1": "+1-202-555-0118",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Nordbeispiel Insurance AG",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Sophia",
+        "lastname": "Samplefield",
+        "jobtitle": "Service Coordinator",
+        "emailaddress1": "sophia.samplefield@mapleleaf.example",
+        "telephone1": "+1-202-555-0119",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Maple Leaf Cold Chain",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Noah",
+        "lastname": "Mockridge",
+        "jobtitle": "Purchasing Manager",
+        "emailaddress1": "noah.mockridge@pacific-fuel.example",
+        "telephone1": "+1-202-555-0120",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Pacific Fuel Partners Inc",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Lucas",
+        "lastname": "Mockridge",
+        "jobtitle": "Operations Director",
+        "emailaddress1": "lucas.mockridge@blue-meridian.example",
+        "telephone1": "+1-202-555-0121",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Blue Meridian Electronics",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Oliver",
+        "lastname": "Mockridge",
+        "jobtitle": "Purchasing Manager",
+        "emailaddress1": "oliver.mockridge@ironclad.example",
+        "telephone1": "+1-202-555-0122",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Ironclad Fleet Services",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Hannah",
+        "lastname": "Exampleby",
+        "jobtitle": "Procurement Specialist",
+        "emailaddress1": "hannah.exampleby@vertest-med.example",
+        "telephone1": "+1-202-555-0123",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Vertest Medical Supplies",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Grace",
+        "lastname": "Dummerton",
+        "jobtitle": "Customer Care Lead",
+        "emailaddress1": "grace.dummerton@sakura-home.example",
+        "telephone1": "+1-202-555-0124",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Sakura Home Tech KK",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Liam",
+        "lastname": "Placeholt",
+        "jobtitle": "Purchasing Manager",
+        "emailaddress1": "liam.placeholt@mapleleaf.example",
+        "telephone1": "+1-202-555-0125",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Maple Leaf Cold Chain",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Grace",
+        "lastname": "Fakeman",
+        "jobtitle": "Service Coordinator",
+        "emailaddress1": "grace.fakeman@brightwave.example",
+        "telephone1": "+1-202-555-0126",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Brightwave Appliances Ltd",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Mia",
+        "lastname": "Fakeman",
+        "jobtitle": "Purchasing Manager",
+        "emailaddress1": "mia.fakeman@harbor-log.example",
+        "telephone1": "+1-202-555-0127",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Harbor Logistics GmbH",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Daniel",
+        "lastname": "Fakeman",
+        "jobtitle": "Service Coordinator",
+        "emailaddress1": "daniel.fakeman@nordbeispiel.example",
+        "telephone1": "+1-202-555-0128",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Nordbeispiel Insurance AG",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Lucas",
+        "lastname": "Probelli",
+        "jobtitle": "Purchasing Manager",
+        "emailaddress1": "lucas.probelli@iberia-mob.example",
+        "telephone1": "+1-202-555-0129",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Iberia Mobility S.L.",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Mateo",
+        "lastname": "Stubworth",
+        "jobtitle": "Purchasing Manager",
+        "emailaddress1": "mateo.stubworth@iberia-mob.example",
+        "telephone1": "+1-202-555-0130",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Iberia Mobility S.L.",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Ravi",
+        "lastname": "Beispielmann",
+        "jobtitle": "Purchasing Manager",
+        "emailaddress1": "ravi.beispielmann@summit-tire.example",
+        "telephone1": "+1-202-555-0131",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Summit Tire & Auto Supply",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Ingrid",
+        "lastname": "Musterfeld",
+        "jobtitle": "Purchasing Manager",
+        "emailaddress1": "ingrid.musterfeld@alpine-pharma.example",
+        "telephone1": "+1-202-555-0132",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Alpine Pharma Distribution",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Elena",
+        "lastname": "Musterfeld",
+        "jobtitle": "Purchasing Manager",
+        "emailaddress1": "elena.musterfeld@oakridge.example",
+        "telephone1": "+1-202-555-0133",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Oakridge Hardware Co",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Liam",
+        "lastname": "Ornekli",
+        "jobtitle": "Purchasing Manager",
+        "emailaddress1": "liam.ornekli@coastal-home.example",
+        "telephone1": "+1-202-555-0134",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Coastal Home Furnishings",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Elena",
+        "lastname": "Ornekli",
+        "jobtitle": "Customer Care Lead",
+        "emailaddress1": "elena.ornekli@coastal-home.example",
+        "telephone1": "+1-202-555-0135",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Coastal Home Furnishings",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Noah",
+        "lastname": "Ornekli",
+        "jobtitle": "Procurement Specialist",
+        "emailaddress1": "noah.ornekli@lumina-retail.example",
+        "telephone1": "+1-202-555-0136",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Lumina Retail Group",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Sophia",
+        "lastname": "Ornekli",
+        "jobtitle": "Service Coordinator",
+        "emailaddress1": "sophia.ornekli@oakridge.example",
+        "telephone1": "+1-202-555-0137",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Oakridge Hardware Co",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Ravi",
+        "lastname": "Denemeci",
+        "jobtitle": "Operations Director",
+        "emailaddress1": "ravi.denemeci@pacific-fuel.example",
+        "telephone1": "+1-202-555-0138",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Pacific Fuel Partners Inc",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Nora",
+        "lastname": "Denemeci",
+        "jobtitle": "Procurement Specialist",
+        "emailaddress1": "nora.denemeci@sakura-home.example",
+        "telephone1": "+1-202-555-0139",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Sakura Home Tech KK",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Mia",
+        "lastname": "Kurguoglu",
+        "jobtitle": "Service Coordinator",
+        "emailaddress1": "mia.kurguoglu@alpine-pharma.example",
+        "telephone1": "+1-202-555-0140",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Alpine Pharma Distribution",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Noah",
+        "lastname": "Sahteci",
+        "jobtitle": "Procurement Specialist",
+        "emailaddress1": "noah.sahteci@summit-tire.example",
+        "telephone1": "+1-202-555-0141",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Summit Tire & Auto Supply",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Ingrid",
+        "lastname": "Pseudoson",
+        "jobtitle": "Facilities Manager",
+        "emailaddress1": "ingrid.pseudoson@ironclad.example",
+        "telephone1": "+1-202-555-0142",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Ironclad Fleet Services",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Anders",
+        "lastname": "Pseudoson",
+        "jobtitle": "Operations Director",
+        "emailaddress1": "anders.pseudoson@lumina-retail.example",
+        "telephone1": "+1-202-555-0143",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Lumina Retail Group",
+          "type": "account"
+        }
+      },
+      {
+        "firstname": "Oliver",
+        "lastname": "Dummyfield",
+        "jobtitle": "Facilities Manager",
+        "emailaddress1": "oliver.dummyfield@vertest-med.example",
+        "telephone1": "+1-202-555-0144",
+        "statecode": 0,
+        "statuscode": 1,
+        "parentcustomerid": {
+          "name": "Vertest Medical Supplies",
+          "type": "account"
+        }
+      }
+    ],
+    "leads": [
+      {
+        "firstname": "Freya",
+        "lastname": "Testwell",
+        "companyname": "Prospect Co 2 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 2 Ltd)",
+        "emailaddress1": "freya.testwell@prospect2.example",
+        "telephone1": "+1-202-555-0145",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Freya",
+        "lastname": "Samplefield",
+        "companyname": "Prospect Co 5 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 5 Ltd)",
+        "emailaddress1": "freya.samplefield@prospect5.example",
+        "telephone1": "+1-202-555-0146",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Emma",
+        "lastname": "Samplefield",
+        "companyname": "Prospect Co 12 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 12 Ltd)",
+        "emailaddress1": "emma.samplefield@prospect12.example",
+        "telephone1": "+1-202-555-0147",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Ravi",
+        "lastname": "Mockridge",
+        "companyname": "Prospect Co 13 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 13 Ltd)",
+        "emailaddress1": "ravi.mockridge@prospect13.example",
+        "telephone1": "+1-202-555-0148",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Noah",
+        "lastname": "Mockridge",
+        "companyname": "Prospect Co 15 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 15 Ltd)",
+        "emailaddress1": "noah.mockridge@prospect15.example",
+        "telephone1": "+1-202-555-0149",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Ravi",
+        "lastname": "Exampleby",
+        "companyname": "Prospect Co 7 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 7 Ltd)",
+        "emailaddress1": "ravi.exampleby@prospect7.example",
+        "telephone1": "+1-202-555-0150",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Grace",
+        "lastname": "Fakeman",
+        "companyname": "Prospect Co 3 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 3 Ltd)",
+        "emailaddress1": "grace.fakeman@prospect3.example",
+        "telephone1": "+1-202-555-0151",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Mia",
+        "lastname": "Fakeman",
+        "companyname": "Prospect Co 6 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 6 Ltd)",
+        "emailaddress1": "mia.fakeman@prospect6.example",
+        "telephone1": "+1-202-555-0152",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Daniel",
+        "lastname": "Fakeman",
+        "companyname": "Prospect Co 11 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 11 Ltd)",
+        "emailaddress1": "daniel.fakeman@prospect11.example",
+        "telephone1": "+1-202-555-0153",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Marco",
+        "lastname": "Probelli",
+        "companyname": "Prospect Co 4 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 4 Ltd)",
+        "emailaddress1": "marco.probelli@prospect4.example",
+        "telephone1": "+1-202-555-0154",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Ravi",
+        "lastname": "Beispielmann",
+        "companyname": "Prospect Co 9 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 9 Ltd)",
+        "emailaddress1": "ravi.beispielmann@prospect9.example",
+        "telephone1": "+1-202-555-0155",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Daniel",
+        "lastname": "Musterfeld",
+        "companyname": "Prospect Co 1 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 1 Ltd)",
+        "emailaddress1": "daniel.musterfeld@prospect1.example",
+        "telephone1": "+1-202-555-0156",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Grace",
+        "lastname": "Musterfeld",
+        "companyname": "Prospect Co 10 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 10 Ltd)",
+        "emailaddress1": "grace.musterfeld@prospect10.example",
+        "telephone1": "+1-202-555-0157",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Ravi",
+        "lastname": "Denemeci",
+        "companyname": "Prospect Co 14 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 14 Ltd)",
+        "emailaddress1": "ravi.denemeci@prospect14.example",
+        "telephone1": "+1-202-555-0158",
+        "statecode": 0,
+        "statuscode": 1
+      },
+      {
+        "firstname": "Noah",
+        "lastname": "Sahteci",
+        "companyname": "Prospect Co 8 Ltd",
+        "subject": "Interest in after-sales service plan (Prospect Co 8 Ltd)",
+        "emailaddress1": "noah.sahteci@prospect8.example",
+        "telephone1": "+1-202-555-0159",
+        "statecode": 0,
+        "statuscode": 1
+      }
+    ],
+    "opportunities": [
+      {
+        "name": "Service contract renewal 1",
+        "estimatedvalue": 94000,
+        "estimatedclosedate": "2026-12-31",
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo opportunity (seed script).",
+        "customerid": {
+          "name": "Harbor Logistics GmbH",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Service contract renewal 10",
+        "estimatedvalue": 62000,
+        "estimatedclosedate": "2026-10-24",
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo opportunity (seed script).",
+        "customerid": {
+          "name": "Sakura Home Tech KK",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Service contract renewal 2",
+        "estimatedvalue": 33000,
+        "estimatedclosedate": "2027-01-16",
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo opportunity (seed script).",
+        "customerid": {
+          "name": "Pacific Fuel Partners Inc",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Service contract renewal 3",
+        "estimatedvalue": 79000,
+        "estimatedclosedate": "2026-11-08",
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo opportunity (seed script).",
+        "customerid": {
+          "name": "Brightwave Appliances Ltd",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Service contract renewal 4",
+        "estimatedvalue": 74000,
+        "estimatedclosedate": "2026-12-19",
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo opportunity (seed script).",
+        "customerid": {
+          "name": "Brightwave Appliances Ltd",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Service contract renewal 5",
+        "estimatedvalue": 53000,
+        "estimatedclosedate": "2027-01-09",
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo opportunity (seed script).",
+        "customerid": {
+          "name": "Lumina Retail Group",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Service contract renewal 6",
+        "estimatedvalue": 30000,
+        "estimatedclosedate": "2026-10-25",
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo opportunity (seed script).",
+        "customerid": {
+          "name": "Alpine Pharma Distribution",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Service contract renewal 7",
+        "estimatedvalue": 35000,
+        "estimatedclosedate": "2026-10-31",
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo opportunity (seed script).",
+        "customerid": {
+          "name": "Vertest Medical Supplies",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Service contract renewal 8",
+        "estimatedvalue": 13000,
+        "estimatedclosedate": "2026-12-14",
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo opportunity (seed script).",
+        "customerid": {
+          "name": "Brightwave Appliances Ltd",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Service contract renewal 9",
+        "estimatedvalue": 96000,
+        "estimatedclosedate": "2026-12-11",
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo opportunity (seed script).",
+        "customerid": {
+          "name": "Coastal Home Furnishings",
+          "type": "account"
+        }
+      }
+    ],
+    "incidents": [
+      {
+        "title": "Air fryer stops mid-cycle",
+        "prioritycode": 1,
+        "caseorigincode": 2,
+        "casetypecode": 3,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Summit Tire & Auto Supply",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Air fryer stops mid-cycle",
+        "prioritycode": 1,
+        "caseorigincode": 2,
+        "casetypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Blue Meridian Electronics",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Air fryer stops mid-cycle",
+        "prioritycode": 2,
+        "caseorigincode": 3,
+        "casetypecode": 3,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Sakura Home Tech KK",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Brake pad squeal",
+        "prioritycode": 3,
+        "caseorigincode": 1,
+        "casetypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Alpine Pharma Distribution",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Delivery arrived damaged",
+        "prioritycode": 2,
+        "caseorigincode": 3,
+        "casetypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Vertest Medical Supplies",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Dishwasher leaves residue on glasses",
+        "prioritycode": 3,
+        "caseorigincode": 3,
+        "casetypecode": 2,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Brightwave Appliances Ltd",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Dishwasher leaves residue on glasses",
+        "prioritycode": 1,
+        "caseorigincode": 3,
+        "casetypecode": 2,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Iberia Mobility S.L.",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Headphone noise cancelling not working",
+        "prioritycode": 3,
+        "caseorigincode": 1,
+        "casetypecode": 3,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Vertest Medical Supplies",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Headphone noise cancelling not working",
+        "prioritycode": 1,
+        "caseorigincode": 3,
+        "casetypecode": 2,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Blue Meridian Electronics",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Invoice does not match order",
+        "prioritycode": 2,
+        "caseorigincode": 1,
+        "casetypecode": 3,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Oakridge Hardware Co",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Invoice does not match order",
+        "prioritycode": 3,
+        "caseorigincode": 1,
+        "casetypecode": 2,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Nordbeispiel Insurance AG",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Invoice does not match order",
+        "prioritycode": 1,
+        "caseorigincode": 2,
+        "casetypecode": 2,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Pacific Fuel Partners Inc",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Product manual missing",
+        "prioritycode": 2,
+        "caseorigincode": 3,
+        "casetypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Brightwave Appliances Ltd",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Refrigerator compressor noise",
+        "prioritycode": 2,
+        "caseorigincode": 1,
+        "casetypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Coastal Home Furnishings",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Refrigerator compressor noise",
+        "prioritycode": 1,
+        "caseorigincode": 1,
+        "casetypecode": 2,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Blue Meridian Electronics",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Refrigerator compressor noise",
+        "prioritycode": 3,
+        "caseorigincode": 3,
+        "casetypecode": 3,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Sakura Home Tech KK",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Remote control not pairing",
+        "prioritycode": 1,
+        "caseorigincode": 2,
+        "casetypecode": 3,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Pacific Fuel Partners Inc",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Replacement part request",
+        "prioritycode": 3,
+        "caseorigincode": 3,
+        "casetypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Lumina Retail Group",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Request for on-site technician visit",
+        "prioritycode": 1,
+        "caseorigincode": 2,
+        "casetypecode": 3,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Sakura Home Tech KK",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Return and refund request",
+        "prioritycode": 2,
+        "caseorigincode": 2,
+        "casetypecode": 3,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Summit Tire & Auto Supply",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Soundbar audio dropouts",
+        "prioritycode": 3,
+        "caseorigincode": 3,
+        "casetypecode": 3,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Oakridge Hardware Co",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Tire vibration after fitting",
+        "prioritycode": 2,
+        "caseorigincode": 1,
+        "casetypecode": 2,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Oakridge Hardware Co",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Vacuum battery drains quickly",
+        "prioritycode": 1,
+        "caseorigincode": 3,
+        "casetypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Alpine Pharma Distribution",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Vacuum battery drains quickly",
+        "prioritycode": 1,
+        "caseorigincode": 3,
+        "casetypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Vertest Medical Supplies",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Vacuum battery drains quickly",
+        "prioritycode": 3,
+        "caseorigincode": 3,
+        "casetypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Iberia Mobility S.L.",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Warranty claim: display flickering",
+        "prioritycode": 1,
+        "caseorigincode": 3,
+        "casetypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Nordbeispiel Insurance AG",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Warranty claim: display flickering",
+        "prioritycode": 1,
+        "caseorigincode": 1,
+        "casetypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Harbor Logistics GmbH",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Washing machine does not drain",
+        "prioritycode": 3,
+        "caseorigincode": 1,
+        "casetypecode": 2,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Brightwave Appliances Ltd",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Washing machine does not drain",
+        "prioritycode": 1,
+        "caseorigincode": 2,
+        "casetypecode": 2,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Harbor Logistics GmbH",
+          "type": "account"
+        }
+      },
+      {
+        "title": "Washing machine does not drain",
+        "prioritycode": 3,
+        "caseorigincode": 1,
+        "casetypecode": 3,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo case (seed script).",
+        "customerid": {
+          "name": "Maple Leaf Cold Chain",
+          "type": "account"
+        }
+      }
+    ],
+    "products": [
+      {
+        "name": "55-inch Smart TV TV-55U",
+        "productnumber": "DUM-P010",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "Air Fryer AF-45",
+        "productnumber": "DUM-P004",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "Brake Pad Set BP-F2",
+        "productnumber": "DUM-P014",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "Built-in Dishwasher DW-60",
+        "productnumber": "DUM-P002",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "Convection Microwave MW-30",
+        "productnumber": "DUM-P007",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "Cordless Vacuum Cleaner VC-X7",
+        "productnumber": "DUM-P005",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "Electric Kettle EK-17",
+        "productnumber": "DUM-P008",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "Espresso Machine EM-15",
+        "productnumber": "DUM-P006",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "Extended Warranty Plan 24m",
+        "productnumber": "DUM-P015",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "French Door Refrigerator FR-520",
+        "productnumber": "DUM-P003",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "Front-Load Washing Machine WM-200",
+        "productnumber": "DUM-P001",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "Soundbar SB-300",
+        "productnumber": "DUM-P011",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "Stand Blender BL-900",
+        "productnumber": "DUM-P009",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "Tire Set 205/55 R16 (4 pcs)",
+        "productnumber": "DUM-P013",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "name": "Wireless Headphones HP-ANC",
+        "productnumber": "DUM-P012",
+        "description": "Fictional demo product (seed script).",
+        "statecode": 0,
+        "statuscode": 1,
+        "defaultuomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      }
+    ],
+    "contracts": [
+      {
+        "title": "ZKV Annual Contract",
+        "activeon": "2026-01-01T00:00:00Z",
+        "expireson": "2027-01-01T00:00:00Z",
+        "billingfrequencycode": 1,
+        "allotmenttypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "customerid": {
+          "name": "ZKV Örnek Sistemleri A.Ş.",
+          "type": "account"
+        },
+        "billingcustomerid": {
+          "name": "ZKV Örnek Sistemleri A.Ş.",
+          "type": "account"
+        },
+        "contracttemplateid": {
+          "name": "Service",
+          "type": "contracttemplate"
+        }
+      },
+      {
+        "title": "Denema Sağlık Contract",
+        "activeon": "2026-01-01T00:00:00Z",
+        "expireson": "2027-01-01T00:00:00Z",
+        "billingfrequencycode": 1,
+        "allotmenttypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "customerid": {
+          "name": "Denema Sağlık Sigorta",
+          "type": "account"
+        },
+        "billingcustomerid": {
+          "name": "Denema Sağlık Sigorta",
+          "type": "account"
+        },
+        "contracttemplateid": {
+          "name": "Service",
+          "type": "contracttemplate"
+        }
+      },
+      {
+        "title": "Denema Annual Contract",
+        "activeon": "2026-01-01T00:00:00Z",
+        "expireson": "2027-01-01T00:00:00Z",
+        "billingfrequencycode": 1,
+        "allotmenttypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "customerid": {
+          "name": "Denema Sigorta A.Ş.",
+          "type": "account"
+        },
+        "billingcustomerid": {
+          "name": "Denema Sigorta A.Ş.",
+          "type": "account"
+        },
+        "contracttemplateid": {
+          "name": "Service",
+          "type": "contracttemplate"
+        }
+      },
+      {
+        "title": "Örnekova Support Contract",
+        "activeon": "2026-01-01T00:00:00Z",
+        "expireson": "2027-01-01T00:00:00Z",
+        "billingfrequencycode": 1,
+        "allotmenttypecode": 1,
+        "statecode": 0,
+        "statuscode": 1,
+        "customerid": {
+          "name": "Örnekova Holding A.Ş.",
+          "type": "account"
+        },
+        "billingcustomerid": {
+          "name": "Örnekova Holding A.Ş.",
+          "type": "account"
+        },
+        "contracttemplateid": {
+          "name": "Service",
+          "type": "contracttemplate"
+        }
+      }
+    ],
+    "contractdetails": [
+      {
+        "title": "ZKV Line A",
+        "price": 100,
+        "activeon": "2026-01-01T00:00:00Z",
+        "expireson": "2027-01-01T00:00:00Z",
+        "statecode": 0,
+        "statuscode": 1,
+        "contractid": {
+          "name": "ZKV Annual Contract",
+          "type": "contract"
+        },
+        "productid": {
+          "name": "Front-Load Washing Machine WM-200",
+          "type": "product"
+        },
+        "uomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "title": "Denema Sağlık Line A",
+        "price": 100,
+        "activeon": "2026-01-01T00:00:00Z",
+        "expireson": "2027-01-01T00:00:00Z",
+        "statecode": 0,
+        "statuscode": 1,
+        "contractid": {
+          "name": "Denema Sağlık Contract",
+          "type": "contract"
+        },
+        "productid": {
+          "name": "Front-Load Washing Machine WM-200",
+          "type": "product"
+        },
+        "uomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "title": "Denema Line A",
+        "price": 100,
+        "activeon": "2026-01-01T00:00:00Z",
+        "expireson": "2027-01-01T00:00:00Z",
+        "statecode": 0,
+        "statuscode": 1,
+        "contractid": {
+          "name": "Denema Annual Contract",
+          "type": "contract"
+        },
+        "productid": {
+          "name": "Front-Load Washing Machine WM-200",
+          "type": "product"
+        },
+        "uomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "title": "Örnekova Support Line A",
+        "price": 100,
+        "activeon": "2026-01-01T00:00:00Z",
+        "expireson": "2027-01-01T00:00:00Z",
+        "statecode": 0,
+        "statuscode": 1,
+        "contractid": {
+          "name": "Örnekova Support Contract",
+          "type": "contract"
+        },
+        "productid": {
+          "name": "Front-Load Washing Machine WM-200",
+          "type": "product"
+        },
+        "uomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      },
+      {
+        "title": "Örnekova Support Line B",
+        "price": 100,
+        "activeon": "2026-01-01T00:00:00Z",
+        "expireson": "2027-01-01T00:00:00Z",
+        "statecode": 0,
+        "statuscode": 1,
+        "contractid": {
+          "name": "Örnekova Support Contract",
+          "type": "contract"
+        },
+        "productid": {
+          "name": "Front-Load Washing Machine WM-200",
+          "type": "product"
+        },
+        "uomid": {
+          "name": "Primary Unit",
+          "type": "uom"
+        }
+      }
+    ],
+    "salesorders": [
+      {
+        "name": "Order DUM-001",
+        "totalamount": 4197,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Vertest Medical Supplies",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-002",
+        "totalamount": 1424,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Nordbeispiel Insurance AG",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-003",
+        "totalamount": 1696,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Alpine Pharma Distribution",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-004",
+        "totalamount": 470,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Vertest Medical Supplies",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-005",
+        "totalamount": 1359,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Summit Tire & Auto Supply",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-006",
+        "totalamount": 948,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Sakura Home Tech KK",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-007",
+        "totalamount": 1316,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Lumina Retail Group",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-008",
+        "totalamount": 156,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Lumina Retail Group",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-009",
+        "totalamount": 1733,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Brightwave Appliances Ltd",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-010",
+        "totalamount": 316,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Vertest Medical Supplies",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-011",
+        "totalamount": 2428,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Coastal Home Furnishings",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-012",
+        "totalamount": 2798,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Alpine Pharma Distribution",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-013",
+        "totalamount": 4478,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Blue Meridian Electronics",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-014",
+        "totalamount": 5785,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Iberia Mobility S.L.",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-015",
+        "totalamount": 119,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Pacific Fuel Partners Inc",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-016",
+        "totalamount": 5525,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Ironclad Fleet Services",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-017",
+        "totalamount": 238,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Alpine Pharma Distribution",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-018",
+        "totalamount": 4321,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Brightwave Appliances Ltd",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-019",
+        "totalamount": 2989,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Pacific Fuel Partners Inc",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-020",
+        "totalamount": 1276,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Ironclad Fleet Services",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-021",
+        "totalamount": 6995,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Maple Leaf Cold Chain",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-022",
+        "totalamount": 3718,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Pacific Fuel Partners Inc",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-023",
+        "totalamount": 2792,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Alpine Pharma Distribution",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-024",
+        "totalamount": 1145,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Harbor Logistics GmbH",
+          "type": "account"
+        }
+      },
+      {
+        "name": "Order DUM-025",
+        "totalamount": 510,
+        "statecode": 0,
+        "statuscode": 1,
+        "description": "Fictional demo order (seed script).",
+        "customerid": {
+          "name": "Blue Meridian Electronics",
+          "type": "account"
+        }
+      }
+    ]
+  }
+}

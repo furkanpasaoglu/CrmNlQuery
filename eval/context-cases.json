@@ -1,0 +1,49 @@
+[
+  {
+    "id": "x01-this-customers-open-opportunities",
+    "note": "Brightwave formunda: açık fırsatlar (lab: 3). Bağlam kullanılmalı.",
+    "context": { "entity": "account", "name": "Brightwave Appliances Ltd" },
+    "question": "Bu müşterinin açık fırsatlarını getir",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "opportunity", "rowCount": 3, "usesContext": true }
+  },
+  {
+    "id": "x02-this-customers-contracts",
+    "note": "Örnekova formunda: contractlar (lab: 1).",
+    "context": { "entity": "account", "name": "Örnekova" },
+    "question": "Bu müşterinin contractlarını getir",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "contract", "rowCount": 1, "usesContext": true }
+  },
+  {
+    "id": "x03-this-opportunitys-company",
+    "note": "Fırsat formunda (renewal 9): fırsatın firması.",
+    "context": { "entity": "opportunity", "name": "renewal 9" },
+    "question": "Bu fırsatın firmasını getir",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "account", "rowCount": 1, "mustContain": ["Coastal"], "usesContext": true }
+  },
+  {
+    "id": "x04-context-but-unrelated-question",
+    "note": "Form açık ama soru atıfsız: bağlam KULLANILMAMALI (lab: 15 ürün).",
+    "context": { "entity": "account", "name": "Brightwave Appliances Ltd" },
+    "question": "Bütün productları getir",
+    "answers": { "columns": "default" },
+    "expect": {"finalKind": "answer", "entity": "product", "usesContext": false,"reference": {"fetchXml": "<fetch><entity name='product'><attribute name='name'/></entity></fetch>"}}
+  },
+  {
+    "id": "x05-english-this-account",
+    "context": { "entity": "account", "name": "Brightwave Appliances Ltd" },
+    "question": "Show the open opportunities of this account",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "opportunity", "rowCount": 3, "usesContext": true }
+  },
+  {
+    "id": "x06-named-company-beats-open-record",
+    "note": "Form Brightwave'de ama soru başka firmayı adıyla soruyor: bağlam kullanılmamalı.",
+    "context": { "entity": "account", "name": "Brightwave Appliances Ltd" },
+    "question": "Örnekova'nın contractlarını getir",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "contract", "rowCount": 1, "usesContext": false }
+  }
+]

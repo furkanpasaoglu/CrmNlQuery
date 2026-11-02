@@ -1,0 +1,36 @@
+[
+  { "id": "g01-cases-chart-no-dimension", "question": "Vakaları grafik olarak göster",
+    "expect": { "firstKind": "answer", "finalKind": "answer", "entity": "incident", "mustUseFetch": ["aggregate=\"true\"", "groupby=\"true\""] },
+    "note": "Grafik isteniyor ama gruplama boyutu verilmemiş: model tek bir toplam sayı yerine bir kategoriye (durum, öncelik...) göre gruplamalı." },
+
+  { "id": "g02-opportunities-chart-no-dimension", "question": "Fırsatları grafik olarak ver",
+    "expect": { "firstKind": "answer", "finalKind": "answer", "entity": "opportunity", "mustUseFetch": ["aggregate=\"true\"", "groupby=\"true\""] } },
+
+  { "id": "g03-accounts-chart-no-dimension", "question": "Hesapları grafik olarak ver",
+    "expect": { "firstKind": "answer", "finalKind": "answer", "entity": "account", "mustUseFetch": ["aggregate=\"true\"", "groupby=\"true\""] } },
+
+  { "id": "g04-one-account-cases-chart", "question": "Boğaz Denizcilik ve Ticaret A.Ş. firmasına ait talepleri grafik olarak ver",
+    "requires": [ { "entity": "account", "name": "Boğaz Denizcilik" } ],
+    "expect": { "firstKind": "answer", "finalKind": "answer", "entity": "incident", "mustUseFetch": ["aggregate=\"true\"", "groupby=\"true\""] },
+    "note": "Kullanıcının gerçek sorusu (25 Eki). Tek vakalı hesapta grafik çıkmaz ama sorgu yine gruplanmış olmalı. Türkçe katman kaydına bağlı: yoksa DATA-MISSING." },
+
+  { "id": "g05-priority-distribution", "question": "Vaka önceliklerinin dağılımı",
+    "expect": { "finalKind": "answer", "entity": "incident", "mustUseFetch": ["aggregate=\"true\"", "groupby=\"true\"", "prioritycode"] } },
+
+  { "id": "g06-monthly-opportunities-chart", "question": "Aylık oluşturulan fırsat sayısı grafiği",
+    "expect": { "finalKind": "answer", "entity": "opportunity", "mustUseFetch": ["aggregate=\"true\"", "dategrouping=\"month\""] } },
+
+  { "id": "g07-trap-plain-list", "question": "Vakaları getir",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "incident", "mustNotUseFetch": ["aggregate"] },
+    "note": "TUZAK: grafik istenmiyor, düz liste gelmeli (gruplama eklenmemeli)." },
+
+  { "id": "g08-trap-filtered-list", "question": "Ankara'daki hesapları getir",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "account", "mustNotUseFetch": ["aggregate"] },
+    "note": "TUZAK: grafik istenmiyor." },
+
+  { "id": "g09-trap-count-only", "question": "Kaç vaka var?",
+    "expect": { "finalKind": "answer", "entity": "incident", "mustNotUseFetch": ["groupby"] },
+    "note": "TUZAK: tek sayı istenmiş; gruplama eklenmemeli." }
+]

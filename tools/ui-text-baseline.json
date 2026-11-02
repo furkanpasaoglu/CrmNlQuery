@@ -1,0 +1,17 @@
+{
+  "js": {
+    "widget (widget.js, outside the catalog)": 0,
+    "result page (result.js)": 0,
+    "test paneli (index.js)": 17,
+    "admin panel (admin-ui/src, outside the catalog)": 101
+  },
+  "cs": {
+    "FailureOutcome(\"...\")": 0,
+    "AccessResult.Fail(..., \"...\")": 0,
+    "QuestionOutcome / Choice / note hardcoded": 0,
+    "UserMessages hardcoded constant": 0,
+    "SettingDefinition description": 56,
+    "Suggestion label hardcoded": 2,
+    "Validator error (\"could not\"/\"must\")": 41
+  }
+}

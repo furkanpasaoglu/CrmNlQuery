@@ -1,0 +1,21 @@
+{
+  "catalog": [
+    { "name": "Hesap özeti", "crmReportId": "b1434720-c5c7-f111-b4de-00155d01f303", "keywords": ["müşteri özeti raporu", "account summary"], "recordEntity": "account" },
+    { "name": "Aylık satış raporu", "url": "https://reports.example/sales", "keywords": ["satış", "ciro"] },
+    { "name": "Hesap detay raporu", "url": "https://reports.example/account?lang=tr", "keywords": ["hesap detay"], "recordEntity": "account", "recordParam": "accountId" }
+  ],
+  "cases": [
+    { "id": "r01-neglected-tr", "question": "Neglected Cases raporunu aç", "expect": { "first": "Neglected Cases", "urlContains": "viewer.aspx?action=run&id=%7b7dce8a08-7d04-e711-80e6-00155db8652a%7d" } },
+    { "id": "r02-overview-en", "question": "Open the Account Overview report", "expect": { "first": "Account Overview" } },
+    { "id": "r03-alias-tr", "question": "hesap özeti raporunu aç", "expect": { "first": "Hesap özeti", "urlContains": "b1434720-c5c7-f111-b4de-00155d01f303" } },
+    { "id": "r04-keyword-tr", "question": "müşteri özeti raporunu göster", "expect": { "first": "Hesap özeti" } },
+    { "id": "r05-external-keyword", "question": "ciro raporunu aç", "expect": { "first": "Aylık satış raporu", "urlContains": "https://reports.example/sales" } },
+    { "id": "r06-list-all", "question": "raporları göster", "expect": { "listedAll": true } },
+    { "id": "r07-record-crm", "question": "bu hesap özeti raporunu aç", "record": { "entity": "account", "name": "Brightwave Appliances Ltd" }, "expect": { "first": "Hesap özeti", "urlContains": "context=records&recordstype=1&records=%7b465bf4cc-67d0-f111-b4eb-00155d01f303%7d", "forRecord": "Brightwave Appliances Ltd" } },
+    { "id": "r08-record-external", "question": "hesap detay raporunu aç", "record": { "entity": "account", "name": "Brightwave Appliances Ltd" }, "expect": { "first": "Hesap detay raporu", "urlContains": "&accountId=465bf4cc-67d0-f111-b4eb-00155d01f303" } },
+    { "id": "r09-other-table-plain", "question": "hesap özeti raporunu aç", "record": { "entity": "contact", "name": "Freya Testwell" }, "expect": { "first": "Hesap özeti" } },
+    { "id": "r10-trap-data-question", "question": "kaç rapor var", "expect": { "report": false } },
+    { "id": "r11-trap-no-report-word", "question": "Brightwave'in açık fırsatlarını getir", "expect": { "report": false } },
+    { "id": "r12-no-match", "question": "Quarterly Banana Forecast raporunu aç", "expect": { "report": false } }
+  ]
+}

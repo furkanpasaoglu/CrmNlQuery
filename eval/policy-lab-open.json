@@ -1,0 +1,7 @@
+{
+  "defaultTables": [
+    "account", "contact", "opportunity", "product", "contract", "contractdetail", "incident", "salesorder",
+    "new_model", "new_aksesuar", "new_arac", "new_servis_kaydi", "new_arac_aksesuar"
+  ],
+  "rules": []
+}

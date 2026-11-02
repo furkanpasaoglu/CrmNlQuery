@@ -1,0 +1,6 @@
+[
+  { "kind": "alias", "terms": ["talep", "talepler", "request"], "entity": "incident", "description": "In this company a request (talep) is a service case." },
+  { "kind": "filter", "terms": ["yüksek öncelikli vaka", "high priority case", "high priority cases"], "entity": "incident", "conditions": [ { "attribute": "prioritycode", "operator": "eq", "values": ["1"] } ], "description": "Cases with High priority." },
+  { "kind": "filter", "terms": ["büyük firma", "large company", "large companies"], "entity": "account", "conditions": [ { "attribute": "numberofemployees", "operator": "gt", "values": ["1000"] } ], "description": "Accounts with more than 1000 employees." },
+  { "kind": "filter", "terms": ["aktif firma", "active company", "active companies"], "entity": "account", "conditions": [ { "attribute": "statecode", "operator": "eq", "values": ["0"] } ], "description": "Active accounts." }
+]

@@ -1,0 +1,2306 @@
+{
+  "options": {
+    "marka": [
+      "Zephyr",
+      "Boreal",
+      "Calypso",
+      "Drakon",
+      "Ember",
+      "Fjord",
+      "Gale"
+    ],
+    "kasa": [
+      "Sedan",
+      "Hatchback",
+      "SUV",
+      "Minivan",
+      "Pikap"
+    ],
+    "yakit": [
+      "Benzin",
+      "Dizel",
+      "Elektrik",
+      "Hibrit"
+    ],
+    "ozellikler": [
+      "Sunroof",
+      "Deri koltuk",
+      "Geri görüş kamerası",
+      "Çeki demiri"
+    ],
+    "islem": [
+      "Bakım",
+      "Onarım",
+      "Lastik",
+      "Kaza"
+    ]
+  },
+  "models": [
+    {
+      "name": "Zephyr S1",
+      "marka": "Zephyr",
+      "yil": 2022,
+      "kasa": "Sedan",
+      "motor": 2.6
+    },
+    {
+      "name": "Zephyr S2",
+      "marka": "Zephyr",
+      "yil": 2026,
+      "kasa": "SUV",
+      "motor": 1.9
+    },
+    {
+      "name": "Boreal X3",
+      "marka": "Boreal",
+      "yil": 2021,
+      "kasa": "Sedan",
+      "motor": 1
+    },
+    {
+      "name": "Boreal X5",
+      "marka": "Boreal",
+      "yil": 2024,
+      "kasa": "Hatchback",
+      "motor": 2.6
+    },
+    {
+      "name": "Calypso 100",
+      "marka": "Calypso",
+      "yil": 2024,
+      "kasa": "Minivan",
+      "motor": 1.9
+    },
+    {
+      "name": "Calypso 200",
+      "marka": "Calypso",
+      "yil": 2020,
+      "kasa": "Hatchback",
+      "motor": 1.3
+    },
+    {
+      "name": "Drakon GT",
+      "marka": "Drakon",
+      "yil": 2019,
+      "kasa": "Minivan",
+      "motor": 2.5
+    },
+    {
+      "name": "Ember Mini",
+      "marka": "Ember",
+      "yil": 2025,
+      "kasa": "Hatchback",
+      "motor": 1.4
+    },
+    {
+      "name": "Fjord Cargo",
+      "marka": "Fjord",
+      "yil": 2023,
+      "kasa": "SUV",
+      "motor": 1.4
+    },
+    {
+      "name": "Gale 7",
+      "marka": "Gale",
+      "yil": 2020,
+      "kasa": "Pikap",
+      "motor": 2.9
+    }
+  ],
+  "accessories": [
+    "Çatı barı",
+    "Paspas seti",
+    "Kar zinciri",
+    "Bebek koltuğu",
+    "Çeki demiri",
+    "Navigasyon",
+    "Park sensörü",
+    "Sis farı"
+  ],
+  "vehicles": [
+    {
+      "plaka": "34 TST 001",
+      "model": "Zephyr S2",
+      "musteri": "Alpine Pharma Distribution",
+      "yakit": "Dizel",
+      "garantili": true,
+      "kilometre": 39000,
+      "alimTarihi": "2022-09-22",
+      "ozellikler": [
+        "Deri koltuk"
+      ],
+      "aksesuarlar": [
+        "Paspas seti",
+        "Sis farı"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "06 DNM 002",
+      "model": "Zephyr S1",
+      "musteri": "Blue Meridian Electronics",
+      "yakit": "Benzin",
+      "garantili": false,
+      "kilometre": 18000,
+      "alimTarihi": "2024-08-13",
+      "ozellikler": [
+        "Geri görüş kamerası",
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Paspas seti"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "35 ORN 003",
+      "model": "Boreal X5",
+      "musteri": "Brightwave Appliances Ltd",
+      "yakit": "Benzin",
+      "garantili": true,
+      "kilometre": 99000,
+      "alimTarihi": "2019-06-05",
+      "ozellikler": [],
+      "aksesuarlar": [
+        "Çatı barı"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "16 TST 004",
+      "model": "Fjord Cargo",
+      "musteri": "Coastal Home Furnishings",
+      "yakit": "Hibrit",
+      "garantili": true,
+      "kilometre": 142000,
+      "alimTarihi": "2026-09-23",
+      "ozellikler": [],
+      "aksesuarlar": [
+        "Bebek koltuğu",
+        "Çeki demiri"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "07 DNM 005",
+      "model": "Calypso 200",
+      "musteri": "Harbor Logistics GmbH",
+      "yakit": "Dizel",
+      "garantili": true,
+      "kilometre": 29000,
+      "alimTarihi": "2022-08-26",
+      "ozellikler": [],
+      "aksesuarlar": [
+        "Kar zinciri"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "34 ORN 006",
+      "model": "Fjord Cargo",
+      "musteri": "Iberia Mobility S.L.",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 114000,
+      "alimTarihi": "2022-05-25",
+      "ozellikler": [
+        "Sunroof"
+      ],
+      "aksesuarlar": [
+        "Park sensörü"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "06 TST 007",
+      "model": "Calypso 100",
+      "musteri": "Ironclad Fleet Services",
+      "yakit": "Benzin",
+      "garantili": false,
+      "kilometre": 102000,
+      "alimTarihi": "2021-11-16",
+      "ozellikler": [],
+      "aksesuarlar": [
+        "Bebek koltuğu",
+        "Navigasyon"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "35 DNM 008",
+      "model": "Calypso 100",
+      "musteri": "Lumina Retail Group",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 85000,
+      "alimTarihi": "2024-10-05",
+      "ozellikler": [
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Bebek koltuğu"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "16 ORN 009",
+      "model": "Boreal X5",
+      "musteri": "Maple Leaf Cold Chain",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 24000,
+      "alimTarihi": "2025-09-27",
+      "ozellikler": [],
+      "aksesuarlar": [
+        "Çeki demiri"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "07 TST 010",
+      "model": "Zephyr S1",
+      "musteri": "Nordbeispiel Insurance AG",
+      "yakit": "Benzin",
+      "garantili": false,
+      "kilometre": 179000,
+      "alimTarihi": "2022-07-12",
+      "ozellikler": [
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Çeki demiri"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "34 DNM 011",
+      "model": "Boreal X5",
+      "musteri": "Oakridge Hardware Co",
+      "yakit": "Elektrik",
+      "garantili": false,
+      "kilometre": 64000,
+      "alimTarihi": "2022-03-09",
+      "ozellikler": [
+        "Geri görüş kamerası",
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Çatı barı",
+        "Çeki demiri",
+        "Navigasyon"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "06 ORN 012",
+      "model": "Calypso 100",
+      "musteri": "Pacific Fuel Partners Inc",
+      "yakit": "Dizel",
+      "garantili": true,
+      "kilometre": 161000,
+      "alimTarihi": "2026-03-08",
+      "ozellikler": [],
+      "aksesuarlar": [],
+      "aciklama": null
+    },
+    {
+      "plaka": "35 TST 013",
+      "model": "Ember Mini",
+      "musteri": "Sakura Home Tech KK",
+      "yakit": "Hibrit",
+      "garantili": false,
+      "kilometre": 170000,
+      "alimTarihi": "2020-06-08",
+      "ozellikler": [
+        "Sunroof",
+        "Deri koltuk",
+        "Geri görüş kamerası",
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Çatı barı",
+        "Paspas seti"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "16 DNM 014",
+      "model": "Ember Mini",
+      "musteri": "Summit Tire & Auto Supply",
+      "yakit": "Hibrit",
+      "garantili": true,
+      "kilometre": 48000,
+      "alimTarihi": "2025-08-22",
+      "ozellikler": [
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Çatı barı",
+        "Kar zinciri",
+        "Çeki demiri"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "07 ORN 015",
+      "model": "Gale 7",
+      "musteri": "Vertest Medical Supplies",
+      "yakit": "Dizel",
+      "garantili": true,
+      "kilometre": 151000,
+      "alimTarihi": "2023-10-02",
+      "ozellikler": [
+        "Deri koltuk",
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Paspas seti",
+        "Park sensörü"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "34 TST 016",
+      "model": "Gale 7",
+      "musteri": "Alpine Pharma Distribution",
+      "yakit": "Hibrit",
+      "garantili": false,
+      "kilometre": 87000,
+      "alimTarihi": "2022-03-05",
+      "ozellikler": [],
+      "aksesuarlar": [
+        "Çeki demiri"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "06 DNM 017",
+      "model": "Gale 7",
+      "musteri": "Blue Meridian Electronics",
+      "yakit": "Benzin",
+      "garantili": true,
+      "kilometre": 8000,
+      "alimTarihi": "2024-07-07",
+      "ozellikler": [
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Çatı barı",
+        "Navigasyon"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "35 ORN 018",
+      "model": "Boreal X5",
+      "musteri": "Brightwave Appliances Ltd",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 58000,
+      "alimTarihi": "2022-01-03",
+      "ozellikler": [
+        "Deri koltuk",
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [],
+      "aciklama": null
+    },
+    {
+      "plaka": "16 TST 019",
+      "model": "Drakon GT",
+      "musteri": "Coastal Home Furnishings",
+      "yakit": "Dizel",
+      "garantili": true,
+      "kilometre": 25000,
+      "alimTarihi": "2022-06-22",
+      "ozellikler": [],
+      "aksesuarlar": [
+        "Paspas seti",
+        "Çeki demiri",
+        "Navigasyon"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "07 DNM 020",
+      "model": "Drakon GT",
+      "musteri": "Harbor Logistics GmbH",
+      "yakit": "Hibrit",
+      "garantili": true,
+      "kilometre": 58000,
+      "alimTarihi": "2022-05-20",
+      "ozellikler": [
+        "Sunroof",
+        "Deri koltuk",
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Çatı barı",
+        "Kar zinciri",
+        "Bebek koltuğu"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "34 ORN 021",
+      "model": "Boreal X3",
+      "musteri": "Iberia Mobility S.L.",
+      "yakit": "Benzin",
+      "garantili": true,
+      "kilometre": 72000,
+      "alimTarihi": "2025-10-29",
+      "ozellikler": [
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Paspas seti"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "06 TST 022",
+      "model": "Ember Mini",
+      "musteri": "Ironclad Fleet Services",
+      "yakit": "Dizel",
+      "garantili": true,
+      "kilometre": 55000,
+      "alimTarihi": "2019-05-25",
+      "ozellikler": [
+        "Deri koltuk",
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Çatı barı",
+        "Paspas seti",
+        "Bebek koltuğu"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "35 DNM 023",
+      "model": "Calypso 200",
+      "musteri": "Lumina Retail Group",
+      "yakit": "Hibrit",
+      "garantili": false,
+      "kilometre": 86000,
+      "alimTarihi": "2021-06-12",
+      "ozellikler": [
+        "Sunroof",
+        "Geri görüş kamerası",
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [],
+      "aciklama": null
+    },
+    {
+      "plaka": "16 ORN 024",
+      "model": "Ember Mini",
+      "musteri": "Maple Leaf Cold Chain",
+      "yakit": "Benzin",
+      "garantili": false,
+      "kilometre": 46000,
+      "alimTarihi": "2023-02-13",
+      "ozellikler": [
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Çatı barı"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "07 TST 025",
+      "model": "Zephyr S1",
+      "musteri": "Nordbeispiel Insurance AG",
+      "yakit": "Hibrit",
+      "garantili": false,
+      "kilometre": 31000,
+      "alimTarihi": "2025-06-21",
+      "ozellikler": [
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Bebek koltuğu",
+        "Çeki demiri"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "34 DNM 026",
+      "model": "Drakon GT",
+      "musteri": "Oakridge Hardware Co",
+      "yakit": "Dizel",
+      "garantili": true,
+      "kilometre": 50000,
+      "alimTarihi": "2025-05-24",
+      "ozellikler": [
+        "Geri görüş kamerası",
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Paspas seti",
+        "Navigasyon",
+        "Park sensörü"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "06 ORN 027",
+      "model": "Ember Mini",
+      "musteri": "Pacific Fuel Partners Inc",
+      "yakit": "Dizel",
+      "garantili": true,
+      "kilometre": 56000,
+      "alimTarihi": "2026-01-27",
+      "ozellikler": [],
+      "aksesuarlar": [
+        "Çatı barı",
+        "Navigasyon"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "35 TST 028",
+      "model": "Calypso 100",
+      "musteri": "Sakura Home Tech KK",
+      "yakit": "Elektrik",
+      "garantili": true,
+      "kilometre": 128000,
+      "alimTarihi": "2026-03-27",
+      "ozellikler": [
+        "Deri koltuk"
+      ],
+      "aksesuarlar": [
+        "Kar zinciri",
+        "Park sensörü"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "16 DNM 029",
+      "model": "Drakon GT",
+      "musteri": "Summit Tire & Auto Supply",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 112000,
+      "alimTarihi": "2026-02-09",
+      "ozellikler": [
+        "Sunroof",
+        "Deri koltuk",
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [],
+      "aciklama": null
+    },
+    {
+      "plaka": "07 ORN 030",
+      "model": "Calypso 100",
+      "musteri": "Vertest Medical Supplies",
+      "yakit": "Hibrit",
+      "garantili": false,
+      "kilometre": 148000,
+      "alimTarihi": "2022-08-09",
+      "ozellikler": [
+        "Deri koltuk",
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Çatı barı"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "34 TST 031",
+      "model": "Zephyr S1",
+      "musteri": "Alpine Pharma Distribution",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 73000,
+      "alimTarihi": "2024-04-17",
+      "ozellikler": [
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Çatı barı",
+        "Paspas seti",
+        "Kar zinciri"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "06 DNM 032",
+      "model": "Calypso 200",
+      "musteri": "Blue Meridian Electronics",
+      "yakit": "Elektrik",
+      "garantili": false,
+      "kilometre": 112000,
+      "alimTarihi": "2021-04-13",
+      "ozellikler": [
+        "Sunroof",
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Sis farı"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "35 ORN 033",
+      "model": "Calypso 200",
+      "musteri": "Brightwave Appliances Ltd",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 115000,
+      "alimTarihi": "2021-01-25",
+      "ozellikler": [],
+      "aksesuarlar": [
+        "Çatı barı",
+        "Park sensörü"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "16 TST 034",
+      "model": "Calypso 200",
+      "musteri": "Coastal Home Furnishings",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 76000,
+      "alimTarihi": "2024-05-24",
+      "ozellikler": [
+        "Sunroof",
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Park sensörü"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "07 DNM 035",
+      "model": "Boreal X5",
+      "musteri": "Harbor Logistics GmbH",
+      "yakit": "Elektrik",
+      "garantili": true,
+      "kilometre": 41000,
+      "alimTarihi": "2022-07-13",
+      "ozellikler": [
+        "Sunroof"
+      ],
+      "aksesuarlar": [
+        "Kar zinciri",
+        "Bebek koltuğu",
+        "Navigasyon"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "34 ORN 036",
+      "model": "Calypso 100",
+      "musteri": "Iberia Mobility S.L.",
+      "yakit": "Benzin",
+      "garantili": true,
+      "kilometre": 123000,
+      "alimTarihi": "2023-04-28",
+      "ozellikler": [
+        "Sunroof",
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Çatı barı"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "06 TST 037",
+      "model": "Calypso 100",
+      "musteri": "Ironclad Fleet Services",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 32000,
+      "alimTarihi": "2021-10-17",
+      "ozellikler": [
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Çatı barı",
+        "Sis farı"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "35 DNM 038",
+      "model": "Drakon GT",
+      "musteri": "Lumina Retail Group",
+      "yakit": "Dizel",
+      "garantili": true,
+      "kilometre": 76000,
+      "alimTarihi": "2020-08-15",
+      "ozellikler": [
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Paspas seti",
+        "Bebek koltuğu",
+        "Park sensörü"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "16 ORN 039",
+      "model": "Fjord Cargo",
+      "musteri": "Maple Leaf Cold Chain",
+      "yakit": "Dizel",
+      "garantili": true,
+      "kilometre": 49000,
+      "alimTarihi": "2019-07-13",
+      "ozellikler": [
+        "Geri görüş kamerası",
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Çatı barı",
+        "Bebek koltuğu",
+        "Çeki demiri"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "07 TST 040",
+      "model": "Calypso 100",
+      "musteri": "Nordbeispiel Insurance AG",
+      "yakit": "Elektrik",
+      "garantili": true,
+      "kilometre": 145000,
+      "alimTarihi": "2019-08-03",
+      "ozellikler": [
+        "Sunroof"
+      ],
+      "aksesuarlar": [],
+      "aciklama": null
+    },
+    {
+      "plaka": "34 DNM 041",
+      "model": "Boreal X5",
+      "musteri": "Oakridge Hardware Co",
+      "yakit": "Dizel",
+      "garantili": true,
+      "kilometre": 12000,
+      "alimTarihi": "2021-08-22",
+      "ozellikler": [
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Çatı barı",
+        "Çeki demiri",
+        "Sis farı"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "06 ORN 042",
+      "model": "Boreal X5",
+      "musteri": "Pacific Fuel Partners Inc",
+      "yakit": "Elektrik",
+      "garantili": false,
+      "kilometre": 36000,
+      "alimTarihi": "2022-09-09",
+      "ozellikler": [
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [],
+      "aciklama": null
+    },
+    {
+      "plaka": "35 TST 043",
+      "model": "Fjord Cargo",
+      "musteri": "Sakura Home Tech KK",
+      "yakit": "Hibrit",
+      "garantili": true,
+      "kilometre": 123000,
+      "alimTarihi": "2019-06-20",
+      "ozellikler": [
+        "Deri koltuk"
+      ],
+      "aksesuarlar": [
+        "Navigasyon"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "16 DNM 044",
+      "model": "Ember Mini",
+      "musteri": "Summit Tire & Auto Supply",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 111000,
+      "alimTarihi": "2019-08-23",
+      "ozellikler": [],
+      "aksesuarlar": [
+        "Çeki demiri",
+        "Navigasyon"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "07 ORN 045",
+      "model": "Boreal X5",
+      "musteri": "Vertest Medical Supplies",
+      "yakit": "Elektrik",
+      "garantili": false,
+      "kilometre": 78000,
+      "alimTarihi": "2019-10-07",
+      "ozellikler": [
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Kar zinciri",
+        "Park sensörü"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "34 TST 046",
+      "model": "Calypso 100",
+      "musteri": "Alpine Pharma Distribution",
+      "yakit": "Benzin",
+      "garantili": false,
+      "kilometre": 141000,
+      "alimTarihi": "2019-05-02",
+      "ozellikler": [
+        "Deri koltuk",
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Çeki demiri",
+        "Navigasyon",
+        "Park sensörü"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "06 DNM 047",
+      "model": "Calypso 100",
+      "musteri": "Blue Meridian Electronics",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 121000,
+      "alimTarihi": "2021-01-07",
+      "ozellikler": [
+        "Sunroof",
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Paspas seti"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "35 ORN 048",
+      "model": "Calypso 200",
+      "musteri": "Brightwave Appliances Ltd",
+      "yakit": "Hibrit",
+      "garantili": false,
+      "kilometre": 9000,
+      "alimTarihi": "2024-10-21",
+      "ozellikler": [],
+      "aksesuarlar": [
+        "Sis farı"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "16 TST 049",
+      "model": "Boreal X3",
+      "musteri": "Coastal Home Furnishings",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 60000,
+      "alimTarihi": "2025-09-30",
+      "ozellikler": [
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Paspas seti",
+        "Bebek koltuğu",
+        "Sis farı"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "07 DNM 050",
+      "model": "Boreal X3",
+      "musteri": "Harbor Logistics GmbH",
+      "yakit": "Elektrik",
+      "garantili": true,
+      "kilometre": 180000,
+      "alimTarihi": "2026-05-16",
+      "ozellikler": [
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "34 ORN 051",
+      "model": "Zephyr S1",
+      "musteri": "Iberia Mobility S.L.",
+      "yakit": "Dizel",
+      "garantili": true,
+      "kilometre": 67000,
+      "alimTarihi": "2023-02-28",
+      "ozellikler": [
+        "Sunroof",
+        "Deri koltuk",
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Park sensörü"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "06 TST 052",
+      "model": "Gale 7",
+      "musteri": "Ironclad Fleet Services",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 120000,
+      "alimTarihi": "2023-09-02",
+      "ozellikler": [
+        "Deri koltuk"
+      ],
+      "aksesuarlar": [
+        "Paspas seti",
+        "Kar zinciri",
+        "Park sensörü"
+      ],
+      "aciklama": null
+    },
+    {
+      "plaka": "35 DNM 053",
+      "model": "Boreal X5",
+      "musteri": "Lumina Retail Group",
+      "yakit": "Hibrit",
+      "garantili": false,
+      "kilometre": 75000,
+      "alimTarihi": "2024-08-04",
+      "ozellikler": [],
+      "aksesuarlar": [
+        "Kar zinciri",
+        "Çeki demiri"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "16 ORN 054",
+      "model": "Ember Mini",
+      "musteri": "Maple Leaf Cold Chain",
+      "yakit": "Elektrik",
+      "garantili": false,
+      "kilometre": 163000,
+      "alimTarihi": "2026-07-05",
+      "ozellikler": [
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Kar zinciri",
+        "Bebek koltuğu",
+        "Park sensörü"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "07 TST 055",
+      "model": "Calypso 200",
+      "musteri": "Nordbeispiel Insurance AG",
+      "yakit": "Benzin",
+      "garantili": false,
+      "kilometre": 36000,
+      "alimTarihi": "2020-10-10",
+      "ozellikler": [
+        "Sunroof",
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Çatı barı",
+        "Paspas seti",
+        "Kar zinciri"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "34 DNM 056",
+      "model": "Boreal X5",
+      "musteri": "Oakridge Hardware Co",
+      "yakit": "Benzin",
+      "garantili": true,
+      "kilometre": 56000,
+      "alimTarihi": "2025-08-18",
+      "ozellikler": [
+        "Çeki demiri"
+      ],
+      "aksesuarlar": [
+        "Paspas seti",
+        "Bebek koltuğu"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "06 ORN 057",
+      "model": "Zephyr S2",
+      "musteri": "Pacific Fuel Partners Inc",
+      "yakit": "Dizel",
+      "garantili": true,
+      "kilometre": 155000,
+      "alimTarihi": "2025-06-23",
+      "ozellikler": [],
+      "aksesuarlar": [],
+      "aciklama": null
+    },
+    {
+      "plaka": "35 TST 058",
+      "model": "Gale 7",
+      "musteri": "Sakura Home Tech KK",
+      "yakit": "Dizel",
+      "garantili": false,
+      "kilometre": 180000,
+      "alimTarihi": "2026-10-08",
+      "ozellikler": [
+        "Geri görüş kamerası"
+      ],
+      "aksesuarlar": [
+        "Bebek koltuğu"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    },
+    {
+      "plaka": "16 DNM 059",
+      "model": "Boreal X3",
+      "musteri": "Summit Tire & Auto Supply",
+      "yakit": "Benzin",
+      "garantili": false,
+      "kilometre": 171000,
+      "alimTarihi": "2021-01-18",
+      "ozellikler": [],
+      "aksesuarlar": [],
+      "aciklama": null
+    },
+    {
+      "plaka": "07 ORN 060",
+      "model": "Boreal X3",
+      "musteri": "Vertest Medical Supplies",
+      "yakit": "Benzin",
+      "garantili": true,
+      "kilometre": 141000,
+      "alimTarihi": "2025-10-29",
+      "ozellikler": [],
+      "aksesuarlar": [
+        "Çatı barı"
+      ],
+      "aciklama": "Uydurma demo araç (tohum verisi)."
+    }
+  ],
+  "services": [
+    {
+      "baslik": "Servis 001 - Bakım",
+      "plaka": "34 TST 001",
+      "tarih": "2025-02-01",
+      "tutar": 3750,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 002 - Bakım",
+      "plaka": "06 DNM 002",
+      "tarih": "2025-09-29",
+      "tutar": 10850,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 003 - Lastik",
+      "plaka": "35 ORN 003",
+      "tarih": "2026-01-19",
+      "tutar": 10700,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 004 - Bakım",
+      "plaka": "16 TST 004",
+      "tarih": "2026-09-17",
+      "tutar": 11500,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 005 - Bakım",
+      "plaka": "07 DNM 005",
+      "tarih": "2024-09-16",
+      "tutar": 4300,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 006 - Lastik",
+      "plaka": "34 ORN 006",
+      "tarih": "2026-01-28",
+      "tutar": 6800,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 007 - Kaza",
+      "plaka": "06 TST 007",
+      "tarih": "2025-11-03",
+      "tutar": 8950,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 008 - Kaza",
+      "plaka": "35 DNM 008",
+      "tarih": "2026-06-07",
+      "tutar": 9750,
+      "tur": "Kaza",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 009 - Onarım",
+      "plaka": "16 ORN 009",
+      "tarih": "2025-03-29",
+      "tutar": 6650,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 010 - Bakım",
+      "plaka": "07 TST 010",
+      "tarih": "2026-01-14",
+      "tutar": 4250,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 011 - Onarım",
+      "plaka": "34 DNM 011",
+      "tarih": "2026-05-03",
+      "tutar": 8750,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 012 - Bakım",
+      "plaka": "06 ORN 012",
+      "tarih": "2024-04-05",
+      "tutar": 10900,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 013 - Onarım",
+      "plaka": "35 TST 013",
+      "tarih": "2026-03-23",
+      "tutar": 6250,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 014 - Bakım",
+      "plaka": "16 DNM 014",
+      "tarih": "2024-04-28",
+      "tutar": 1550,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 015 - Lastik",
+      "plaka": "07 ORN 015",
+      "tarih": "2026-02-03",
+      "tutar": 4950,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 016 - Onarım",
+      "plaka": "34 TST 016",
+      "tarih": "2024-07-01",
+      "tutar": 4200,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 017 - Kaza",
+      "plaka": "06 DNM 017",
+      "tarih": "2025-11-09",
+      "tutar": 700,
+      "tur": "Kaza",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 018 - Bakım",
+      "plaka": "35 ORN 018",
+      "tarih": "2026-09-02",
+      "tutar": 8300,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 019 - Kaza",
+      "plaka": "16 TST 019",
+      "tarih": "2024-10-25",
+      "tutar": 3550,
+      "tur": "Kaza",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 020 - Lastik",
+      "plaka": "07 DNM 020",
+      "tarih": "2026-10-11",
+      "tutar": 2550,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 021 - Bakım",
+      "plaka": "34 ORN 021",
+      "tarih": "2025-03-25",
+      "tutar": 9650,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 022 - Lastik",
+      "plaka": "06 TST 022",
+      "tarih": "2024-04-23",
+      "tutar": 5700,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 023 - Bakım",
+      "plaka": "35 DNM 023",
+      "tarih": "2024-09-07",
+      "tutar": 7600,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 024 - Lastik",
+      "plaka": "16 ORN 024",
+      "tarih": "2024-07-18",
+      "tutar": 10200,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 025 - Lastik",
+      "plaka": "07 TST 025",
+      "tarih": "2024-01-05",
+      "tutar": 5900,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 026 - Onarım",
+      "plaka": "34 DNM 026",
+      "tarih": "2024-09-26",
+      "tutar": 9700,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 027 - Kaza",
+      "plaka": "06 ORN 027",
+      "tarih": "2026-07-07",
+      "tutar": 2850,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 028 - Lastik",
+      "plaka": "35 TST 028",
+      "tarih": "2025-05-16",
+      "tutar": 9400,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 029 - Kaza",
+      "plaka": "16 DNM 029",
+      "tarih": "2024-11-08",
+      "tutar": 10300,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 030 - Kaza",
+      "plaka": "07 ORN 030",
+      "tarih": "2024-08-27",
+      "tutar": 11900,
+      "tur": "Kaza",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 031 - Lastik",
+      "plaka": "34 TST 031",
+      "tarih": "2025-08-05",
+      "tutar": 10500,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 032 - Lastik",
+      "plaka": "06 DNM 032",
+      "tarih": "2024-03-27",
+      "tutar": 8500,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 033 - Lastik",
+      "plaka": "35 ORN 033",
+      "tarih": "2024-11-26",
+      "tutar": 6950,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 034 - Kaza",
+      "plaka": "16 TST 034",
+      "tarih": "2025-05-16",
+      "tutar": 1200,
+      "tur": "Kaza",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 035 - Kaza",
+      "plaka": "07 DNM 035",
+      "tarih": "2025-06-14",
+      "tutar": 5250,
+      "tur": "Kaza",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 036 - Bakım",
+      "plaka": "34 ORN 036",
+      "tarih": "2025-07-06",
+      "tutar": 8250,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 037 - Lastik",
+      "plaka": "06 TST 037",
+      "tarih": "2024-04-20",
+      "tutar": 7750,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 038 - Onarım",
+      "plaka": "35 DNM 038",
+      "tarih": "2024-06-16",
+      "tutar": 450,
+      "tur": "Onarım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 039 - Kaza",
+      "plaka": "16 ORN 039",
+      "tarih": "2026-05-14",
+      "tutar": 6200,
+      "tur": "Kaza",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 040 - Lastik",
+      "plaka": "07 TST 040",
+      "tarih": "2024-05-26",
+      "tutar": 4650,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 041 - Bakım",
+      "plaka": "34 DNM 041",
+      "tarih": "2025-02-14",
+      "tutar": 11350,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 042 - Bakım",
+      "plaka": "06 ORN 042",
+      "tarih": "2026-08-03",
+      "tutar": 9450,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 043 - Kaza",
+      "plaka": "35 TST 043",
+      "tarih": "2025-01-26",
+      "tutar": 4150,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 044 - Bakım",
+      "plaka": "16 DNM 044",
+      "tarih": "2026-01-02",
+      "tutar": 8750,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 045 - Lastik",
+      "plaka": "07 ORN 045",
+      "tarih": "2026-10-25",
+      "tutar": 3100,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 046 - Kaza",
+      "plaka": "34 TST 046",
+      "tarih": "2026-02-20",
+      "tutar": 5650,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 047 - Onarım",
+      "plaka": "06 DNM 047",
+      "tarih": "2024-03-30",
+      "tutar": 3550,
+      "tur": "Onarım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 048 - Bakım",
+      "plaka": "35 ORN 048",
+      "tarih": "2026-04-30",
+      "tutar": 8300,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 049 - Kaza",
+      "plaka": "16 TST 049",
+      "tarih": "2024-01-08",
+      "tutar": 5300,
+      "tur": "Kaza",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 050 - Bakım",
+      "plaka": "07 DNM 050",
+      "tarih": "2026-08-07",
+      "tutar": 6100,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 051 - Kaza",
+      "plaka": "34 ORN 051",
+      "tarih": "2025-01-05",
+      "tutar": 1000,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 052 - Bakım",
+      "plaka": "06 TST 052",
+      "tarih": "2026-08-02",
+      "tutar": 9400,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 053 - Onarım",
+      "plaka": "35 DNM 053",
+      "tarih": "2025-09-05",
+      "tutar": 1300,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 054 - Onarım",
+      "plaka": "16 ORN 054",
+      "tarih": "2025-01-07",
+      "tutar": 6600,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 055 - Onarım",
+      "plaka": "07 TST 055",
+      "tarih": "2024-01-18",
+      "tutar": 7950,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 056 - Lastik",
+      "plaka": "34 DNM 056",
+      "tarih": "2025-04-26",
+      "tutar": 7250,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 057 - Kaza",
+      "plaka": "06 ORN 057",
+      "tarih": "2025-09-25",
+      "tutar": 7400,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 058 - Bakım",
+      "plaka": "35 TST 058",
+      "tarih": "2024-11-03",
+      "tutar": 7550,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 059 - Onarım",
+      "plaka": "16 DNM 059",
+      "tarih": "2025-06-20",
+      "tutar": 4900,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 060 - Bakım",
+      "plaka": "07 ORN 060",
+      "tarih": "2025-07-29",
+      "tutar": 6950,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 061 - Kaza",
+      "plaka": "34 TST 001",
+      "tarih": "2024-04-25",
+      "tutar": 4500,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 062 - Bakım",
+      "plaka": "06 DNM 002",
+      "tarih": "2025-02-02",
+      "tutar": 6900,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 063 - Bakım",
+      "plaka": "35 ORN 003",
+      "tarih": "2026-11-27",
+      "tutar": 10550,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 064 - Onarım",
+      "plaka": "16 TST 004",
+      "tarih": "2024-06-23",
+      "tutar": 6700,
+      "tur": "Onarım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 065 - Lastik",
+      "plaka": "07 DNM 005",
+      "tarih": "2025-11-10",
+      "tutar": 8450,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 066 - Bakım",
+      "plaka": "34 ORN 006",
+      "tarih": "2024-11-09",
+      "tutar": 11100,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 067 - Bakım",
+      "plaka": "06 TST 007",
+      "tarih": "2026-06-08",
+      "tutar": 6300,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 068 - Onarım",
+      "plaka": "35 DNM 008",
+      "tarih": "2026-02-12",
+      "tutar": 1250,
+      "tur": "Onarım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 069 - Onarım",
+      "plaka": "16 ORN 009",
+      "tarih": "2025-09-29",
+      "tutar": 9850,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 070 - Lastik",
+      "plaka": "07 TST 010",
+      "tarih": "2024-02-02",
+      "tutar": 9250,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 071 - Kaza",
+      "plaka": "34 DNM 011",
+      "tarih": "2025-09-28",
+      "tutar": 11300,
+      "tur": "Kaza",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 072 - Kaza",
+      "plaka": "06 ORN 012",
+      "tarih": "2024-03-15",
+      "tutar": 4950,
+      "tur": "Kaza",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 073 - Onarım",
+      "plaka": "35 TST 013",
+      "tarih": "2025-06-25",
+      "tutar": 8850,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 074 - Onarım",
+      "plaka": "16 DNM 014",
+      "tarih": "2024-03-05",
+      "tutar": 2100,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 075 - Lastik",
+      "plaka": "07 ORN 015",
+      "tarih": "2026-09-13",
+      "tutar": 7400,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 076 - Bakım",
+      "plaka": "34 TST 016",
+      "tarih": "2025-11-04",
+      "tutar": 6200,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 077 - Bakım",
+      "plaka": "06 DNM 017",
+      "tarih": "2025-09-18",
+      "tutar": 10450,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 078 - Kaza",
+      "plaka": "35 ORN 018",
+      "tarih": "2024-09-23",
+      "tutar": 2400,
+      "tur": "Kaza",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 079 - Kaza",
+      "plaka": "16 TST 019",
+      "tarih": "2024-08-27",
+      "tutar": 3650,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 080 - Kaza",
+      "plaka": "07 DNM 020",
+      "tarih": "2025-04-02",
+      "tutar": 10650,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 081 - Kaza",
+      "plaka": "34 ORN 021",
+      "tarih": "2025-02-24",
+      "tutar": 1050,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 082 - Bakım",
+      "plaka": "06 TST 022",
+      "tarih": "2024-05-16",
+      "tutar": 9100,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 083 - Lastik",
+      "plaka": "35 DNM 023",
+      "tarih": "2025-07-11",
+      "tutar": 3200,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 084 - Lastik",
+      "plaka": "16 ORN 024",
+      "tarih": "2026-10-20",
+      "tutar": 8750,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 085 - Bakım",
+      "plaka": "07 TST 025",
+      "tarih": "2025-09-22",
+      "tutar": 11900,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 086 - Onarım",
+      "plaka": "34 DNM 026",
+      "tarih": "2026-09-16",
+      "tutar": 7950,
+      "tur": "Onarım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 087 - Bakım",
+      "plaka": "06 ORN 027",
+      "tarih": "2024-07-03",
+      "tutar": 4850,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 088 - Onarım",
+      "plaka": "35 TST 028",
+      "tarih": "2025-01-28",
+      "tutar": 8000,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 089 - Onarım",
+      "plaka": "16 DNM 029",
+      "tarih": "2024-05-19",
+      "tutar": 2650,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 090 - Kaza",
+      "plaka": "07 ORN 030",
+      "tarih": "2026-03-08",
+      "tutar": 6600,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 091 - Kaza",
+      "plaka": "34 TST 031",
+      "tarih": "2024-09-19",
+      "tutar": 7350,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 092 - Onarım",
+      "plaka": "06 DNM 032",
+      "tarih": "2025-02-17",
+      "tutar": 5150,
+      "tur": "Onarım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 093 - Onarım",
+      "plaka": "35 ORN 033",
+      "tarih": "2025-04-08",
+      "tutar": 5550,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 094 - Bakım",
+      "plaka": "16 TST 034",
+      "tarih": "2025-05-02",
+      "tutar": 9800,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 095 - Onarım",
+      "plaka": "07 DNM 035",
+      "tarih": "2025-11-20",
+      "tutar": 1250,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 096 - Onarım",
+      "plaka": "34 ORN 036",
+      "tarih": "2025-06-21",
+      "tutar": 11050,
+      "tur": "Onarım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 097 - Bakım",
+      "plaka": "06 TST 037",
+      "tarih": "2024-10-08",
+      "tutar": 10800,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 098 - Kaza",
+      "plaka": "35 DNM 038",
+      "tarih": "2026-11-07",
+      "tutar": 7150,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 099 - Lastik",
+      "plaka": "16 ORN 039",
+      "tarih": "2025-06-10",
+      "tutar": 5500,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 100 - Onarım",
+      "plaka": "07 TST 040",
+      "tarih": "2025-03-07",
+      "tutar": 8150,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 101 - Onarım",
+      "plaka": "34 DNM 041",
+      "tarih": "2024-02-24",
+      "tutar": 4150,
+      "tur": "Onarım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 102 - Onarım",
+      "plaka": "06 ORN 042",
+      "tarih": "2025-11-26",
+      "tutar": 2650,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 103 - Bakım",
+      "plaka": "35 TST 043",
+      "tarih": "2024-08-16",
+      "tutar": 9250,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 104 - Lastik",
+      "plaka": "16 DNM 044",
+      "tarih": "2026-07-25",
+      "tutar": 6650,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 105 - Onarım",
+      "plaka": "07 ORN 045",
+      "tarih": "2024-06-29",
+      "tutar": 7450,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 106 - Bakım",
+      "plaka": "34 TST 046",
+      "tarih": "2024-11-20",
+      "tutar": 600,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 107 - Kaza",
+      "plaka": "06 DNM 047",
+      "tarih": "2024-05-18",
+      "tutar": 11950,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 108 - Lastik",
+      "plaka": "35 ORN 048",
+      "tarih": "2024-08-31",
+      "tutar": 2550,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 109 - Lastik",
+      "plaka": "16 TST 049",
+      "tarih": "2026-10-05",
+      "tutar": 10650,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 110 - Bakım",
+      "plaka": "07 DNM 050",
+      "tarih": "2026-09-25",
+      "tutar": 5050,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 111 - Kaza",
+      "plaka": "34 ORN 051",
+      "tarih": "2025-09-09",
+      "tutar": 4350,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 112 - Bakım",
+      "plaka": "06 TST 052",
+      "tarih": "2024-02-10",
+      "tutar": 10100,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 113 - Lastik",
+      "plaka": "35 DNM 053",
+      "tarih": "2025-04-03",
+      "tutar": 3450,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 114 - Kaza",
+      "plaka": "16 ORN 054",
+      "tarih": "2024-03-13",
+      "tutar": 800,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 115 - Kaza",
+      "plaka": "07 TST 055",
+      "tarih": "2024-08-04",
+      "tutar": 6700,
+      "tur": "Kaza",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 116 - Bakım",
+      "plaka": "34 DNM 056",
+      "tarih": "2026-04-19",
+      "tutar": 950,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 117 - Onarım",
+      "plaka": "06 ORN 057",
+      "tarih": "2025-11-12",
+      "tutar": 2400,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 118 - Onarım",
+      "plaka": "35 TST 058",
+      "tarih": "2024-07-22",
+      "tutar": 3450,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 119 - Bakım",
+      "plaka": "16 DNM 059",
+      "tarih": "2024-11-24",
+      "tutar": 1400,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 120 - Bakım",
+      "plaka": "07 ORN 060",
+      "tarih": "2026-09-13",
+      "tutar": 9950,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 121 - Bakım",
+      "plaka": "34 TST 001",
+      "tarih": "2025-03-11",
+      "tutar": 4000,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 122 - Onarım",
+      "plaka": "06 DNM 002",
+      "tarih": "2025-10-27",
+      "tutar": 9900,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 123 - Bakım",
+      "plaka": "35 ORN 003",
+      "tarih": "2024-03-01",
+      "tutar": 11400,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 124 - Lastik",
+      "plaka": "16 TST 004",
+      "tarih": "2026-10-27",
+      "tutar": 650,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 125 - Kaza",
+      "plaka": "07 DNM 005",
+      "tarih": "2026-07-15",
+      "tutar": 1350,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 126 - Lastik",
+      "plaka": "34 ORN 006",
+      "tarih": "2024-02-11",
+      "tutar": 2350,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 127 - Lastik",
+      "plaka": "06 TST 007",
+      "tarih": "2024-04-23",
+      "tutar": 2850,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 128 - Onarım",
+      "plaka": "35 DNM 008",
+      "tarih": "2025-06-08",
+      "tutar": 1350,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 129 - Bakım",
+      "plaka": "16 ORN 009",
+      "tarih": "2025-02-12",
+      "tutar": 1200,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 130 - Lastik",
+      "plaka": "07 TST 010",
+      "tarih": "2024-09-29",
+      "tutar": 7400,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 131 - Lastik",
+      "plaka": "34 DNM 011",
+      "tarih": "2024-08-02",
+      "tutar": 10150,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 132 - Lastik",
+      "plaka": "06 ORN 012",
+      "tarih": "2026-01-22",
+      "tutar": 5850,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 133 - Onarım",
+      "plaka": "35 TST 013",
+      "tarih": "2025-01-19",
+      "tutar": 6950,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 134 - Bakım",
+      "plaka": "16 DNM 014",
+      "tarih": "2025-06-24",
+      "tutar": 4700,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 135 - Lastik",
+      "plaka": "07 ORN 015",
+      "tarih": "2024-05-23",
+      "tutar": 3600,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 136 - Lastik",
+      "plaka": "34 TST 016",
+      "tarih": "2024-03-29",
+      "tutar": 2750,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 137 - Lastik",
+      "plaka": "06 DNM 017",
+      "tarih": "2026-04-07",
+      "tutar": 6050,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 138 - Onarım",
+      "plaka": "35 ORN 018",
+      "tarih": "2025-09-07",
+      "tutar": 10250,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 139 - Onarım",
+      "plaka": "16 TST 019",
+      "tarih": "2024-02-10",
+      "tutar": 9100,
+      "tur": "Onarım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 140 - Kaza",
+      "plaka": "07 DNM 020",
+      "tarih": "2025-02-28",
+      "tutar": 9200,
+      "tur": "Kaza",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 141 - Onarım",
+      "plaka": "34 ORN 021",
+      "tarih": "2026-03-22",
+      "tutar": 2950,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 142 - Kaza",
+      "plaka": "06 TST 022",
+      "tarih": "2024-04-29",
+      "tutar": 4950,
+      "tur": "Kaza",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 143 - Onarım",
+      "plaka": "35 DNM 023",
+      "tarih": "2026-01-29",
+      "tutar": 5800,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 144 - Bakım",
+      "plaka": "16 ORN 024",
+      "tarih": "2025-01-18",
+      "tutar": 8650,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 145 - Lastik",
+      "plaka": "07 TST 025",
+      "tarih": "2025-09-22",
+      "tutar": 1000,
+      "tur": "Lastik",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 146 - Bakım",
+      "plaka": "34 DNM 026",
+      "tarih": "2026-03-26",
+      "tutar": 4600,
+      "tur": "Bakım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 147 - Onarım",
+      "plaka": "06 ORN 027",
+      "tarih": "2026-11-07",
+      "tutar": 11950,
+      "tur": "Onarım",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 148 - Lastik",
+      "plaka": "35 TST 028",
+      "tarih": "2024-04-11",
+      "tutar": 3850,
+      "tur": "Lastik",
+      "tamamlandi": true
+    },
+    {
+      "baslik": "Servis 149 - Bakım",
+      "plaka": "16 DNM 029",
+      "tarih": "2025-06-28",
+      "tutar": 3500,
+      "tur": "Bakım",
+      "tamamlandi": false
+    },
+    {
+      "baslik": "Servis 150 - Onarım",
+      "plaka": "07 ORN 030",
+      "tarih": "2025-08-21",
+      "tutar": 6300,
+      "tur": "Onarım",
+      "tamamlandi": true
+    }
+  ]
+}

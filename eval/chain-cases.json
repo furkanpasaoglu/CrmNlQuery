@@ -1,0 +1,294 @@
+[
+  {
+    "id": "A-firsat-tarih-firma-sehir",
+    "note": "Fırsatlar (>50k) -> kapanış tarihi daralt -> firmalara geç -> şehir daralt. Lab: renewal 9,1,3,4,10,5; sonra 3 ve 10; firmalar Brightwave (London) ve Sakura (Osaka).",
+    "turns": [
+      {
+        "id": "A1",
+        "question": "Tahmini geliri 50 binin üstündeki fırsatları getir",
+        "answers": {
+          "columns": "default"
+        },
+        "expect": {"finalKind": "answer", "entity": "opportunity", "reference": {"fetchXml": "<fetch><entity name='opportunity'><attribute name='name'/><filter><condition attribute='estimatedvalue' operator='gt' value='50000'/></filter></entity></fetch>"}}
+      },
+      {
+        "id": "A2",
+        "question": "Bunlardan kapanış tarihi 2026-12-01'den önce olanlar",
+        "expect": {"finalKind": "answer", "entity": "opportunity", "followUp": true,"reference": {"fetchXml": "<fetch><entity name='opportunity'><attribute name='name'/><filter><condition attribute='estimatedvalue' operator='gt' value='50000'/><condition attribute='estimatedclosedate' operator='lt' value='2026-12-01'/></filter></entity></fetch>"}}
+      },
+      {
+        "id": "A3",
+        "question": "Bu fırsatların firmalarını getir",
+        "answers": {
+          "columns": "default"
+        },
+        "expect": {"finalKind": "answer", "entity": "account", "followUp": true,"reference": {"fetchXml": "<fetch distinct='true'><entity name='account'><attribute name='name'/><link-entity name='opportunity' from='customerid' to='accountid' link-type='inner' alias='lo'><filter><condition attribute='estimatedvalue' operator='gt' value='50000'/><condition attribute='estimatedclosedate' operator='lt' value='2026-12-01'/></filter></link-entity></entity></fetch>"}}
+      },
+      {
+        "id": "A4",
+        "question": "Bunlardan London'dakiler",
+        "expect": {"finalKind": "answer", "entity": "account", "followUp": true,"reference": {"fetchXml": "<fetch distinct='true'><entity name='account'><attribute name='name'/><filter><condition attribute='address1_city' operator='eq' value='London'/></filter><link-entity name='opportunity' from='customerid' to='accountid' link-type='inner' alias='lo'><filter><condition attribute='estimatedvalue' operator='gt' value='50000'/><condition attribute='estimatedclosedate' operator='lt' value='2026-12-01'/></filter></link-entity></entity></fetch>"}}
+      }
+    ]
+  },
+  {
+    "id": "B-firma-sozlesme-satir",
+    "note": "Örnekova -> contractları -> satırları (varlık değiştirir) -> Line A daralt. Lab: 1 contract, 2 satır, 1 satır.",
+    "turns": [
+      {
+        "id": "B1",
+        "question": "Örnekova şirketine ait contractları getir",
+        "answers": {
+          "columns": "default"
+        },
+        "expect": {
+          "finalKind": "answer",
+          "entity": "contract",
+          "rowCount": 1,
+          "mustContain": [
+            "Örnekova Support Contract"
+          ]
+        }
+      },
+      {
+        "id": "B2",
+        "question": "Bu contractların satırlarını getir",
+        "answers": {
+          "columns": "default"
+        },
+        "expect": {
+          "finalKind": "answer",
+          "entity": "contractdetail",
+          "rowCount": 2,
+          "mustContain": [
+            "Örnekova Support Line A",
+            "Örnekova Support Line B"
+          ],
+          "followUp": true
+        }
+      },
+      {
+        "id": "B3",
+        "question": "Bunlardan sadece Line A olanları",
+        "expect": {
+          "finalKind": "answer",
+          "entity": "contractdetail",
+          "rowCount": 1,
+          "mustContain": [
+            "Line A"
+          ],
+          "mustNotContain": [
+            "Line B"
+          ],
+          "followUp": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "C-hesap-acik-firsat-tutar",
+    "note": "Hesaplar (>1000 çalışan: 10) -> açık fırsatları (6; Brightwave ve Alpine fırsatları YOK) -> tutar daralt (3: renewal 9, 1, 10).",
+    "turns": [
+      {
+        "id": "C1",
+        "question": "Çalışan sayısı 1000'den fazla hesapları getir",
+        "answers": {
+          "columns": "default"
+        },
+        "expect": {
+          "finalKind": "answer",
+          "entity": "account",
+          "rowCount": 10
+        }
+      },
+      {
+        "id": "C2",
+        "question": "Bu hesapların açık fırsatlarını getir",
+        "answers": {
+          "columns": "default"
+        },
+        "expect": {
+          "finalKind": "answer",
+          "entity": "opportunity",
+          "rowCount": 6,
+          "mustNotContain": [
+            "renewal 3",
+            "renewal 4",
+            "renewal 6",
+            "renewal 8"
+          ],
+          "followUp": true
+        }
+      },
+      {
+        "id": "C3",
+        "question": "Bunlardan tahmini geliri 60 binin üstü olanlar",
+        "expect": {
+          "finalKind": "answer",
+          "entity": "opportunity",
+          "rowCount": 3,
+          "mustNotContain": [
+            "renewal 2",
+            "renewal 5",
+            "renewal 7"
+          ],
+          "followUp": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "D-zincir-ortasinda-yeni-soru",
+    "note": "Atıfsız yeni soru önceki bağlamı KULLANMAMALI: ürün listesinden sonra Örnekova'nın contractları (devam sayılmamalı).",
+    "turns": [
+      {
+        "id": "D1",
+        "question": "Bütün productları getir",
+        "answers": {
+          "columns": "default"
+        },
+        "expect": {
+          "finalKind": "answer",
+          "entity": "product",
+          "minRows": 15
+        }
+      },
+      {
+        "id": "D2",
+        "question": "Örnekova şirketine ait contractları getir",
+        "answers": {
+          "columns": "default"
+        },
+        "expect": {
+          "finalKind": "answer",
+          "entity": "contract",
+          "rowCount": 1,
+          "mustContain": [
+            "Örnekova Support Contract"
+          ],
+          "followUp": false
+        }
+      }
+    ]
+  },
+  {
+    "id": "E-ayni-varlik-daraltma",
+    "note": "Aynı varlıkta art arda daraltma; sütunlar korunur (productid, name).",
+    "turns": [
+      {
+        "id": "E1",
+        "question": "Productları getir, sütun olarak id, name getir",
+        "expect": {
+          "finalKind": "answer",
+          "entity": "product",
+          "columns": [
+            "productid",
+            "name"
+          ],
+          "minRows": 15
+        }
+      },
+      {
+        "id": "E2",
+        "question": "Bunlardan adında Machine geçenler",
+        "expect": {
+          "finalKind": "answer",
+          "entity": "product",
+          "columns": [
+            "productid",
+            "name"
+          ],
+          "rowCount": 2,
+          "mustContain": [
+            "Washing Machine",
+            "Espresso Machine"
+          ],
+          "followUp": true
+        }
+      },
+      {
+        "id": "E3",
+        "question": "Peki Espresso olanı",
+        "expect": {
+          "finalKind": "answer",
+          "entity": "product",
+          "columns": [
+            "productid",
+            "name"
+          ],
+          "rowCount": 1,
+          "mustContain": [
+            "Espresso Machine"
+          ],
+          "followUp": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "F-english",
+    "note": "İngilizce zincir: >2000 çalışan (Nordbeispiel, Pacific, Coastal, Ironclad, Sakura) -> Sydney veya Osaka (Coastal, Sakura).",
+    "turns": [
+      {
+        "id": "F1",
+        "question": "Show accounts with more than 2000 employees",
+        "answers": {
+          "columns": "default"
+        },
+        "expect": {
+          "finalKind": "answer",
+          "entity": "account",
+          "rowCount": 5
+        }
+      },
+      {
+        "id": "F2",
+        "question": "Which of them are in Sydney or Osaka?",
+        "expect": {
+          "finalKind": "answer",
+          "entity": "account",
+          "rowCount": 2,
+          "mustContain": [
+            "Coastal Home Furnishings",
+            "Sakura Home Tech KK"
+          ],
+          "followUp": true
+        }
+      }
+    ]
+  },
+  {
+    "id": "G-yok-kosulu-deneysel",
+    "note": "DENEYSEL (the author's 'hiç aranmamış / siparişi olmayan' örneklerine benzer 'yok' koşulu): >1000 çalışanlı hesaplardan hiç fırsatı OLMAYANLAR = Summit, Nordbeispiel, Ironclad, Maple Leaf (4). FetchXML 9.0'da 'not any'/dış birleştirme gerektirir.",
+    "turns": [
+      {
+        "id": "G1",
+        "question": "Çalışan sayısı 1000'den fazla hesapları getir",
+        "answers": {
+          "columns": "default"
+        },
+        "expect": {
+          "finalKind": "answer",
+          "entity": "account",
+          "rowCount": 10
+        }
+      },
+      {
+        "id": "G2",
+        "question": "Bunlardan hiç fırsatı olmayanlar",
+        "expect": {
+          "finalKind": "answer",
+          "entity": "account",
+          "rowCount": 4,
+          "mustContain": [
+            "Summit Tire & Auto Supply",
+            "Nordbeispiel Insurance AG",
+            "Ironclad Fleet Services",
+            "Maple Leaf Cold Chain"
+          ],
+          "followUp": true
+        }
+      }
+    ]
+  }
+]

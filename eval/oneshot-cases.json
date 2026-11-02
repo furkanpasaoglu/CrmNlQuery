@@ -1,0 +1,100 @@
+[
+  {
+    "id": "o01-hesap-firsati-olmayan",
+    "question": "Çalışan sayısı 1000'den fazla olup hiç fırsatı olmayan hesapları getir",
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Zincir G'nin tek cümlesi: Summit, Nordbeispiel, Ironclad, Maple Leaf. Referans sorgu (27 Eki 2026): eski sabit sayı (4) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "reference": {
+        "fetchXml": "<fetch><entity name='account'><attribute name='name'/><link-entity name='opportunity' from='customerid' to='accountid' link-type='outer' alias='o'/><filter><condition attribute='numberofemployees' operator='gt' value='1000'/><condition entityname='o' attribute='opportunityid' operator='null'/></filter></entity></fetch>"
+      }
+    }
+  },
+  {
+    "id": "o02-firsat-tutar-tarih-firma",
+    "question": "Tahmini geliri 50 binin üstünde olan ve kapanış tarihi 2026-12-01'den önce olan fırsatların firmalarını getir",
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Zincir A'nın tek cümlesi: renewal 3 (Brightwave) ve renewal 10 (Sakura) firmaları.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "reference": {
+        "fetchXml": "<fetch distinct='true'><entity name='account'><attribute name='name'/><link-entity name='opportunity' from='customerid' to='accountid' link-type='inner' alias='lo'><filter><condition attribute='estimatedvalue' operator='gt' value='50000'/><condition attribute='estimatedclosedate' operator='lt' value='2026-12-01'/></filter></link-entity></entity></fetch>"
+      }
+    }
+  },
+  {
+    "id": "o03-hesaptan-firsata-tutar",
+    "question": "Çalışan sayısı 1000'den fazla olan hesapların tahmini geliri 60 binin üstündeki açık fırsatlarını getir",
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Zincir C'nin tek cümlesi: renewal 9, 1, 10.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "opportunity",
+      "rowCount": 3,
+      "mustNotContain": [
+        "renewal 2",
+        "renewal 5",
+        "renewal 7",
+        "renewal 3"
+      ]
+    }
+  },
+  {
+    "id": "o04-sozlesme-satir-line-a",
+    "question": "Örnekova şirketine ait contractların satırlarından sadece Line A olanları getir",
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Zincir B'nin tek cümlesi.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contractdetail",
+      "rowCount": 1,
+      "mustContain": [
+        "Line A"
+      ],
+      "mustNotContain": [
+        "Line B"
+      ]
+    }
+  },
+  {
+    "id": "o05-calisan-ve-sehir",
+    "question": "Çalışan sayısı 2000'den fazla olup Sydney veya Osaka'daki hesapları getir",
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Zincir F'nin tek cümlesi: Coastal Home Furnishings, Sakura Home Tech KK. Referans sorgu (27 Eki 2026): eski sabit sayı (2) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "reference": {
+        "fetchXml": "<fetch><entity name='account'><attribute name='name'/><filter type='and'><condition attribute='numberofemployees' operator='gt' value='2000'/><filter type='or'><condition attribute='address1_city' operator='eq' value='Sydney'/><condition attribute='address1_city' operator='eq' value='Osaka'/></filter></filter></entity></fetch>"
+      }
+    }
+  },
+  {
+    "id": "o06-uzun-uc-kosul",
+    "question": "Çalışan sayısı 1000'den fazla olan, London dışında bir şehirde bulunan ve hiç fırsatı olmayan hesapların adlarını ve şehirlerini getir",
+    "answers": {
+      "columns": "custom:name, address1_city"
+    },
+    "note": "Üç koşul tek cümlede: 1000+ çalışan, London dışı, fırsatsız = Summit (Denver), Nordbeispiel (Zurich), Ironclad (Dallas), Maple Leaf (Vancouver).",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "reference": {
+        "fetchXml": "<fetch><entity name='account'><attribute name='name'/><attribute name='address1_city'/><link-entity name='opportunity' from='customerid' to='accountid' link-type='outer' alias='o'/><filter><condition attribute='numberofemployees' operator='gt' value='1000'/><condition attribute='address1_city' operator='ne' value='London'/><condition entityname='o' attribute='opportunityid' operator='null'/></filter></entity></fetch>"
+      }
+    }
+  }
+]

@@ -1,0 +1,54 @@
+[
+  { "id": "r01-platin-tr", "question": "Platin müşterilerimizi getir",
+    "answers": { "columns": "default" },
+    "note": "Güncel tanım: çalışan > 3000. Eski tanım (> 2000) belgede 'geçersiz' diye duruyor: 5 değil 2 hesap gelmeli.",
+    "expect": { "finalKind": "answer", "entity": "account", "rowCount": 2, "mustContain": ["Nordbeispiel Insurance AG", "Ironclad Fleet Services"] } },
+
+  { "id": "r02-platinum-en", "question": "Show me the Platinum customers",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "account", "rowCount": 2, "mustContain": ["Nordbeispiel Insurance AG", "Ironclad Fleet Services"] } },
+
+  { "id": "r03-altin", "question": "Altın segmentteki müşterileri listele",
+    "answers": { "columns": "default" },
+    "note": "Altın = 1000-3000 (dahil): 8 hesap. Eski tanım (500-2000) farklı sonuç verirdi.",
+    "expect": { "finalKind": "answer", "entity": "account", "rowCount": 8, "mustContain": ["Coastal Home Furnishings", "Harbor Logistics GmbH"], "mustNotContain": ["Nordbeispiel", "Ironclad", "Brightwave"] } },
+
+  { "id": "r04-gumus", "question": "Gümüş müşteri listesi",
+    "answers": { "columns": "default" },
+    "note": "Gümüş = 250-999: Brightwave (519), Alpine (478), Oakridge (666).",
+    "expect": {"finalKind": "answer", "entity": "account", "reference": {"fetchXml": "<fetch><entity name='account'><attribute name='name'/><filter><condition attribute='numberofemployees' operator='ge' value='250'/><condition attribute='numberofemployees' operator='lt' value='1000'/></filter></entity></fetch>"}} },
+
+  { "id": "r05-kuzey-bolge", "question": "Kuzey bölgesindeki hesapları getir",
+    "answers": { "columns": "default" },
+    "note": "Kuzey = Hamburg, Amsterdam, Dublin, Manchester, London (adres şehri). Adında Hamburg geçen ama şehri boş hesap gelmemeli.",
+    "expect": { "finalKind": "answer", "entity": "account", "rowCount": 5, "mustContain": ["Harbor Logistics GmbH", "Lumina Retail Group", "Vertest Medical Supplies", "Oakridge Hardware Co", "Brightwave Appliances Ltd"], "mustNotContain": ["Hamburg Logistik"] } },
+
+  { "id": "r06-south-region-en", "question": "Show me the accounts in our Southern region",
+    "answers": { "columns": "default" },
+    "note": "Güney = Madrid, Vienna, Zurich.",
+    "expect": { "finalKind": "answer", "entity": "account", "rowCount": 3, "mustContain": ["Iberia Mobility S.L.", "Alpine Pharma Distribution", "Nordbeispiel Insurance AG"] } },
+
+  { "id": "r07-apac", "question": "Asya-Pasifik bölgesindeki müşteriler",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "account", "rowCount": 2, "mustContain": ["Coastal Home Furnishings", "Sakura Home Tech KK"] } },
+
+  { "id": "r08-a-sinifi", "question": "A sınıfı fırsatları getir",
+    "answers": { "columns": "default" },
+    "note": "A >= 90.000: 96k ve 94k.",
+    "expect": {"finalKind": "answer", "entity": "opportunity", "reference": {"fetchXml": "<fetch><entity name='opportunity'><attribute name='name'/><filter><condition attribute='estimatedvalue' operator='ge' value='90000'/></filter></entity></fetch>"}} },
+
+  { "id": "r09-b-sinifi", "question": "B sınıfı fırsatlar",
+    "answers": { "columns": "default" },
+    "note": "B = 50.000-89.999: 79k, 74k, 62k, 53k.",
+    "expect": { "finalKind": "answer", "entity": "opportunity", "rowCount": 4, "mustNotContain": ["renewal 9", "renewal 8"] } },
+
+  { "id": "r10-eski-terim-buyuk-firsat", "question": "Büyük fırsatları getir",
+    "answers": { "columns": "default" },
+    "note": "Belgede: 'büyük fırsat' ifadesi artık A sınıfı olarak okunur (>= 90.000): 2 fırsat.",
+    "expect": {"finalKind": "answer", "entity": "opportunity", "reference": {"fetchXml": "<fetch><entity name='opportunity'><attribute name='name'/><filter><condition attribute='estimatedvalue' operator='ge' value='90000'/></filter></entity></fetch>"}} },
+
+  { "id": "r11-unrelated", "question": "Bütün productları getir",
+    "answers": { "columns": "default" },
+    "note": "Uzun, ilgisiz belgelerin içinde ürün sorusu bozulmamalı.",
+    "expect": { "firstKind": "question", "firstKeyPrefix": "columns", "finalKind": "answer", "entity": "product", "minRows": 15 } }
+]

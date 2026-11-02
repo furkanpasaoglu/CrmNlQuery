@@ -1,0 +1,596 @@
+[
+  {
+    "id": "c01-all-products",
+    "question": "Bütün productları getir",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "firstKind": "question",
+      "firstKeyPrefix": "columns",
+      "finalKind": "answer",
+      "entity": "product",
+      "minRows": 15
+    }
+  },
+  {
+    "id": "c02-products-id-name",
+    "question": "Productları getir, sütun olarak id, name getir",
+    "expect": {
+      "firstKind": "answer",
+      "finalKind": "answer",
+      "entity": "product",
+      "columns": [
+        "productid",
+        "name"
+      ],
+      "minRows": 15
+    }
+  },
+  {
+    "id": "c03-ornekova-contractlines",
+    "question": "Örnekova şirketine bağlı contractline'ları getir",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contractdetail",
+      "mustContain": [
+        "Örnekova Support Line A",
+        "Örnekova Support Line B"
+      ],
+      "mustNotContain": [
+        "Denema Line A",
+        "ZKV Line A"
+      ]
+    }
+  },
+  {
+    "id": "c04-denema-and-zkv-contracts",
+    "question": "Denema Sigorta A.Ş. ve ZKV Örnek Sistemleri A.Ş. şirketlerine ait contractları getir",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contract",
+      "mustContain": [
+        "Denema Annual Contract",
+        "ZKV Annual Contract"
+      ],
+      "mustNotContain": [
+        "Örnekova Support Contract",
+        "Denema Sağlık Contract"
+      ]
+    }
+  },
+  {
+    "id": "c05-ambiguous-denema",
+    "question": "Denema'nın contractlarını getir",
+    "pickChoice": 0,
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "firstKind": "question",
+      "firstKeyPrefix": "resolve:",
+      "finalKind": "answer",
+      "entity": "contract",
+      "minRows": 1
+    }
+  },
+  {
+    "id": "c06-unknown-company",
+    "question": "Zorlu Holding şirketinin contractlarını getir",
+    "expect": {
+      "finalKind": "failure"
+    }
+  },
+  {
+    "id": "c07-unknown-column",
+    "question": "Productları getir, sütun olarak productname getir",
+    "expect": {
+      "firstKind": "question",
+      "firstKeyPrefix": "columns",
+      "finalKind": "question"
+    }
+  },
+  {
+    "id": "c08-count-accounts",
+    "question": "How many accounts do we have?",
+    "expect": {
+      "firstKind": "answer",
+      "finalKind": "answer",
+      "entity": "account",
+      "reference": {
+        "fetchXml": "<fetch aggregate='true'><entity name='account'><attribute name='accountid' aggregate='count' alias='n'/></entity></fetch>",
+        "compare": {
+          "columns": "last"
+        }
+      }
+    },
+    "note": "Referans sorgu (27 Eki 2026): eski sabit sayı (1) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir."
+  },
+  {
+    "id": "c09-accounts-in-hamburg",
+    "question": "Hamburg'daki şirketleri (accounts) getir",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "mustContain": [
+        "Harbor Logistics GmbH"
+      ],
+      "mustNotContain": [
+        "Alpine Pharma Distribution"
+      ]
+    }
+  },
+  {
+    "id": "c10-retired-products",
+    "question": "Kullanımdan kaldırılmış (retired) productları getir",
+    "answers": {
+      "columns": "name"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "product",
+      "reference": {
+        "fetchXml": "<fetch><entity name='product'><attribute name='name'/><filter><condition attribute='statecode' operator='eq' value='1'/></filter></entity></fetch>"
+      }
+    },
+    "note": "Lab'da kullanımdan kaldırılmış ürün yok; doğru cevap boş tablo (15 Eki 2026'da CRM'den doğrulandı). Referans sorgu (27 Eki 2026): eski sabit sayı (0) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir."
+  },
+  {
+    "id": "c11-contacts-of-alpine",
+    "question": "Alpine Pharma Distribution şirketinin contactlarını getir",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contact",
+      "rowCount": 2
+    }
+  },
+  {
+    "id": "c12-opportunity-columns",
+    "question": "Opportunity'leri getir, sütun olarak name ve estimatedvalue",
+    "expect": {
+      "firstKind": "answer",
+      "finalKind": "answer",
+      "entity": "opportunity",
+      "columns": [
+        "name",
+        "estimatedvalue"
+      ]
+    }
+  },
+  {
+    "id": "c13-orders-of-brightwave",
+    "question": "Brightwave Appliances Ltd şirketinin siparişlerini (orders) getir",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "salesorder",
+      "rowCount": 2
+    },
+    "note": "Brightwave'in 2 siparişi var (15 Eki 2026'da CRM'den doğrulandı)."
+  },
+  {
+    "id": "c14-cases-of-nordbeispiel",
+    "question": "Nordbeispiel Insurance AG şirketinin case'lerini getir",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "incident",
+      "rowCount": 2
+    },
+    "note": "Nordbeispiel'in 2 case'i var (15 Eki 2026'da CRM'den doğrulandı)."
+  },
+  {
+    "id": "c15-xss-name-is-plain-text",
+    "question": "Accounts listesini getir",
+    "answers": {
+      "columns": "name"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "mustContain": [
+        "XSS <b>Probe</b> Ltd"
+      ]
+    }
+  },
+  {
+    "id": "c16-three-companies-contracts",
+    "question": "Örnekova Holding A.Ş., Denema Sigorta A.Ş. ve ZKV Örnek Sistemleri A.Ş. şirketlerinin contractlarını getir",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contract",
+      "mustContain": [
+        "Örnekova Support Contract",
+        "Denema Annual Contract",
+        "ZKV Annual Contract"
+      ],
+      "mustNotContain": [
+        "Denema Sağlık Contract"
+      ]
+    }
+  },
+  {
+    "id": "c17-two-companies-contractlines",
+    "question": "Denema Sigorta A.Ş. ve ZKV Örnek Sistemleri A.Ş. şirketlerine bağlı contractline'ları getir",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contractdetail",
+      "mustContain": [
+        "Denema Line A",
+        "ZKV Line A"
+      ],
+      "mustNotContain": [
+        "Örnekova Support Line A",
+        "Denema Sağlık Line A"
+      ]
+    }
+  },
+  {
+    "id": "c18-city-in-english",
+    "question": "Which accounts are in Hamburg?",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "mustContain": [
+        "Harbor Logistics GmbH"
+      ],
+      "mustNotContain": [
+        "Alpine Pharma Distribution"
+      ]
+    }
+  },
+  {
+    "id": "c19-accounts-in-manchester",
+    "question": "Manchester'daki şirketleri (accounts) getir",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "mustContain": [
+        "Oakridge Hardware Co"
+      ],
+      "mustNotContain": [
+        "Brightwave Appliances Ltd",
+        "Harbor Logistics GmbH"
+      ]
+    },
+    "note": "Manchester'da yalnız Oakridge var; Brightwave aynı ülkede (UK) ama Londra'da (15 Eki 2026'da CRM'den doğrulandı)."
+  },
+  {
+    "id": "c20-accounts-in-uk",
+    "question": "UK'deki şirketleri (accounts) getir",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "mustContain": [
+        "Brightwave Appliances Ltd",
+        "Oakridge Hardware Co"
+      ],
+      "mustNotContain": [
+        "Harbor Logistics GmbH",
+        "Sakura Home Tech KK"
+      ]
+    },
+    "note": "Ülke değeri de filtre değeridir, firma adı değil. UK'de 2 hesap var (15 Eki 2026'da CRM'den doğrulandı)."
+  },
+  {
+    "id": "c21-company-named-after-a-city",
+    "question": "Hamburg Logistik GmbH şirketinin contactlarını getir",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contact",
+      "rowCount": 0
+    },
+    "note": "Adı şehir içeren firma doğru 'firma' sayılmalı. Seed-EvalData.ps1 ile 'Hamburg Logistik GmbH' hesabı eklenmiş olmalı (şehir alanı boş, contact'ı yok). Firma düşürülürse tüm contactlar (Alpine'in 2'si dahil) döner ve vaka kalır."
+  },
+  {
+    "id": "c22-fallback-skipped",
+    "question": "Denema Sigorta A.Ş. şirketinin contractları yoksa Örnekova Holding A.Ş. şirketinin contractlarını getir",
+    "answers": {
+      "s1:columns": "default",
+      "s2:columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contract",
+      "mustContain": [
+        "Denema Annual Contract"
+      ],
+      "mustNotContain": [
+        "Örnekova Support Contract"
+      ]
+    },
+    "note": "Dilim 2a. Denema Sigorta A.Ş.'nin contractı var, bu yüzden Örnekova adımı atlanır."
+  },
+  {
+    "id": "c23-fallback-runs",
+    "question": "Hamburg Logistik GmbH şirketinin contractları yoksa Örnekova Holding A.Ş. şirketinin contractlarını getir",
+    "answers": {
+      "s1:columns": "default",
+      "s2:columns": "default"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contract",
+      "mustContain": [
+        "Örnekova Support Contract"
+      ],
+      "mustNotContain": [
+        "Denema Annual Contract"
+      ]
+    },
+    "note": "Dilim 2a. Hamburg Logistik GmbH'in contractı yok (Seed-EvalData.ps1; Dump-EvalFacts.ps1 ile teyit et), bu yüzden Örnekova adımı çalışır."
+  },
+  {
+    "id": "c25-refine-city-within-country",
+    "question": "UK'deki şirketleri (accounts) getir — narrow it down: sadece Manchester'dakiler",
+    "answers": {
+      "columns": "custom:name, address1_city"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "mustContain": [
+        "Oakridge Hardware Co"
+      ],
+      "mustNotContain": [
+        "Brightwave Appliances Ltd"
+      ]
+    },
+    "note": "Sonuç sayfasındaki daraltma cümlesinin birleşik hali. UK'de yalnız Brightwave (Londra) ve Oakridge (Manchester) var (CRM'den doğrulandı)."
+  },
+  {
+    "id": "c26-refine-by-name-word",
+    "question": "Accounts listesini getir — narrow it down: only the ones whose name contains Logistics",
+    "answers": {
+      "columns": "custom:name, address1_city"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "mustContain": [
+        "Harbor Logistics GmbH"
+      ],
+      "mustNotContain": [
+        "Alpine Pharma Distribution",
+        "Hamburg Logistik GmbH"
+      ]
+    },
+    "note": "Adında 'Logistics' geçen tek hesap Harbor Logistics GmbH; 'Logistik' (Hamburg Logistik GmbH) eşleşmemeli (CRM'den doğrulandı)."
+  },
+  {
+    "id": "c27-opportunities-over-70k",
+    "question": "Tahmini değeri (estimatedvalue) 70000'den büyük olan fırsatları (opportunities) getir",
+    "answers": {
+      "columns": "custom:name, estimatedvalue"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "opportunity",
+      "reference": {
+        "fetchXml": "<fetch><entity name='opportunity'><attribute name='name'/><filter><condition attribute='estimatedvalue' operator='gt' value='70000'/></filter></entity></fetch>"
+      }
+    },
+    "note": "CRM'den: 96k (9), 94k (1), 79k (3), 74k (4) > 70k; diğerleri en çok 62k (17 Eki 2026)."
+  },
+  {
+    "id": "c28-opportunities-between",
+    "question": "Which opportunities have an estimated value between 40000 and 60000?",
+    "answers": {
+      "columns": "custom:name, estimatedvalue"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "opportunity",
+      "reference": {
+        "fetchXml": "<fetch><entity name='opportunity'><attribute name='name'/><attribute name='estimatedvalue'/><filter><condition attribute='estimatedvalue' operator='between'><value>40000</value><value>60000</value></condition></filter></entity></fetch>"
+      }
+    },
+    "note": "CRM'den: aralıkta yalnız 53000 (renewal 5). Referans sorgu (27 Eki 2026): eski sabit sayı (1) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir."
+  },
+  {
+    "id": "c29-top-3-opportunities",
+    "question": "En yüksek tahmini değerli 3 fırsatı (opportunities) getir",
+    "answers": {
+      "columns": "custom:name, estimatedvalue"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "opportunity",
+      "reference": {
+        "fetchXml": "<fetch top='3'><entity name='opportunity'><attribute name='name'/><order attribute='estimatedvalue' descending='true'/></entity></fetch>"
+      }
+    },
+    "note": "CRM'den ilk 3: 96k (9), 94k (1), 79k (3)."
+  },
+  {
+    "id": "c30-closing-in-2027",
+    "question": "Tahmini kapanış tarihi (estimatedclosedate) 2027 yılında olan fırsatları (opportunities) getir",
+    "answers": {
+      "columns": "custom:name, estimatedclosedate"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "opportunity",
+      "reference": {
+        "fetchXml": "<fetch><entity name='opportunity'><attribute name='name'/><filter><condition attribute='estimatedclosedate' operator='ge' value='2027-01-01'/><condition attribute='estimatedclosedate' operator='lt' value='2028-01-01'/></filter></entity></fetch>"
+      }
+    },
+    "note": "CRM'den 2027: renewal 5 (2027-01-09), renewal 2 (2027-01-16)."
+  },
+  {
+    "id": "c31-closing-in-november",
+    "question": "Tahmini kapanış tarihi (estimatedclosedate) Kasım 2026'da olan fırsatları (opportunities) getir",
+    "answers": {
+      "columns": "custom:name, estimatedclosedate"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "opportunity",
+      "reference": {
+        "fetchXml": "<fetch><entity name='opportunity'><attribute name='name'/><filter><condition attribute='estimatedclosedate' operator='ge' value='2026-11-01'/><condition attribute='estimatedclosedate' operator='lt' value='2026-12-01'/></filter></entity></fetch>"
+      }
+    },
+    "note": "CRM'den Kasım 2026: yalnız renewal 3 (2026-11-08)."
+  },
+  {
+    "id": "c32-closing-before-date",
+    "question": "Tahmini kapanış tarihi (estimatedclosedate) 2026-11-01'den önce olan fırsatları (opportunities) getir",
+    "answers": {
+      "columns": "custom:name, estimatedclosedate"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "opportunity",
+      "reference": {
+        "fetchXml": "<fetch><entity name='opportunity'><attribute name='name'/><attribute name='estimatedclosedate'/><filter><condition attribute='estimatedclosedate' operator='lt' value='2026-11-01'/></filter></entity></fetch>"
+      }
+    },
+    "note": "CRM'den: renewal 10 (10-24), 7 (10-31), 6 (10-25). Referans sorgu (27 Eki 2026): eski sabit sayı (3) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir."
+  },
+  {
+    "id": "c33-high-priority-cases",
+    "question": "Önceliği yüksek (High) olan case'leri getir",
+    "answers": {
+      "columns": "custom:title, prioritycode"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "incident",
+      "reference": {
+        "fetchXml": "<fetch><entity name='incident'><attribute name='title'/><filter><condition attribute='prioritycode' operator='eq' value='1'/></filter></entity></fetch>"
+      }
+    },
+    "note": "CRM'den 30 case'in 13'ü High."
+  },
+  {
+    "id": "c34-low-cases-of-a-company",
+    "question": "Brightwave Appliances Ltd şirketinin düşük (Low) öncelikli case'lerini getir",
+    "answers": {
+      "columns": "custom:title, prioritycode"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "incident",
+      "rowCount": 2,
+      "mustContain": [
+        "Dishwasher leaves residue on glasses",
+        "Washing machine does not drain"
+      ],
+      "mustNotContain": [
+        "Product manual missing"
+      ]
+    },
+    "note": "CRM'den Brightwave: 2 Low, 1 Normal (Product manual missing)."
+  },
+  {
+    "id": "c35-orders-of-alpine",
+    "question": "Alpine Pharma Distribution şirketinin siparişlerini (orders) getir",
+    "answers": {
+      "columns": "custom:name, totalamount"
+    },
+    "expect": {
+      "finalKind": "answer",
+      "entity": "salesorder",
+      "rowCount": 4,
+      "mustContain": [
+        "Order DUM-003",
+        "Order DUM-012",
+        "Order DUM-017",
+        "Order DUM-023"
+      ]
+    },
+    "note": "CRM'den Alpine'in siparişleri: 003, 012, 017, 023."
+  },
+  {
+    "id": "c36-count-orders",
+    "question": "How many orders do we have?",
+    "expect": {
+      "firstKind": "answer",
+      "finalKind": "answer",
+      "entity": "salesorder",
+      "reference": {
+        "fetchXml": "<fetch aggregate='true'><entity name='salesorder'><attribute name='salesorderid' aggregate='count' alias='n'/></entity></fetch>",
+        "compare": {
+          "columns": "last"
+        }
+      }
+    },
+    "note": "CRM'den 25 sipariş. Referans sorgu (27 Eki 2026): eski sabit sayı (1) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir."
+  },
+  {
+    "id": "c37-count-cases",
+    "question": "Kaç tane case var?",
+    "expect": {
+      "firstKind": "answer",
+      "finalKind": "answer",
+      "entity": "incident",
+      "reference": {
+        "fetchXml": "<fetch aggregate='true'><entity name='incident'><attribute name='incidentid' aggregate='count' alias='n'/></entity></fetch>"
+      }
+    },
+    "note": "CRM'den 30 case."
+  },
+  {
+    "id": "c38-order-columns",
+    "question": "Siparişleri getir, sütun olarak name ve totalamount",
+    "expect": {
+      "firstKind": "answer",
+      "finalKind": "answer",
+      "entity": "salesorder",
+      "columns": [
+        "name",
+        "totalamount"
+      ],
+      "reference": {
+        "fetchXml": "<fetch><entity name='salesorder'><attribute name='name'/><attribute name='totalamount'/></entity></fetch>"
+      }
+    },
+    "note": "Referans sorgu (27 Eki 2026): eski sabit sayı (25) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir."
+  },
+  {
+    "id": "c24-unknown-company-no-fallthrough",
+    "question": "Zorlu Holding şirketinin contractları yoksa Örnekova Holding A.Ş. şirketinin contractlarını getir",
+    "answers": {
+      "s1:columns": "default",
+      "s2:columns": "default"
+    },
+    "expect": {
+      "finalKind": "failure"
+    },
+    "note": "Dilim 2a anti-goal: firma bulunamazsa (yazım hatası olabilir) 'yoksa' koluna sessizce geçilmez."
+  }
+]

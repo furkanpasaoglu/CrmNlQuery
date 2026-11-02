@@ -1,0 +1,21 @@
+[
+  {
+    "id": "X-context-then-follow-up",
+    "note": "Brightwave formunda açık fırsatlar (3) -> bunlardan daralt (devam sorusu; bağlam da hâlâ açık).",
+    "turns": [
+      {
+        "id": "X1",
+        "context": { "entity": "account", "name": "Brightwave Appliances Ltd" },
+        "question": "Bu müşterinin açık fırsatlarını getir",
+        "answers": { "columns": "default" },
+        "expect": { "finalKind": "answer", "entity": "opportunity", "rowCount": 3, "usesContext": true }
+      },
+      {
+        "id": "X2",
+        "context": { "entity": "account", "name": "Brightwave Appliances Ltd" },
+        "question": "Bunlardan tahmini geliri 50 binin üstünde olanlar",
+        "expect": { "finalKind": "answer", "entity": "opportunity", "followUp": true }
+      }
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+[
+  {
+    "id": "s01-open-columns",
+    "fetchXml": "<fetch><entity name=\"account\"><attribute name=\"name\"/><attribute name=\"address1_city\"/></entity></fetch>",
+    "usable": true
+  },
+  {
+    "id": "s02-rowid-alias-false-positive",
+    "fetchXml": "<fetch><entity name=\"account\"><attribute name=\"name\"/><attribute name=\"accountid\" alias=\"_rowid\"/></entity></fetch>",
+    "usable": true
+  },
+  {
+    "id": "s03-closed-column",
+    "fetchXml": "<fetch><entity name=\"account\"><attribute name=\"name\"/><attribute name=\"telephone1\"/></entity></fetch>",
+    "usable": false
+  },
+  {
+    "id": "s04-closed-filter",
+    "fetchXml": "<fetch><entity name=\"account\"><attribute name=\"name\"/><filter><condition attribute=\"telephone1\" operator=\"like\" value=\"555%\"/></filter></entity></fetch>",
+    "usable": false
+  },
+  {
+    "id": "s05-closed-order",
+    "fetchXml": "<fetch><entity name=\"account\"><attribute name=\"name\"/><order attribute=\"telephone1\"/></entity></fetch>",
+    "usable": false
+  },
+  {
+    "id": "s06-closed-root-table",
+    "fetchXml": "<fetch><entity name=\"contract\"><attribute name=\"title\"/></entity></fetch>",
+    "usable": false
+  },
+  {
+    "id": "s07-closed-link-table",
+    "fetchXml": "<fetch><entity name=\"contact\"><attribute name=\"fullname\"/><link-entity name=\"incident\" from=\"customerid\" to=\"contactid\" alias=\"i\"><attribute name=\"title\"/></link-entity></entity></fetch>",
+    "usable": false
+  },
+  {
+    "id": "s08-auto-closed-birthdate",
+    "fetchXml": "<fetch><entity name=\"contact\"><attribute name=\"fullname\"/><attribute name=\"birthdate\"/></entity></fetch>",
+    "usable": false
+  },
+  {
+    "id": "s09-valueof",
+    "fetchXml": "<fetch><entity name=\"account\"><attribute name=\"name\"/><filter><condition attribute=\"name\" operator=\"eq\" valueof=\"telephone1\"/></filter></entity></fetch>",
+    "usable": false
+  },
+  {
+    "id": "s10-closed-custom-table",
+    "fetchXml": "<fetch><entity name=\"new_arac\"><attribute name=\"new_plaka\"/></entity></fetch>",
+    "usable": false
+  }
+]

@@ -1,0 +1,147 @@
+[
+  {
+    "id": "k01-plaka-34",
+    "question": "Plakası 34 ile başlayan araçları getir",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "new_arac",
+      "reference": {
+        "fetchXml": "<fetch><entity name='new_arac'><attribute name='new_plaka'/><filter><condition attribute='new_plaka' operator='like' value='34%'/></filter></entity></fetch>"
+      }
+    },
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Referans sorgu (27 Eki 2026): eski sabit sayı (12) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir."
+  },
+  {
+    "id": "k02-dizel",
+    "question": "Yakıt tipi dizel olan araçları getir",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "new_arac",
+      "reference": {
+        "fetchXml": "<fetch><entity name='new_arac'><attribute name='new_plaka'/><filter><condition attribute='new_yakit' operator='eq' value='100000001'/></filter></entity></fetch>"
+      }
+    },
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Referans sorgu (27 Eki 2026): eski sabit sayı (27) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir."
+  },
+  {
+    "id": "k03-garantili-en",
+    "question": "Show the vehicles that are still under warranty",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "new_arac",
+      "reference": {
+        "fetchXml": "<fetch><entity name='new_arac'><attribute name='new_plaka'/><filter><condition attribute='new_garantili' operator='eq' value='1'/></filter></entity></fetch>"
+      }
+    },
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Referans sorgu (27 Eki 2026): eski sabit sayı (27) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir."
+  },
+  {
+    "id": "k04-model-musterileri",
+    "question": "Zephyr S1 modelindeki araçların plakalarını getir",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "new_arac",
+      "rowCount": 5,
+      "mustContain": [
+        "06 DNM 002"
+      ]
+    },
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "k05-musteri-servisleri",
+    "question": "Alpine Pharma Distribution firmasının araçlarının servis kayıtlarını getir",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "new_servis_kaydi",
+      "rowCount": 10
+    },
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "k06-tutar-en",
+    "question": "Show service records with a cost over 8000",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "new_servis_kaydi",
+      "reference": {
+        "fetchXml": "<fetch><entity name='new_servis_kaydi'><attribute name='new_baslik'/><filter><condition attribute='new_tutar' operator='gt' value='8000'/></filter></entity></fetch>"
+      }
+    },
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Referans sorgu (27 Eki 2026): eski sabit sayı (51) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir. Referans yalnız başlık sütununu ister: model 'varsayılan görünüm' sütunlarını verir ve o görünümde tutar yok (27 Eki 2026, ilk eval koşusunda düştü)."
+  },
+  {
+    "id": "k07-sunroof",
+    "question": "Sunroof özelliği olan araçları getir",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "new_arac",
+      "reference": {
+        "fetchXml": "<fetch><entity name='new_arac'><attribute name='new_plaka'/><filter><condition attribute='new_ozellikler' operator='contain-values'><value>100000000</value></condition></filter></entity></fetch>"
+      }
+    },
+    "note": "Cok secimli secenek kumesi; CRM surumu desteklemiyorsa bu vaka atlanir. Referans sorgu (27 Eki 2026): eski sabit sayı (13) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir.",
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "k08-bakim-tamamlanmamis",
+    "question": "Tamamlanmamış bakım servis kayıtlarını getir",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "new_servis_kaydi",
+      "reference": {
+        "fetchXml": "<fetch><entity name='new_servis_kaydi'><attribute name='new_baslik'/><filter><condition attribute='new_tamamlandi' operator='eq' value='0'/><condition attribute='new_islemturu' operator='eq' value='100000000'/></filter></entity></fetch>"
+      }
+    },
+    "answers": {
+      "columns": "default"
+    },
+    "note": "Referans sorgu (27 Eki 2026): eski sabit sayı (17) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir."
+  },
+  {
+    "id": "k09-aksesuarlar",
+    "question": "34 TST 001 plakalı aracın aksesuarlarını getir",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "new_aksesuar",
+      "rowCount": 2,
+      "mustContain": [
+        "Paspas seti"
+      ]
+    },
+    "note": "Coktan coga iliski (arac <-> aksesuar).",
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "k10-2026-servis-araclari",
+    "question": "2026 yılında servis kaydı olan araçların plakalarını getir",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "new_arac",
+      "rowCount": 32
+    },
+    "answers": {
+      "columns": "default"
+    }
+  }
+]

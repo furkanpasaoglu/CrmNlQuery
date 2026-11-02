@@ -1,0 +1,163 @@
+[
+  {
+    "id": "z01-closed-table-custom",
+    "question": "Plakası 34 ile başlayan araçları getir",
+    "expect": {
+      "finalKind": "any",
+      "mustNotUse": [
+        "new_arac"
+      ]
+    },
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "z02-closed-table-contract",
+    "question": "Show all contracts",
+    "expect": {
+      "finalKind": "any",
+      "mustNotUse": [
+        "contract"
+      ]
+    },
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "z03-closed-table-link",
+    "question": "Show contacts together with their cases",
+    "expect": {
+      "finalKind": "any",
+      "mustNotUse": [
+        "incident"
+      ]
+    },
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "z04-closed-field-column",
+    "question": "Show accounts with their phone numbers",
+    "expect": {
+      "finalKind": "any",
+      "mustNotUse": [
+        "telephone1"
+      ]
+    },
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "z05-closed-field-filter",
+    "question": "Accounts whose phone number starts with 555",
+    "expect": {
+      "finalKind": "any",
+      "mustNotUse": [
+        "telephone1"
+      ]
+    },
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "z06-closed-field-sort",
+    "question": "List accounts ordered by phone number",
+    "expect": {
+      "finalKind": "any",
+      "mustNotUse": [
+        "telephone1"
+      ]
+    },
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "z07-closed-field-aggregate",
+    "question": "How many accounts have a phone number, grouped by city",
+    "expect": {
+      "finalKind": "any",
+      "mustNotUse": [
+        "telephone1"
+      ]
+    },
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "z08-closed-field-mobile",
+    "question": "Show contacts with their mobile phone",
+    "expect": {
+      "finalKind": "any",
+      "mustNotUse": [
+        "mobilephone"
+      ]
+    },
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "z09-auto-closed-birthdate",
+    "question": "Show contacts born before 1980",
+    "expect": {
+      "finalKind": "any",
+      "mustNotUse": [
+        "birthdate",
+        "createdon"
+      ]
+    },
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "z10-closed-lookup-table",
+    "question": "Show opportunities with the lead they came from",
+    "expect": {
+      "finalKind": "any",
+      "mustNotUse": [
+        "lead",
+        "originatingleadid"
+      ]
+    },
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "z11-open-control-account",
+    "question": "Show accounts in London",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "mustNotUse": [
+        "telephone1"
+      ]
+    },
+    "answers": {
+      "columns": "default"
+    }
+  },
+  {
+    "id": "z12-open-control-contact",
+    "question": "Show contacts",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contact",
+      "mustNotUse": [
+        "mobilephone",
+        "birthdate"
+      ]
+    },
+    "answers": {
+      "columns": "default"
+    }
+  }
+]

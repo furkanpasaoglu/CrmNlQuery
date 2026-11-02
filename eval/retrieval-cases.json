@@ -1,0 +1,589 @@
+[
+  {
+    "id": "r01-platin-tr",
+    "question": "Platin müşterilerimizi getir",
+    "expect": [
+      "Müşteri segmentasyonu rehberi (Satış Operasyonları)"
+    ],
+    "note": "Kasıtlı zor negatif: 'Sadakat programı üyelik kademeleri' ve 'Kurumsal hediye kartı kademeleri' de Platin sözcüğünü kullanır.",
+    "expectText": [
+      "3000"
+    ]
+  },
+  {
+    "id": "r02-platinum-en",
+    "question": "Show me the Platinum customers",
+    "expect": [
+      "Müşteri segmentasyonu rehberi (Satış Operasyonları)"
+    ],
+    "expectText": [
+      "3000"
+    ]
+  },
+  {
+    "id": "r03-altin",
+    "question": "Altın segmentteki müşterileri listele",
+    "expect": [
+      "Müşteri segmentasyonu rehberi (Satış Operasyonları)"
+    ],
+    "expectText": [
+      "1000 ile 3000"
+    ]
+  },
+  {
+    "id": "r04-gumus",
+    "question": "Gümüş müşteri listesi",
+    "expect": [
+      "Müşteri segmentasyonu rehberi (Satış Operasyonları)"
+    ],
+    "expectText": [
+      "250 ile 999"
+    ]
+  },
+  {
+    "id": "r05-kuzey-bolge",
+    "question": "Kuzey bölgesindeki hesapları getir",
+    "expect": [
+      "Satış bölgeleri ve sorumluluklar"
+    ],
+    "note": "Zor negatif: dağıtım hatları, bölgesel depolar ve bölge toplantıları da 'Kuzey' içerir.",
+    "expectText": [
+      "Hamburg, Amsterdam, Dublin"
+    ]
+  },
+  {
+    "id": "r06-south-region-en",
+    "question": "Show me the accounts in our Southern region",
+    "expect": [
+      "Satış bölgeleri ve sorumluluklar"
+    ],
+    "expectText": [
+      "Madrid, Vienna ve Zurich"
+    ]
+  },
+  {
+    "id": "r07-apac",
+    "question": "Asya-Pasifik bölgesindeki müşteriler",
+    "expect": [
+      "Satış bölgeleri ve sorumluluklar"
+    ],
+    "expectText": [
+      "Sydney ve Osaka"
+    ]
+  },
+  {
+    "id": "r08-a-sinifi",
+    "question": "A sınıfı fırsatları getir",
+    "expect": [
+      "Fırsat sınıfları ve tahmin (forecast) kuralları"
+    ],
+    "note": "Zor negatif: 'Depo ABC analizi' ve 'Müşteri memnuniyeti anketi sınıfları' A sınıfını başka anlamda kullanır.",
+    "expectText": [
+      "90.000"
+    ]
+  },
+  {
+    "id": "r09-b-sinifi",
+    "question": "B sınıfı fırsatlar",
+    "expect": [
+      "Fırsat sınıfları ve tahmin (forecast) kuralları"
+    ],
+    "expectText": [
+      "50.000 ile 89.999"
+    ]
+  },
+  {
+    "id": "r10-buyuk-firsat",
+    "question": "Büyük fırsatları getir",
+    "expect": [
+      "Fırsat sınıfları ve tahmin (forecast) kuralları"
+    ],
+    "note": "Zor negatif: 'Büyük alım onay prosedürü', 'Büyük proje yönetim kuralları'.",
+    "expectText": [
+      "büyük fırsat",
+      "90.000"
+    ]
+  },
+  {
+    "id": "n01-3000-calisan",
+    "question": "Çalışan sayısı 3000'den fazla olanlar hangi segment?",
+    "expect": [
+      "Müşteri segmentasyonu rehberi (Satış Operasyonları)"
+    ],
+    "expectText": [
+      "3000"
+    ]
+  },
+  {
+    "id": "n02-guney-sehirler",
+    "question": "Hangi şehirler Güney bölgesine giriyor?",
+    "expect": [
+      "Satış bölgeleri ve sorumluluklar"
+    ],
+    "expectText": [
+      "Madrid, Vienna ve Zurich"
+    ]
+  },
+  {
+    "id": "n03-kapanis-erteleme",
+    "question": "Fırsat kapanış tarihi iki kez ertelendiyse ne yapılır?",
+    "expect": [
+      "Fırsat sınıfları ve tahmin (forecast) kuralları",
+      "Tahmin (forecast) toplantısı"
+    ],
+    "expectText": [
+      "iki kez ertelenen"
+    ]
+  },
+  {
+    "id": "n04-indirim-onay",
+    "question": "%12 indirim için kimin onayı lazım?",
+    "expect": [
+      "Satış politikası (indirim, onay ve ödeme koşulları)"
+    ],
+    "expectText": [
+      "%10 ile %20"
+    ]
+  },
+  {
+    "id": "n05-contract-line",
+    "question": "Contract line başlığı nasıl yazılır?",
+    "expect": [
+      "Satış politikası (indirim, onay ve ödeme koşulları)",
+      "CRM kullanım rehberi (yeni başlayanlar için)"
+    ]
+  },
+  {
+    "id": "n06-mukerrer-hesap",
+    "question": "Mükerrer hesap açılmasın diye ne yapmalıyım?",
+    "expect": [
+      "CRM kullanım rehberi (yeni başlayanlar için)"
+    ],
+    "expectText": [
+      "Mükerrer"
+    ]
+  },
+  {
+    "id": "n07-platin-yonetici",
+    "question": "Platin müşteriye hesap yöneticisi atanır mı?",
+    "expect": [
+      "Müşteri segmentasyonu rehberi (Satış Operasyonları)"
+    ],
+    "expectText": [
+      "hesap yöneticisi"
+    ]
+  },
+  {
+    "id": "n08-apac-mudur",
+    "question": "Asya-Pasifik bölge müdürü kim?",
+    "expect": [
+      "Satış bölgeleri ve sorumluluklar"
+    ],
+    "expectText": [
+      "Osaka"
+    ]
+  },
+  {
+    "id": "g01-sadakat-platin",
+    "question": "Sadakat programında Platin üye olmak için kaç puan gerekir?",
+    "expect": [
+      "Sadakat programı üyelik kademeleri"
+    ]
+  },
+  {
+    "id": "g02-hediye-karti",
+    "question": "Hediye kartı Altın kademesi tutarı nedir?",
+    "expect": [
+      "Kurumsal hediye kartı kademeleri"
+    ]
+  },
+  {
+    "id": "g03-depo-a-sinifi",
+    "question": "Depoda A sınıfı ürünler ne sıklıkla sayılır?",
+    "expect": [
+      "Depo ABC analizi"
+    ]
+  },
+  {
+    "id": "g04-samsun-hatti",
+    "question": "Samsun hattı hangi günler sefer yapıyor?",
+    "expect": [
+      "Dağıtım hatları: Kuzey ve Güney rotaları"
+    ]
+  },
+  {
+    "id": "g05-depo-sehir",
+    "question": "Hangi şehirde depomuz var?",
+    "expect": [
+      "Bölgesel depolar ve şehirleri"
+    ]
+  },
+  {
+    "id": "g06-butce-sunum",
+    "question": "Bütçe sunumları ne zaman yapılıyor?",
+    "expect": [
+      "Q4 bütçe planlama takvimi"
+    ]
+  },
+  {
+    "id": "g07-mutabakat",
+    "question": "Çeyrek kapanışta mutabakat kaç gün sürer?",
+    "expect": [
+      "Mali çeyrek kapanış mutabakatı"
+    ]
+  },
+  {
+    "id": "g08-kobi-kredisi",
+    "question": "KOBİ kredisinde vade ne kadar?",
+    "expect": [
+      "KOBİ kredisi ürün koşulları"
+    ]
+  },
+  {
+    "id": "g09-kobi-egitim",
+    "question": "KOBİ eğitimlerinin ücreti ne kadar?",
+    "expect": [
+      "KOBİ'lere yönelik eğitim programı"
+    ]
+  },
+  {
+    "id": "g10-buyuk-alim",
+    "question": "Büyük alımlarda kaç teklif isteniyor?",
+    "expect": [
+      "Büyük alım onay prosedürü"
+    ]
+  },
+  {
+    "id": "g11-proje-rapor",
+    "question": "Büyük projede haftalık durum raporunu kim hazırlar?",
+    "expect": [
+      "Büyük proje yönetim kuralları"
+    ]
+  },
+  {
+    "id": "g12-cagri-merkezi",
+    "question": "Çağrı merkezi kurumsal hatlarda cevaplama süresi nedir?",
+    "expect": [
+      "Kurumsal müşteri çağrı merkezi hizmet seviyesi"
+    ]
+  },
+  {
+    "id": "g13-logo",
+    "question": "Logo kullanımı ve marka renkleri nelerdir?",
+    "expect": [
+      "Kurumsal kimlik ve marka kılavuzu"
+    ]
+  },
+  {
+    "id": "g14-eposta-altin",
+    "question": "E-posta listesinde Altın aboneler kimler?",
+    "expect": [
+      "E-posta pazarlama segmentleri"
+    ]
+  },
+  {
+    "id": "g15-anket-sinifi",
+    "question": "Anket puanı hangi memnuniyet sınıfına girer?",
+    "expect": [
+      "Müşteri memnuniyeti anketi sınıfları"
+    ]
+  },
+  {
+    "id": "g16-sunum-firsat",
+    "question": "Müşteri sunumuna fırsat bilgisi nasıl eklenir?",
+    "expect": [
+      "Satış sunumu hazırlama rehberi"
+    ]
+  },
+  {
+    "id": "g17-kadro",
+    "question": "Departman bazında çalışan sayısı hedefi ve işe alım takvimi",
+    "expect": [
+      "Kadro ve çalışan sayısı planlaması"
+    ]
+  },
+  {
+    "id": "g18-kritik-sikayet",
+    "question": "Kritik şikayet çözüm süresi kaç saat?",
+    "expect": [
+      "Müşteri şikayeti öncelik sınıfları"
+    ]
+  },
+  {
+    "id": "g19-kuzey-toplanti",
+    "question": "Kuzey bölgesi toplantısı hangi gün yapılıyor?",
+    "expect": [
+      "Bölge toplantıları takvimi"
+    ]
+  },
+  {
+    "id": "g20-komisyon",
+    "question": "Çeyreklik komisyon kota ve prim tablosu",
+    "expect": [
+      "Satış komisyon planı"
+    ]
+  },
+  {
+    "id": "g21-yenileme-hatirlatma",
+    "question": "Sözleşme bitişinden kaç gün önce hatırlatma gider?",
+    "expect": [
+      "Sözleşme yenileme hatırlatma süreci"
+    ]
+  },
+  {
+    "id": "g22-iade",
+    "question": "Beyaz eşya iade kaç gün içinde yapılır?",
+    "expect": [
+      "Ürün garanti ve iade koşulları",
+      "Satış politikası (indirim, onay ve ödeme koşulları)"
+    ]
+  },
+  {
+    "id": "g23-fiyat-listesi",
+    "question": "Q4 kampanya fiyatları ne zaman güncellenir?",
+    "expect": [
+      "Fiyat listesi güncelleme takvimi"
+    ]
+  },
+  {
+    "id": "g24-forecast-katilimci",
+    "question": "Tahmin toplantısına kimler katılır?",
+    "expect": [
+      "Tahmin (forecast) toplantısı"
+    ]
+  },
+  {
+    "id": "x01-izin",
+    "question": "Yıllık izin kaç gün?",
+    "expect": [
+      "İzin politikası"
+    ]
+  },
+  {
+    "id": "x02-vpn",
+    "question": "VPN'e nasıl bağlanırım?",
+    "expect": [
+      "VPN kullanım rehberi"
+    ]
+  },
+  {
+    "id": "x03-parola",
+    "question": "Parola en az kaç karakter olmalı?",
+    "expect": [
+      "BT parola kuralları"
+    ]
+  },
+  {
+    "id": "x04-otel",
+    "question": "Seyahatte otel konaklama limiti nedir?",
+    "expect": [
+      "Seyahat politikası"
+    ]
+  },
+  {
+    "id": "x05-fatura-kesme",
+    "question": "Fatura kaç günde kesilir?",
+    "expect": [
+      "Fatura kesme süreci"
+    ]
+  },
+  {
+    "id": "x06-yedek",
+    "question": "Yedekler ne kadar süre saklanır?",
+    "expect": [
+      "Yedekleme politikası"
+    ]
+  },
+  {
+    "id": "x07-uzaktan",
+    "question": "Haftada kaç gün uzaktan çalışabilirim?",
+    "expect": [
+      "Uzaktan çalışma kuralları"
+    ]
+  },
+  {
+    "id": "x08-kvkk",
+    "question": "KVKK aydınlatma metni kime verilir?",
+    "expect": [
+      "KVKK aydınlatma süreci"
+    ]
+  },
+  {
+    "id": "h01-kobi-aksan-yok",
+    "question": "kobi musterileri kimler",
+    "expect": [
+      "Müşteri segmentasyonu rehberi (Satış Operasyonları)"
+    ],
+    "note": "Diyakritiksiz yazım; zor negatif: KOBİ kredisi ve KOBİ eğitimi belgeleri"
+  },
+  {
+    "id": "h02-platin-aksan-yok",
+    "question": "platin musteri",
+    "expect": [
+      "Müşteri segmentasyonu rehberi (Satış Operasyonları)"
+    ],
+    "note": "Diyakritiksiz, iki kelime"
+  },
+  {
+    "id": "h03-staff-range-en",
+    "question": "Which customers have more than 1000 staff but fewer than 3000?",
+    "expect": [
+      "Müşteri segmentasyonu rehberi (Satış Operasyonları)"
+    ],
+    "note": "İngilizce, belgedeki kelimeler yok (çalışan = staff)",
+    "expectText": [
+      "1000 ile 3000"
+    ]
+  },
+  {
+    "id": "h04-en-degerli",
+    "question": "en değerli iki fırsatımız hangileri",
+    "expect": [
+      "Fırsat sınıfları ve tahmin (forecast) kuralları"
+    ],
+    "note": "Ortak kelime yok; A sınıfı anlamı",
+    "expectText": [
+      "90.000"
+    ]
+  },
+  {
+    "id": "h05-ucuz-firsat",
+    "question": "ucuz fırsatlar",
+    "expect": [
+      "Fırsat sınıfları ve tahmin (forecast) kuralları"
+    ],
+    "note": "Ortak kelime yok; C sınıfı",
+    "expectText": [
+      "50.000'in altında"
+    ]
+  },
+  {
+    "id": "h06-avrupa-kuzey",
+    "question": "Avrupanın kuzeyindeki firmalar",
+    "expect": [
+      "Satış bölgeleri ve sorumluluklar"
+    ],
+    "note": "Şehir adı yok, bölge anlamı",
+    "expectText": [
+      "Hamburg, Amsterdam"
+    ]
+  },
+  {
+    "id": "h07-japonya-avustralya",
+    "question": "Japonya ve Avustralya müşterileri",
+    "expect": [
+      "Satış bölgeleri ve sorumluluklar"
+    ],
+    "note": "Ülke adı; belgede şehir (Osaka, Sydney) yazıyor",
+    "expectText": [
+      "Sydney ve Osaka"
+    ]
+  },
+  {
+    "id": "h08-iskonto-yetkisi",
+    "question": "iskonto yetkisi kimde",
+    "expect": [
+      "Satış politikası (indirim, onay ve ödeme koşulları)"
+    ],
+    "note": "iskonto = indirim"
+  },
+  {
+    "id": "h09-payment-terms-en",
+    "question": "How many days do customers have to pay an invoice?",
+    "expect": [
+      "Satış politikası (indirim, onay ve ödeme koşulları)",
+      "Tahsilat takibi",
+      "Fatura kesme süreci"
+    ],
+    "note": "İngilizce; üç belge makul"
+  },
+  {
+    "id": "h10-ilgili-kisi-telefon",
+    "question": "ilgili kişinin hangi telefonu aranmalı",
+    "expect": [
+      "CRM kullanım rehberi (yeni başlayanlar için)"
+    ],
+    "note": "cep telefonu önceliği"
+  },
+  {
+    "id": "h11-iki-kere-kayit",
+    "question": "aynı firmayı iki kere kaydetmeyelim",
+    "expect": [
+      "CRM kullanım rehberi (yeni başlayanlar için)"
+    ],
+    "note": "mükerrer = iki kere"
+  },
+  {
+    "id": "h12-ay-sonu-rapor",
+    "question": "segment raporları ne zaman gönderilir",
+    "expect": [
+      "Müşteri segmentasyonu rehberi (Satış Operasyonları)"
+    ],
+    "note": "raporlama takvimi bölümü"
+  },
+  {
+    "id": "h13-zurih",
+    "question": "Zürih müşterilerimizi hangi ekip yönetiyor",
+    "expect": [
+      "Satış bölgeleri ve sorumluluklar"
+    ],
+    "note": "Zürih/Zurich yazımı farklı",
+    "expectText": [
+      "Madrid, Vienna ve Zurich"
+    ]
+  },
+  {
+    "id": "h14-commit-best-case",
+    "question": "commit ve best case kategorileri ne anlama geliyor",
+    "expect": [
+      "Fırsat sınıfları ve tahmin (forecast) kuralları"
+    ],
+    "note": "tahmin kategorileri",
+    "expectText": [
+      "Best Case"
+    ]
+  },
+  {
+    "id": "h15-komisyon-hesap",
+    "question": "komisyon ne zaman hesaplanır",
+    "expect": [
+      "Satış politikası (indirim, onay ve ödeme koşulları)",
+      "Satış komisyon planı"
+    ],
+    "note": "iki belge makul"
+  },
+  {
+    "id": "h16-a-class-en",
+    "question": "What is the threshold for an A class opportunity?",
+    "expect": [
+      "Fırsat sınıfları ve tahmin (forecast) kuralları"
+    ],
+    "note": "İngilizce; zor negatif: Depo ABC"
+  },
+  {
+    "id": "h17-garanti-iki-yil",
+    "question": "garanti süresi iki yıl mı",
+    "expect": [
+      "Satış politikası (indirim, onay ve ödeme koşulları)",
+      "Ürün garanti ve iade koşulları"
+    ],
+    "note": "iki belge makul"
+  },
+  {
+    "id": "h18-joker-arama",
+    "question": "CRM arama kutusunda joker karakter kullanılır mı",
+    "expect": [
+      "CRM kullanım rehberi (yeni başlayanlar için)"
+    ],
+    "note": "yıldız joker"
+  },
+  {
+    "id": "h19-holding-istirak",
+    "question": "holdingin iştirakleri ayrı hesap mı",
+    "expect": [
+      "Müşteri segmentasyonu rehberi (Satış Operasyonları)",
+      "CRM kullanım rehberi (yeni başlayanlar için)"
+    ],
+    "note": "SSS bölümü; CRM rehberinde de hesap kuralları"
+  }
+]

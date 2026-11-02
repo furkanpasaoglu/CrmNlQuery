@@ -1,0 +1,38 @@
+[
+  {
+    "id": "g01-monthly-won-total",
+    "question": "Show the number of opportunities created per month",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "opportunity", "mustUseFetch": ["dategrouping=\"month\"", "dategrouping=\"year\"", "aggregate=\"count\""], "minRows": 1 }
+  },
+  {
+    "id": "g02-monthly-tr",
+    "question": "Aylık oluşturulan fırsat sayısını getir",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "opportunity", "mustUseFetch": ["dategrouping=\"month\"", "aggregate=\"count\""], "minRows": 1 }
+  },
+  {
+    "id": "g03-yearly-count",
+    "question": "How many opportunities were created each year?",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "opportunity", "mustUseFetch": ["dategrouping=\"year\"", "aggregate=\"count\""], "minRows": 1 }
+  },
+  {
+    "id": "g04-quarterly-cases",
+    "question": "Number of cases opened per quarter this year",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "incident", "mustUseFetch": ["dategrouping=\"quarter\"", "aggregate=\"count\""], "minRows": 1 }
+  },
+  {
+    "id": "g05-trap-by-city",
+    "question": "How many accounts do we have in each city?",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "account", "mustNotUseFetch": ["dategrouping"], "minRows": 1 }
+  },
+  {
+    "id": "g06-trap-priority",
+    "question": "How many cases are there per priority?",
+    "answers": { "columns": "default" },
+    "expect": { "finalKind": "answer", "entity": "incident", "mustNotUseFetch": ["dategrouping"], "minRows": 1 }
+  }
+]

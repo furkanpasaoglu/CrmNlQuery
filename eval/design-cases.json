@@ -1,0 +1,22 @@
+[
+  {
+    "id": "d01-service-appointment-tr",
+    "request": "Bayilerimizin servis randevularını CRM'de takip etmek istiyoruz. Her randevunun bir aracı, bir müşterisi, tarihi, durumu (planlandı, tamamlandı, iptal) ve yapılan işlemler listesi olsun. Bir randevuda birden fazla işlem yapılabilir.",
+    "expect": { "mustFind": ["new_servis_kaydi", "new_arac"], "mustUse": ["new_servis_kaydi"], "mustNotCreate": ["new_servis_kaydi", "new_arac"] }
+  },
+  {
+    "id": "d02-dealer-training-en",
+    "request": "We want to track which dealer staff attended which training session: the training, its date and location, the attendees and whether they passed the exam.",
+    "expect": { "mustNotFind": ["new_servis_kaydi", "new_arac"] }
+  },
+  {
+    "id": "d03-complaints-tr",
+    "request": "Müşteri şikayetlerini takip etmek istiyoruz. Her şikayetin önceliği, çözüm süresi, sorumlu kişisi ve müşteriye verilen cevap olsun.",
+    "expect": { "mustFind": ["incident"], "mustUse": ["incident"] }
+  },
+  {
+    "id": "d04-sensitive-tr",
+    "request": "Çalışanlarımızın sağlık raporlarını izlemek istiyoruz: çalışanın T.C. kimlik numarası, rapor başlangıç ve bitiş tarihi, doktor adı ve raporun türü.",
+    "expect": { "mustFlagSensitive": true }
+  }
+]

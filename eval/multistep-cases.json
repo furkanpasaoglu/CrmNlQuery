@@ -1,0 +1,459 @@
+[
+  {
+    "id": "m01-most-open-opps-contacts",
+    "kind": "multi",
+    "question": "En çok açık fırsatı olan firmanın kişilerini getir",
+    "answers": {
+      "s2:columns": "custom:fullname",
+      "columns": "custom:fullname"
+    },
+    "plan": {
+      "steps": 2,
+      "dependsOn": [
+        null,
+        1
+      ],
+      "entities": [
+        "opportunity",
+        "contact"
+      ],
+      "note": "1. adım: açık fırsatları müşteriye göre say, en çok olan (Brightwave, 3); 2. adım: o hesabın kişileri"
+    },
+    "note": "Lab: Brightwave 3 açık fırsat (tek en çok); diğer 7 hesap 1'er fırsat. Brightwave'in 2 kişisi var.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contact",
+      "rowCount": 2,
+      "mustContain": [
+        "Freya Testwell",
+        "Grace Fakeman"
+      ],
+      "mustNotContain": [
+        "Daniel Fakeman"
+      ]
+    }
+  },
+  {
+    "id": "m02-fewest-open-opps-contacts-tie",
+    "kind": "multi",
+    "question": "Açık fırsatı olan firmalar arasında en az fırsatı olanların kişilerini getir",
+    "answers": {
+      "s2:columns": "custom:fullname",
+      "columns": "custom:fullname"
+    },
+    "plan": {
+      "steps": 2,
+      "dependsOn": [
+        null,
+        1
+      ],
+      "entities": [
+        "opportunity",
+        "contact"
+      ],
+      "tie": true,
+      "note": "7 hesap 1'er fırsatla EŞİT: hepsi kullanılmalı ve eşitlik cevapta belirtilmeli"
+    },
+    "note": "Lab: 7 hesap (Harbor, Pacific Fuel, Lumina, Alpine, Vertest, Coastal, Sakura) 1'er açık fırsatla eşit; 14 kişi. Brightwave (3) dışarıda kalır.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contact",
+      "reference": {
+        "steps": [
+          {
+            "fetchXml": "<fetch aggregate='true'><entity name='opportunity'><attribute name='customerid' groupby='true' alias='account'/><attribute name='opportunityid' aggregate='count' alias='n'/><filter><condition attribute='statecode' operator='eq' value='0'/></filter></entity></fetch>",
+            "reduce": "min"
+          },
+          {
+            "fetchXml": "<fetch><entity name='contact'><attribute name='fullname'/><filter><condition attribute='parentcustomerid' operator='in'>{{ids}}</condition></filter></entity></fetch>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "m03-most-cases-contacts-tie",
+    "kind": "multi",
+    "question": "En çok case'i olan firmaların kişilerini getir",
+    "answers": {
+      "s2:columns": "custom:fullname",
+      "columns": "custom:fullname"
+    },
+    "plan": {
+      "steps": 2,
+      "dependsOn": [
+        null,
+        1
+      ],
+      "entities": [
+        "incident",
+        "contact"
+      ],
+      "tie": true,
+      "note": "5 hesap 3'er case ile EŞİT (Brightwave, Oakridge, Blue Meridian, Vertest, Sakura)"
+    },
+    "note": "Lab: 5 hesap 3 case ile eşit; kişi sayısı 10.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contact",
+      "rowCount": 10,
+      "mustContain": [
+        "Freya Testwell"
+      ]
+    }
+  },
+  {
+    "id": "m04-most-employees-contacts",
+    "kind": "multi",
+    "question": "En çok çalışanı olan firmanın kişilerini getir",
+    "answers": {
+      "s1:columns": "custom:name",
+      "s2:columns": "custom:fullname",
+      "columns": "custom:fullname"
+    },
+    "plan": {
+      "steps": 2,
+      "dependsOn": [
+        null,
+        1
+      ],
+      "entities": [
+        "account",
+        "contact"
+      ],
+      "note": "Düz (toplamasız) sıralama: kimlik _rowid ile taşınır"
+    },
+    "note": "Lab: Nordbeispiel Insurance AG 3626 çalışanla en çok; 2 kişisi var (Daniel Fakeman, Emma Samplefield).",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contact",
+      "rowCount": 2,
+      "mustContain": [
+        "Daniel Fakeman",
+        "Emma Samplefield"
+      ],
+      "mustNotContain": [
+        "Freya Testwell"
+      ]
+    }
+  },
+  {
+    "id": "m05-empty-intermediate-stops",
+    "kind": "multi",
+    "question": "Kazanılmış fırsatlar arasında en çok fırsatı olan firmanın kişilerini getir",
+    "answers": {
+      "s2:columns": "custom:fullname",
+      "columns": "custom:fullname"
+    },
+    "plan": {
+      "steps": 2,
+      "dependsOn": [
+        null,
+        1
+      ],
+      "entities": [
+        "opportunity",
+        "contact"
+      ],
+      "note": "Lab'da kazanılmış fırsat YOK: 1. adım boş, zincir DURMALI; uydurma sonuç olmamalı"
+    },
+    "note": "Lab: 10 fırsatın hepsi açık (state 0). Beklenen: satır yok + adım notu.",
+    "expect": {
+      "finalKind": "answer",
+      "reference": {
+        "steps": [
+          {
+            "fetchXml": "<fetch aggregate='true'><entity name='opportunity'><attribute name='customerid' groupby='true' alias='account'/><attribute name='opportunityid' aggregate='count' alias='n'/><filter><condition attribute='statecode' operator='eq' value='1'/></filter></entity></fetch>",
+            "reduce": "max"
+          },
+          {
+            "fetchXml": "<fetch><entity name='contact'><attribute name='fullname'/><filter><condition attribute='parentcustomerid' operator='in'>{{ids}}</condition></filter></entity></fetch>"
+          }
+        ]
+      }
+    }
+  },
+  {
+    "id": "m06-most-open-opps-cases",
+    "kind": "multi",
+    "question": "En çok açık fırsatı olan firmanın case'lerini getir",
+    "answers": {
+      "s2:columns": "custom:title",
+      "columns": "custom:title"
+    },
+    "plan": {
+      "steps": 2,
+      "dependsOn": [
+        null,
+        1
+      ],
+      "entities": [
+        "opportunity",
+        "incident"
+      ]
+    },
+    "note": "Lab: Brightwave'in 3 case'i var.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "incident",
+      "rowCount": 3
+    }
+  },
+  {
+    "id": "m07-independent-two-steps",
+    "kind": "multi",
+    "question": "Brightwave Appliances Ltd firmasının kişilerini getir, sonra Alpine Pharma Distribution firmasının açık fırsatlarını getir",
+    "answers": {
+      "s1:columns": "custom:fullname",
+      "s2:columns": "custom:name",
+      "columns": "custom:name"
+    },
+    "plan": {
+      "steps": 2,
+      "dependsOn": [
+        null,
+        null
+      ],
+      "entities": [
+        "contact",
+        "opportunity"
+      ],
+      "note": "Bağımsız iki adım: ikisi de çalışır (sırayla), son tablo 2. adımınki, 1. adım özette"
+    },
+    "note": "Lab: Alpine'ın 1 açık fırsatı var.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "opportunity",
+      "rowCount": 1
+    }
+  },
+  {
+    "id": "t01-top5-employees",
+    "kind": "single",
+    "question": "En çok çalışanı olan 5 firmayı getir",
+    "answers": {
+      "columns": "custom:name"
+    },
+    "plan": {
+      "steps": 1
+    },
+    "note": "TUZAK: 'en çok' geçer ama tek sorgu (sıralama + top 5). Referans sorgu (27 Eki 2026): eski sabit sayı (5) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "reference": {
+        "fetchXml": "<fetch top='5'><entity name='account'><attribute name='name'/><attribute name='numberofemployees'/><order attribute='numberofemployees' descending='true'/><filter><condition attribute='numberofemployees' operator='not-null'/></filter></entity></fetch>",
+        "compare": {
+          "ties": "boundary"
+        }
+      }
+    }
+  },
+  {
+    "id": "t02-accounts-with-open-opps-contacts-join",
+    "kind": "single",
+    "question": "Açık fırsatı olan firmaların kişilerini getir",
+    "answers": {
+      "columns": "custom:fullname"
+    },
+    "plan": {
+      "steps": 1
+    },
+    "note": "TUZAK: iki varlık gibi görünür ama tek birleştirme sorgusu (kişi → firma → fırsat). Lab: 8 hesap x 2 = 16 kişi.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contact",
+      "reference": {
+        "fetchXml": "<fetch distinct='true'><entity name='contact'><attribute name='fullname'/><link-entity name='account' from='accountid' to='parentcustomerid' link-type='inner' alias='la'><link-entity name='opportunity' from='customerid' to='accountid' link-type='inner' alias='lo'><filter><condition attribute='statecode' operator='eq' value='0'/></filter></link-entity></link-entity></entity></fetch>"
+      }
+    }
+  },
+  {
+    "id": "t03-london-accounts-contacts",
+    "kind": "single",
+    "question": "Londra'daki firmaların kişilerini getir",
+    "answers": {
+      "columns": "custom:fullname"
+    },
+    "plan": {
+      "steps": 1
+    },
+    "note": "TUZAK: tek birleştirme. Lab: Londra'da yalnız Brightwave (2 kişi).",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contact",
+      "rowCount": 2,
+      "mustContain": [
+        "Freya Testwell"
+      ]
+    }
+  },
+  {
+    "id": "t04-highest-value-opportunity",
+    "kind": "single",
+    "question": "En yüksek tutarlı fırsatı getir",
+    "answers": {
+      "columns": "custom:name, estimatedvalue"
+    },
+    "plan": {
+      "steps": 1
+    },
+    "note": "TUZAK: 'en yüksek' geçer ama tek sorgu (sıralama + top 1). Lab: Service contract renewal 9 (96000).",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "opportunity",
+      "reference": {
+        "fetchXml": "<fetch top='1'><entity name='opportunity'><attribute name='name'/><order attribute='estimatedvalue' descending='true'/></entity></fetch>"
+      }
+    }
+  },
+  {
+    "id": "t05-accounts-without-opps",
+    "kind": "single",
+    "question": "Fırsatı olmayan firmaları getir",
+    "answers": {
+      "columns": "custom:name"
+    },
+    "plan": {
+      "steps": 1
+    },
+    "note": "TUZAK: 'olmayan' (dış birleştirme + null süzgeci). Lab: 21 - 8 = 13 hesap.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "reference": {
+        "fetchXml": "<fetch><entity name='account'><attribute name='name'/><link-entity name='opportunity' from='customerid' to='accountid' link-type='outer' alias='o'/><filter><condition entityname='o' attribute='opportunityid' operator='null'/></filter></entity></fetch>"
+      }
+    }
+  },
+  {
+    "id": "t06-big-accounts-contacts-join",
+    "kind": "single",
+    "question": "Çalışan sayısı 1000'den fazla olan firmaların kişilerini getir",
+    "answers": {
+      "columns": "custom:fullname"
+    },
+    "plan": {
+      "steps": 1
+    },
+    "note": "TUZAK: tek birleştirme. Lab: 10 hesap x 2 = 20 kişi. Referans sorgu (27 Eki 2026): eski sabit sayı (20) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contact",
+      "reference": {
+        "fetchXml": "<fetch distinct='true'><entity name='contact'><attribute name='fullname'/><link-entity name='account' from='accountid' to='parentcustomerid' alias='a'><filter><condition attribute='numberofemployees' operator='gt' value='1000'/></filter></link-entity></entity></fetch>"
+      }
+    }
+  },
+  {
+    "id": "t07-brightwave-highest-opportunity",
+    "kind": "single",
+    "question": "Brightwave Appliances Ltd firmasının en yüksek tutarlı fırsatını getir",
+    "answers": {
+      "columns": "custom:name, estimatedvalue"
+    },
+    "plan": {
+      "steps": 1
+    },
+    "note": "TUZAK: firma + 'en yüksek'; tek sorgu. Lab: Service contract renewal 3 (79000).",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "opportunity",
+      "rowCount": 1,
+      "mustContain": [
+        "Service contract renewal 3"
+      ]
+    }
+  },
+  {
+    "id": "t08-fewest-employees-3",
+    "kind": "single",
+    "question": "En az çalışanı olan 3 firmayı getir",
+    "answers": {
+      "columns": "custom:name, numberofemployees"
+    },
+    "plan": {
+      "steps": 1
+    },
+    "note": "TUZAK: 'en az' geçer ama tek sorgu. Lab: Iberia Mobility 116, Blue Meridian 222, Alpine 478.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "reference": {
+        "fetchXml": "<fetch top='3'><entity name='account'><attribute name='name'/><filter><condition attribute='numberofemployees' operator='not-null'/></filter><order attribute='numberofemployees'/></entity></fetch>"
+      }
+    }
+  },
+  {
+    "id": "t09-count-open-opps-per-account",
+    "kind": "single",
+    "question": "Her firmanın kaç açık fırsatı olduğunu getir",
+    "plan": {
+      "steps": 1
+    },
+    "note": "TUZAK: toplama (gruplama), tek sorgu. Lab: 8 grup.",
+    "expect": {
+      "finalKind": "answer",
+      "reference": {
+        "compare": {
+          "columns": "last"
+        },
+        "fetchXml": "<fetch aggregate='true'><entity name='opportunity'><attribute name='customerid' groupby='true' alias='account'/><attribute name='opportunityid' aggregate='count' alias='n'/><filter><condition attribute='statecode' operator='eq' value='0'/></filter></entity></fetch>"
+      }
+    }
+  },
+  {
+    "id": "t10-brightwave-case-count",
+    "kind": "single",
+    "question": "Brightwave Appliances Ltd firmasının kaç case'i var",
+    "plan": {
+      "steps": 1
+    },
+    "note": "TUZAK: sayım. Lab: 3.",
+    "expect": {
+      "finalKind": "answer",
+      "mustContain": [
+        "3"
+      ]
+    }
+  },
+  {
+    "id": "t11-nordbeispiel-contacts",
+    "kind": "single",
+    "question": "Nordbeispiel Insurance AG firmasının kişilerini getir",
+    "answers": {
+      "columns": "custom:fullname"
+    },
+    "plan": {
+      "steps": 1
+    },
+    "note": "Basit tek adım (kontrol).",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "contact",
+      "rowCount": 2,
+      "mustContain": [
+        "Daniel Fakeman"
+      ]
+    }
+  },
+  {
+    "id": "t12-accounts-over-2000-employees",
+    "kind": "single",
+    "question": "Çalışan sayısı 2000'den fazla firmaları getir",
+    "answers": {
+      "columns": "custom:name"
+    },
+    "plan": {
+      "steps": 1
+    },
+    "note": "Basit tek adım (kontrol). Lab: Nordbeispiel, Ironclad, Coastal, Pacific Fuel, Sakura (5). Referans sorgu (27 Eki 2026): eski sabit sayı (5) CRM'de aynen doğrulandı; artık veri değişince kendiliğinden güncellenir.",
+    "expect": {
+      "finalKind": "answer",
+      "entity": "account",
+      "reference": {
+        "fetchXml": "<fetch><entity name='account'><attribute name='name'/><filter><condition attribute='numberofemployees' operator='gt' value='2000'/></filter></entity></fetch>"
+      }
+    }
+  }
+]

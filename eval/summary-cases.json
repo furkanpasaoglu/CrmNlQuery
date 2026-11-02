@@ -1,0 +1,90 @@
+[
+  {
+    "id": "s01-account-tr",
+    "question": "Örnekova'yı özetle",
+    "expect": {
+      "finalKind": "summary",
+      "entity": "account"
+    }
+  },
+  {
+    "id": "s02-account-en",
+    "question": "Summarize Brightwave Appliances Ltd",
+    "expect": {
+      "finalKind": "summary",
+      "entity": "account"
+    }
+  },
+  {
+    "id": "s03-account-tr-possessive",
+    "question": "Brightwave'in özetini ver",
+    "expect": {
+      "finalKind": "summary",
+      "entity": "account"
+    }
+  },
+  {
+    "id": "s04-overview-en",
+    "question": "Give me an overview of Denema Sigorta A.Ş.",
+    "expect": {
+      "finalKind": "summary",
+      "entity": "account"
+    }
+  },
+  {
+    "id": "s05-contact-tr",
+    "question": "Freya Testwell kişisini özetle",
+    "expect": {
+      "finalKind": "summary",
+      "entity": "contact"
+    }
+  },
+  {
+    "id": "s06-contact-en",
+    "question": "Summarize the contact Grace Fakeman",
+    "expect": {
+      "finalKind": "summary",
+      "entity": "contact"
+    }
+  },
+  {
+    "id": "t01-no-summary-word",
+    "question": "Brightwave'in açık fırsatlarını getir",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "not-summary"
+    }
+  },
+  {
+    "id": "t02-summary-of-a-report",
+    "question": "Show the sales summary of all products",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "not-summary"
+    }
+  },
+  {
+    "id": "t03-summary-word-product",
+    "question": "Summarize the product Chair",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "not-summary"
+    }
+  },
+  {
+    "id": "t04-plain-list",
+    "question": "Show accounts in London",
+    "answers": {
+      "columns": "default"
+    },
+    "expect": {
+      "finalKind": "not-summary"
+    }
+  }
+]

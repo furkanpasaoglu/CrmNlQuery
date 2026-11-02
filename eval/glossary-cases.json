@@ -1,0 +1,22 @@
+[
+  { "id": "gl01-talep-alias", "question": "Talepleri getir",
+    "answers": { "columns": "custom:title" },
+    "expect": { "finalKind": "answer", "entity": "incident", "reference": { "fetchXml": "<fetch><entity name='incident'><attribute name='title'/></entity></fetch>" } },
+    "note": "Sözlükte 'talep' = incident (alias)." },
+  { "id": "gl02-yuksek-oncelikli-vaka", "question": "Yüksek öncelikli vakaları getir",
+    "answers": { "columns": "custom:title, prioritycode" },
+    "expect": { "finalKind": "answer", "entity": "incident", "reference": { "fetchXml": "<fetch><entity name='incident'><attribute name='title'/><attribute name='prioritycode'/><filter><condition attribute='prioritycode' operator='eq' value='1'/></filter></entity></fetch>" } } },
+  { "id": "gl03-buyuk-firma", "question": "Büyük firmaları getir",
+    "answers": { "columns": "custom:name, numberofemployees" },
+    "expect": { "finalKind": "answer", "entity": "account", "reference": { "fetchXml": "<fetch><entity name='account'><attribute name='name'/><attribute name='numberofemployees'/><filter><condition attribute='numberofemployees' operator='gt' value='1000'/></filter></entity></fetch>" } } },
+  { "id": "gl04-ekli-kullanim", "question": "Büyük firmaların kişilerini getir",
+    "answers": { "columns": "custom:fullname" },
+    "expect": { "finalKind": "answer", "entity": "contact", "reference": { "fetchXml": "<fetch><entity name='contact'><attribute name='fullname'/><link-entity name='account' from='accountid' to='parentcustomerid' alias='a'><filter><condition attribute='numberofemployees' operator='gt' value='1000'/></filter></link-entity></entity></fetch>" } } },
+  { "id": "gl05-ingilizce", "question": "Show large companies",
+    "answers": { "columns": "custom:name, numberofemployees" },
+    "expect": { "finalKind": "answer", "entity": "account", "reference": { "fetchXml": "<fetch><entity name='account'><attribute name='name'/><attribute name='numberofemployees'/><filter><condition attribute='numberofemployees' operator='gt' value='1000'/></filter></entity></fetch>" } } },
+  { "id": "gl06-terimsiz-tuzak", "question": "Londra'daki firmaları getir",
+    "answers": { "columns": "custom:name, address1_city" },
+    "expect": { "finalKind": "answer", "entity": "account", "mustNotUse": ["numberofemployees"] },
+    "note": "Terim yok: sözlük hiçbir şeyi eklememeli." }
+]
