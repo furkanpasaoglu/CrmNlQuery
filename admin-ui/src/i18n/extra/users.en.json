@@ -1,0 +1,6 @@
+{
+  "users.editRoles": "Edit roles",
+  "users.actionsAria": "Actions for {name}",
+  "users.deleteTitle": "Delete {name}?",
+  "users.deleteMessage": "This user can no longer open the panel. This cannot be undone."
+}

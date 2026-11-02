@@ -1,0 +1,11 @@
+{
+  "data-access.colTable": "Tablo",
+  "data-access.colFieldDecisions": "Alanlar",
+  "data-access.colSwitch": "İzinli",
+  "data-access.switchLabel": "{name}: sohbet aracında kullanılabilir",
+  "data-access.fieldSwitchLabel": "{name}: sohbet aracında kullanılabilir",
+  "data-access.lockedTip": "Açık olarak kilitli: araç kayıtları bulmak için bu alana ihtiyaç duyar.",
+  "data-access.sourceLabel": "Karar",
+  "data-access.reviewAria": "Otomatik kapatılan alanlar",
+  "data-access.loadFailed": "Veri erişim listesi yüklenemedi."
+}

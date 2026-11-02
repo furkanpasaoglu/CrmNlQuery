@@ -1,0 +1,11 @@
+{
+  "glossary.fField": "Alan",
+  "glossary.fOperator": "Koşul",
+  "glossary.fValue": "Değer",
+  "glossary.deleted": "Giriş silindi.",
+  "glossary.deleteMsg": "Bu giriş silinsin mi? Bu işlem geri alınamaz.",
+  "glossary.nowEnabled": "Giriş etkinleştirildi.",
+  "glossary.nowDisabled": "Giriş devre dışı bırakıldı.",
+  "glossary.importChoose": "JSON dosyası",
+  "glossary.importNoFile": "Önce bir dosya seçin."
+}

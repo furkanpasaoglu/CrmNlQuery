@@ -1,0 +1,9 @@
+{
+  "identity.copyDiag": "Tanı metnini kopyala",
+  "identity.showGroups": "{n} AD grubunun tümünü göster",
+  "identity.hideGroups": "Grup listesini gizle",
+  "identity.copyGroups": "Grup listesini kopyala",
+  "identity.cardWho": "Kimsiniz",
+  "identity.cardAccess": "Neler yapabilirsiniz",
+  "identity.cardGroups": "AD grupları"
+}

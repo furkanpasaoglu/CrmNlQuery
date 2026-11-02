@@ -1,0 +1,7 @@
+{
+  "roles.addRole": "New role",
+  "roles.selectGroup": "Select all",
+  "roles.clearGroup": "Clear all",
+  "roles.deleteTitle": "Delete the role {name}?",
+  "roles.deleteMessage": "Users who have this role lose its permissions. This cannot be undone."
+}

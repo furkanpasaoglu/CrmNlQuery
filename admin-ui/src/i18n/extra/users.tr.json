@@ -1,0 +1,6 @@
+{
+  "users.editRoles": "Rolleri düzenle",
+  "users.actionsAria": "{name} için işlemler",
+  "users.deleteTitle": "{name} silinsin mi?",
+  "users.deleteMessage": "Bu kullanıcı artık paneli açamaz. Bu işlem geri alınamaz."
+}

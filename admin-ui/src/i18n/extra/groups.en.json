@@ -1,0 +1,6 @@
+{
+  "groups.editRoles": "Edit roles",
+  "groups.actionsAria": "Actions for {group}",
+  "groups.removeTitle": "Remove the mapping for {group}?",
+  "groups.removeMessage": "Members of this group lose the rights these roles gave them. People are not deleted."
+}

@@ -1,0 +1,7 @@
+{
+  "roles.addRole": "Yeni rol",
+  "roles.selectGroup": "Tümünü seç",
+  "roles.clearGroup": "Seçimi temizle",
+  "roles.deleteTitle": "{name} rolü silinsin mi?",
+  "roles.deleteMessage": "Bu role sahip kullanıcılar rolün izinlerini kaybeder. Bu işlem geri alınamaz."
+}

@@ -1,0 +1,9 @@
+{
+  "identity.copyDiag": "Copy diagnostic text",
+  "identity.showGroups": "Show all {n} AD groups",
+  "identity.hideGroups": "Hide the group list",
+  "identity.copyGroups": "Copy group list",
+  "identity.cardWho": "Who you are",
+  "identity.cardAccess": "What you may do",
+  "identity.cardGroups": "AD groups"
+}

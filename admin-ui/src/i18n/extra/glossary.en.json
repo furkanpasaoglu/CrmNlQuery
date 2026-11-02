@@ -1,0 +1,11 @@
+{
+  "glossary.fField": "Field",
+  "glossary.fOperator": "Condition",
+  "glossary.fValue": "Value",
+  "glossary.deleted": "Entry deleted.",
+  "glossary.deleteMsg": "Delete this entry? This cannot be undone.",
+  "glossary.nowEnabled": "Entry enabled.",
+  "glossary.nowDisabled": "Entry disabled.",
+  "glossary.importChoose": "JSON file",
+  "glossary.importNoFile": "Choose a file first."
+}

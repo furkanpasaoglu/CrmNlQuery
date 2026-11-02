@@ -1,0 +1,16 @@
+{
+  "settings.less": "Daha az",
+  "settings.groupsAria": "Ayar grupları",
+  "settings.saveFailed": "Ayar kaydedilemedi.",
+  "setting.Features:RecordCreate": "Kullanıcıların chat’ten yeni CRM kaydı oluşturmasına izin verir (örneğin: Alpine adında hesap oluştur). Model yalnızca değerleri önerir: sistem değerleri denetler, eksik zorunlu alanları sorar, önizleme gösterir ve kaydı ancak kullanıcı Oluştur’a tıkladıktan sonra kullanıcının adına yazar. Yalnız “Create:Tables” listesindeki tablolar ve “Records.Create” iznine sahip kullanıcılar için geçerlidir. CRM’de servis hesabına oluşturma yetkisi gerekir. Varsayılan olarak kapalıdır.",
+  "setting.Create:Tables": "Kullanıcıların kayıt oluşturabileceği tablolar; mantıksal adların virgülle ayrılmış listesi, örneğin: account,contact. Boş = hiçbiri. Tablo ayrıca Veri erişimi’nde açık olmalı.",
+  "setting.Create:MaxRows": "Bir kullanıcının tek istekte oluşturabileceği en çok kayıt sayısı (örneğin bir liste yapıştırınca).",
+  "setting.Create:PerDay": "Bir kullanıcının günde oluşturabileceği en çok kayıt sayısı.",
+  "setting.Create:HiddenFields": "Kayıt oluştururken asistanın doldurmaması gereken alanlar; virgülle ayrılmış tablo.alan listesi, örneğin: contact.company,account.fax. CRM’inizde daha iyi bir alanın tekrarı olan alanlar için kullanın (örneğin modelin ana telefon yerine seçtiği ikinci bir telefon alanı). Yerleşik listeye eklenir; yerleşik listenin gizlediği bir alanı göstermek için !tablo.alan yazın.",
+  "setting.Quality:ScheduleEnabled": "Kalite kontrolünü (kabul seti) her gün kendiliğinden çalıştırır. Zamanlamayı kaydeden yöneticinin CRM yetkisiyle çalışır. Değiştirmek için Kalite kontrolü izni de gerekir. Kalite kontrolü sayfasındaki zamanlama kartını kullanın.",
+  "setting.Quality:ScheduleHour": "Zamanlanmış kalite kontrolünün başladığı saat (sunucunun yerel saati). En çok 3 saat sonra başlayabilir; kaçan gün atlanır.",
+  "setting.Quality:ScheduleRepeat": "Zamanlanmış kalite kontrolünde her vakanın kaç kez sorulacağı (daha çok tekrar kararsız cevapları bulur ama daha uzun sürer).",
+  "setting.Quality:ScheduleRunAs": "Zamanlanmış kalite kontrolünün CRM yetkisini kullandığı Windows hesabı (DOMAIN\\kullanıcı). Zamanlamayı kaydeden yönetici ile kendiliğinden doldurulur.",
+  "setting.Quality:AllowSuggestions": "Kullanıcılar kendi cevaplarından birini iyi test örneği olarak önerebilsin (👍, sonra \"İyi örnek olarak öner\"). Soru ve onu cevaplayan sorgu, Kalite kontrolü sayfasında BEKLEYEN bir vaka olur; bir yönetici onaylayana kadar koşmaz ve doğruluğa girmez. Kimsenin adı saklanmaz. Sonuç satırları asla paylaşılmaz. Kalite kontrolü özelliğinin açık olması gerekir.",
+  "setting.Features:Reports": "Kullanıcılar chat'ten CRM raporlarını bulup açabilsin (örneğin \"Neglected Cases raporunu aç\"). Rapor CRM'in kendi rapor görüntüleyicisinde açılır; chat rapor verisini hiç görmez ve her kullanıcı yalnız CRM'in kendisine gösterdiği raporları alır. Rapor tablosu Veri erişimi'nde açılana ve servis hesabı onu okuyabilene kadar hiçbir şey yapmaz."
+}

@@ -1,0 +1,11 @@
+{
+  "data-access.colTable": "Table",
+  "data-access.colFieldDecisions": "Fields",
+  "data-access.colSwitch": "Allowed",
+  "data-access.switchLabel": "{name}: allowed in the chat tool",
+  "data-access.fieldSwitchLabel": "{name}: allowed in the chat tool",
+  "data-access.lockedTip": "Locked open: the tool needs this field to find records.",
+  "data-access.sourceLabel": "Decision",
+  "data-access.reviewAria": "Fields closed automatically",
+  "data-access.loadFailed": "The data access list could not be loaded."
+}

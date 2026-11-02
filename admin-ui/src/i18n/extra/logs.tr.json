@@ -1,0 +1,6 @@
+{
+  "logs.detailTitle": "Günlük kaydı",
+  "logs.detailException": "Hata ayrıntıları",
+  "logs.detailNone": "Bu kayıtta hata ayrıntısı yok.",
+  "logs.detailRequest": "İstek kimliği"
+}

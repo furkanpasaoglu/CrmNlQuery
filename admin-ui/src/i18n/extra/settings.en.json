@@ -1,0 +1,16 @@
+{
+  "settings.less": "Less",
+  "settings.groupsAria": "Setting groups",
+  "settings.saveFailed": "The setting was not saved.",
+  "setting.Features:RecordCreate": "Let users create new CRM records from the chat (for example: create an account named Alpine). The model only proposes the values: the system checks them, asks for missing required fields, shows a preview, and writes the record in the user’s name only after the user clicks Create. Only for the tables in “Create:Tables” and for users with the “Records.Create” permission. Needs create rights for the service account in the CRM. Off by default.",
+  "setting.Create:Tables": "The tables users may create records in, as a comma-separated list of logical names, for example: account,contact. Empty = none. A table must also be open in Data access.",
+  "setting.Create:MaxRows": "Most records a user can create in one request (for example when pasting a list).",
+  "setting.Create:PerDay": "Most records one user can create per day.",
+  "setting.Create:HiddenFields": "Fields the assistant must not fill when creating records, as a comma-separated list of table.field, for example: contact.company,account.fax. Use it for fields that duplicate a better field in your CRM (for example a second phone field that the model picks instead of the main one). It adds to the built-in list; write !table.field to show a field the built-in list hides.",
+  "setting.Quality:ScheduleEnabled": "Run the quality check (acceptance set) by itself every day. It runs with the CRM rights of the administrator who saved the schedule. Changing it needs the Quality check permission too. Use the schedule card on the Quality check page.",
+  "setting.Quality:ScheduleHour": "Hour of the day (server local time) when the scheduled quality check starts. It may start up to 3 hours later; a missed day is skipped.",
+  "setting.Quality:ScheduleRepeat": "How many times each case is asked in a scheduled quality check (more repeats find unstable answers, but take longer).",
+  "setting.Quality:ScheduleRunAs": "The Windows account (DOMAIN\\user) whose CRM rights the scheduled quality check uses. Filled in automatically with the administrator who saves the schedule.",
+  "setting.Quality:AllowSuggestions": "Let users suggest one of their own answers as a good test example (a thumbs-up, then \"Suggest as a good example\"). The question and the query that answered it become a PENDING case on the Quality check page; it does not run or count until an administrator approves it. Nobody's name is stored. Result rows are never shared. Needs the Quality check feature to be on.",
+  "setting.Features:Reports": "Let users find and open CRM reports from the chat (for example \"open the Neglected Cases report\"). The report opens in the CRM's own report viewer; the chat never sees report data, and each user only gets the reports the CRM lets them see. It does nothing until the report table is opened in Data access and the service account may read it."
+}

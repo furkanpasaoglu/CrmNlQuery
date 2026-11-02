@@ -1,0 +1,6 @@
+{
+  "logs.detailTitle": "Log entry",
+  "logs.detailException": "Exception details",
+  "logs.detailNone": "This entry has no exception details.",
+  "logs.detailRequest": "Request id"
+}

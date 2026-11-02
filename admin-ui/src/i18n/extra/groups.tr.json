@@ -1,0 +1,6 @@
+{
+  "groups.editRoles": "Rolleri düzenle",
+  "groups.actionsAria": "{group} için işlemler",
+  "groups.removeTitle": "{group} eşlemesi kaldırılsın mı?",
+  "groups.removeMessage": "Bu grubun üyeleri, bu rollerin verdiği haklarını kaybeder. Kişiler silinmez."
+}
