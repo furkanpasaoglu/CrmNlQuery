@@ -1,6 +1,7 @@
 using System.Security.Claims;
 using CrmNlQuery.Web.Identity;
 using CrmNlQuery.Application.Access.Models;
+using CrmNlQuery.Tests.Support;
 
 namespace CrmNlQuery.Tests.Web.Identity;
 
@@ -29,7 +30,7 @@ public class TokenGroupsTests
     /// <summary>
     /// Verifies that windows mode translates known sids and keeps the sid text when it cannot be translated.
     /// </summary>
-    [Fact]
+    [WindowsOnlyFact]
     public void WindowsMode_TranslatesKnownSids_AndKeepsTheSidTextWhenItCannotBeTranslated()
     {
         var names = TokenGroups.Names(Windows(), PrincipalWith("S-1-1-0", "S-1-5-21-111-222-333-513"));
@@ -42,7 +43,7 @@ public class TokenGroupsTests
     /// <summary>
     /// Verifies that a malformed sid claim is ignored not thrown.
     /// </summary>
-    [Fact]
+    [WindowsOnlyFact]
     public void AMalformedSidClaim_IsIgnored_NotThrown()
     {
         var names = TokenGroups.Names(Windows(), PrincipalWith("not-a-sid", "S-1-1-0"));
@@ -53,7 +54,7 @@ public class TokenGroupsTests
     /// <summary>
     /// Verifies that the list is limited.
     /// </summary>
-    [Fact]
+    [WindowsOnlyFact]
     public void TheListIsLimited()
     {
         var sids = Enumerable.Range(1, 60).Select(i => "S-1-5-21-1-2-3-" + (1000 + i)).ToArray();
@@ -77,7 +78,7 @@ public class TokenGroupsTests
     /// <summary>
     /// Verifies that describe joins at most forty names and is null when there are none.
     /// </summary>
-    [Fact]
+    [WindowsOnlyFact]
     public void Describe_JoinsAtMostFortyNames_AndIsNullWhenThereAreNone()
     {
         var sids = Enumerable.Range(1, 60).Select(i => "S-1-5-21-1-2-3-" + (1000 + i)).ToArray();
