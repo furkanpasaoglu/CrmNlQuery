@@ -5,7 +5,7 @@
 <h1 align="center">CrmNlQuery</h1>
 
 <p align="center">
-  <b>Ask your on-premises Dynamics 365 questions in plain language.<br>Your data never leaves your network.</b>
+  <b>Ask your on-premises Dynamics 365 (v9.0) CRM questions in plain language.<br>Your data never leaves your network.</b>
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@
   <img alt="License: MIT" src="https://img.shields.io/badge/license-MIT-blue.svg">
   <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-512BD4.svg">
   <img alt="Docker" src="https://img.shields.io/badge/docker-compose-2496ED.svg">
-  <img alt="Dynamics 365 on-premises" src="https://img.shields.io/badge/Dynamics%20365-on--premises-002050.svg">
+  <img alt="Dynamics 365 on-premises v9.0" src="https://img.shields.io/badge/Dynamics%20365-on--premises%20v9.0-002050.svg">
   <img alt="Local models" src="https://img.shields.io/badge/models-Ollama%20%7C%20vLLM-black.svg">
 </p>
 

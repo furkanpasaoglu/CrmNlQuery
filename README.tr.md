@@ -5,7 +5,7 @@
 <h1 align="center">CrmNlQuery</h1>
 
 <p align="center">
-  <b>Şirket içi Dynamics 365'inize sade bir dille soru sorun.<br>Verileriniz ağınızdan dışarı çıkmaz.</b>
+  <b>Şirket içi (on-premises) Dynamics 365 (v9.0) CRM'inize sade bir dille soru sorun.<br>Verileriniz ağınızdan dışarı çıkmaz.</b>
 </p>
 
 <p align="center">
@@ -13,7 +13,7 @@
   <img alt="Lisans: MIT" src="https://img.shields.io/badge/lisans-MIT-blue.svg">
   <img alt=".NET 10" src="https://img.shields.io/badge/.NET-10-512BD4.svg">
   <img alt="Docker" src="https://img.shields.io/badge/docker-compose-2496ED.svg">
-  <img alt="Dynamics 365 on-premises" src="https://img.shields.io/badge/Dynamics%20365-on--premises-002050.svg">
+  <img alt="Dynamics 365 on-premises v9.0" src="https://img.shields.io/badge/Dynamics%20365-on--premises%20v9.0-002050.svg">
   <img alt="Yerel modeller" src="https://img.shields.io/badge/modeller-Ollama%20%7C%20vLLM-black.svg">
 </p>
 
