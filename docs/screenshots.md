@@ -47,6 +47,15 @@ All screenshots use fictional data and a local model. Questions run as the signe
 ![Appearance settings](images/chat-settings-appearance.jpg)
 ![Help and shortcuts](images/chat-settings-help.jpg)
 
+## First-run setup wizard
+
+**After `docker compose up` the service starts in setup mode. The one-time code is printed in the service log; the wizard tests the CRM and the model before anything is saved, and secrets are stored encrypted.**
+
+![Setup code](images/setup-1-code.jpg)
+![CRM connection](images/setup-2-crm.jpg)
+![Model](images/setup-3-model.jpg)
+![Administrator and address](images/setup-4-administrator.jpg)
+
 ## Administration panel
 
 **Data access: administrators choose which CRM tables and fields the tool may use, on top of the CRM's own security.**
