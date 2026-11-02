@@ -1,0 +1,12 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <!-- Application: kullanım senaryoları ve portlar (arayüzler). YALNIZ Domain'e bağımlıdır (mimari testle korunur). -->
+  <ItemGroup>
+    <ProjectReference Include="..\CrmNlQuery.Domain\CrmNlQuery.Domain.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.Extensions.Logging.Abstractions" />
+  </ItemGroup>
+
+</Project>
