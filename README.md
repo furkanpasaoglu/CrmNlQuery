@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="docs/images/logo.svg" alt="CrmNlQuery logo" width="112">
+</p>
+
 <h1 align="center">CrmNlQuery</h1>
 
 <p align="center">
