@@ -81,6 +81,38 @@ The full list is in [docs/features.md](docs/features.md).
                                └─────────────────────────────────────┘     rows (never to the model)
 ```
 
+## Built with
+
+| Area | Technologies |
+|---|---|
+| Service | C# / .NET 10, ASP.NET Core (minimal APIs), Npgsql, Serilog |
+| Data | PostgreSQL 17 with pgvector, AES-GCM encrypted settings |
+| AI | Ollama (default), vLLM (OpenAI-compatible), optional Claude API, bge-m3 embeddings, JSON-schema structured output |
+| CRM | Dynamics 365 Web API (OData), FetchXML, impersonation, Windows (NTLM) authentication |
+| Chat window | Vanilla JavaScript, Shadow DOM, Canvas charts (no libraries) |
+| Admin panel | React 19, TypeScript, Vite, Mantine 9, TanStack Query, React Router, Recharts |
+| Quality | xUnit (about 2,900 tests), architecture and contract tests, Node checks, GitHub Actions |
+| Delivery | Docker, Docker Compose, PowerShell setup scripts |
+
+## AI concepts at a glance
+
+| Concept | How it is used | Design spec |
+|---|---|---|
+| **RAG** | bge-m3 embeddings in pgvector, hybrid search (vector + full text, merged with reciprocal rank fusion), chunking and a similarity threshold; only relevant pieces reach the prompt | [knowledge base](docs/specs/knowledge-base.md) |
+| **Human in the loop** | Record creation needs a preview and an explicit click; e-mail drafts are never sent; the quality set grows only with an administrator's approval | [record creation](docs/specs/record-creation.md), [e-mail draft](docs/specs/email-draft.md), [quality checks](docs/specs/quality-checks.md) |
+| **Guardrails** | Plan validator, allow-lists, a data access policy, quotas, an emergency stop and a daily cloud token budget | [guardrails](docs/specs/guardrails-and-limits.md), [data access policy](docs/specs/data-access-policy.md) |
+| **Prompt-injection defense** | Text that comes from the CRM is flattened, stripped of hidden characters and quoted as data; model output is verified by code | [guardrails](docs/specs/guardrails-and-limits.md) |
+| **Structured output** | A JSON schema is enforced on every model call (Ollama `format`, vLLM `response_format`, Claude structured output) | [natural-language query](docs/specs/natural-language-query.md) |
+| **Text-to-query** | A three-step workflow: analyze, decompose, plan; conditional and dependent multi-step plans | [natural-language query](docs/specs/natural-language-query.md), [conditional plans](docs/specs/conditional-plans.md), [dependent steps](docs/specs/dependent-steps.md) |
+| **Semantic layer** | A business glossary turns company terms into filters that code enforces | [business glossary](docs/specs/business-glossary.md) |
+| **Context engineering** | Rule-based context pruning, examples drawn from the question's own tables, prompt-size metering | [prompt structure](docs/specs/prompt-structure.md), [context window](docs/specs/prompt-size-and-context-window.md) |
+| **Prefix-cache friendly prompts** | Stable parts first, changing parts last, so the model server can reuse its cache; plus our own plan and analysis caches | [prompt structure](docs/specs/prompt-structure.md) |
+| **Evals** | Reference-query mode (the expected result is computed on live data), an acceptance set generated from the schema, regression reports, scheduled runs, load and latency measurement | [reference queries](docs/specs/reference-query-evaluation.md), [quality checks](docs/specs/quality-checks.md), [starter set](docs/specs/starter-acceptance-set.md) |
+| **Local, model-agnostic inference** | Ollama, vLLM and an optional cloud model behind one interface; per-step settings for thinking, context size and keep-alive | [vLLM provider](docs/specs/vllm-provider.md) |
+| **Privacy by design** | The model never sees row data; every read is logged without the data itself | [data access log](docs/specs/data-access-log.md), [data access policy](docs/specs/data-access-policy.md) |
+
+**Deliberately not used:** autonomous agents and function calling (the pipeline is deterministic: the model proposes, code decides), fine-tuning, and LLM-as-judge (answers are checked against reference queries instead).
+
 ## Security model
 
 | Principle | How |

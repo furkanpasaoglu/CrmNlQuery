@@ -81,6 +81,38 @@ Tam liste [docs/features.md](docs/features.md) dosyasındadır (İngilizce).
                                └─────────────────────────────────────┘     satırlar (modele gitmez)
 ```
 
+## Kullanılan teknolojiler
+
+| Alan | Teknolojiler |
+|---|---|
+| Servis | C# / .NET 10, ASP.NET Core (minimal API), Npgsql, Serilog |
+| Veri | pgvector'lü PostgreSQL 17, AES-GCM ile şifreli ayarlar |
+| Yapay zekâ | Ollama (varsayılan), vLLM (OpenAI uyumlu), isteğe bağlı Claude API, bge-m3 gömmeleri, JSON şemalı yapılandırılmış çıktı |
+| CRM | Dynamics 365 Web API (OData), FetchXML, taklit, Windows (NTLM) kimlik doğrulama |
+| Sohbet penceresi | Saf JavaScript, Shadow DOM, Canvas ile grafik (kütüphanesiz) |
+| Yönetim paneli | React 19, TypeScript, Vite, Mantine 9, TanStack Query, React Router, Recharts |
+| Kalite | xUnit (yaklaşık 2.900 test), mimari ve sözleşme testleri, Node denetimleri, GitHub Actions |
+| Dağıtım | Docker, Docker Compose, PowerShell kurulum betikleri |
+
+## Yapay zekâ kavramları
+
+| Kavram | Nasıl kullanılıyor | Tasarım spec'i |
+|---|---|---|
+| **RAG** | pgvector'de bge-m3 gömmeleri, hibrit arama (vektör + tam metin, karşılıklı sıra birleştirmesiyle), parçalama ve benzerlik eşiği; isteme yalnızca ilgili parçalar girer | [bilgi tabanı](docs/specs/knowledge-base.md) |
+| **Human in the loop (insan onayı)** | Kayıt oluşturma önizleme ve açık tıklama ister; e-posta taslakları gönderilmez; kalite seti yalnızca yönetici onayıyla büyür | [kayıt oluşturma](docs/specs/record-creation.md), [e-posta taslağı](docs/specs/email-draft.md), [kalite kontrolü](docs/specs/quality-checks.md) |
+| **Guardrails (korkuluklar)** | Plan doğrulayıcı, izin listeleri, veri izin politikası, kotalar, acil durdurma ve günlük bulut token bütçesi | [korkuluklar](docs/specs/guardrails-and-limits.md), [veri izin politikası](docs/specs/data-access-policy.md) |
+| **İstem enjeksiyonu savunması** | CRM'den gelen metin tek satıra indirilir, gizli karakterlerden arındırılır ve veri olarak tırnaklanır; model çıktısı kodla doğrulanır | [korkuluklar](docs/specs/guardrails-and-limits.md) |
+| **Yapılandırılmış çıktı** | Her model çağrısında JSON şeması zorlanır (Ollama `format`, vLLM `response_format`, Claude yapılandırılmış çıktı) | [doğal dil sorgusu](docs/specs/natural-language-query.md) |
+| **Text-to-query** | Üç adımlı iş akışı: analiz, bölme, planlama; koşullu ve bağımlı çok adımlı planlar | [doğal dil sorgusu](docs/specs/natural-language-query.md), [koşullu planlar](docs/specs/conditional-plans.md), [bağımlı adımlar](docs/specs/dependent-steps.md) |
+| **Semantik katman** | İş sözlüğü şirket terimlerini, kodun zorladığı süzgeçlere çevirir | [iş sözlüğü](docs/specs/business-glossary.md) |
+| **Bağlam mühendisliği** | Kural tabanlı bağlam budama, sorunun kendi tablolarından örnekler, istem boyutu ölçümü | [istem yapısı](docs/specs/prompt-structure.md), [bağlam penceresi](docs/specs/prompt-size-and-context-window.md) |
+| **Ön ek önbelleğine uygun istemler** | Sabit kısımlar önce, değişenler sonda; model sunucusu önbelleğini yeniden kullanabilir; ayrıca kendi plan ve analiz önbelleklerimiz | [istem yapısı](docs/specs/prompt-structure.md) |
+| **Değerlendirme (evals)** | Referans sorgu modu (beklenen sonuç canlı veride hesaplanır), şemadan üretilen kabul seti, regresyon raporları, zamanlanmış koşular, yük ve gecikme ölçümü | [referans sorgular](docs/specs/reference-query-evaluation.md), [kalite kontrolü](docs/specs/quality-checks.md), [başlangıç seti](docs/specs/starter-acceptance-set.md) |
+| **Yerel, modelden bağımsız çıkarım** | Ollama, vLLM ve isteğe bağlı bulut modeli tek arayüzün arkasında; düşünme, bağlam boyutu ve keep-alive için adım başına ayar | [vLLM sağlayıcısı](docs/specs/vllm-provider.md) |
+| **Tasarımdan gelen gizlilik** | Model satır verisini görmez; her okuma verinin kendisi olmadan kaydedilir | [veri erişim kaydı](docs/specs/data-access-log.md), [veri izin politikası](docs/specs/data-access-policy.md) |
+
+**Bilerek kullanılmayanlar:** otonom ajanlar ve function calling (hat deterministiktir: model önerir, kod karar verir), fine-tuning ve LLM-as-judge (cevaplar bunun yerine referans sorgularla denetlenir).
+
 ## Güvenlik modeli
 
 | İlke | Nasıl |
