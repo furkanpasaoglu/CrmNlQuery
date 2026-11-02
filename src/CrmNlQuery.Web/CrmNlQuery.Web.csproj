@@ -1,0 +1,13 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <ItemGroup>
+    <ProjectReference Include="..\CrmNlQuery.Application\CrmNlQuery.Application.csproj" />
+    <ProjectReference Include="..\CrmNlQuery.Domain\CrmNlQuery.Domain.csproj" />
+    <ProjectReference Include="..\CrmNlQuery.Composition\CrmNlQuery.Composition.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Serilog.AspNetCore" />
+  </ItemGroup>
+
+</Project>

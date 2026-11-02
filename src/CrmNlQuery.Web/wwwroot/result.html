@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="referrer" content="no-referrer">
+<title>Query result</title>
+<link rel="stylesheet" href="result.css">
+</head>
+<body>
+<h1>Query result</h1>
+<div id="meta" class="muted"></div>
+<div id="refine" class="bar" hidden>
+  <input id="refineText" maxlength="300" placeholder="Narrow it down or ask about related records, e.g. only the ones in Germany, or their contracts">
+  <button id="refineGo">Continue from this result</button>
+  <span id="refineStatus" class="muted"></span>
+</div>
+<div id="refineQuestion"></div>
+<div id="out"></div>
+
+<script src="result.js"></script>
+</body>
+</html>
