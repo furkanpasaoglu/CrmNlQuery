@@ -1,0 +1,46 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+
+jobs:
+  dotnet:
+    name: Build and unit tests
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          global-json-file: global.json
+      - name: Test (live tests that need a CRM or PostgreSQL are excluded)
+        run: dotnet test --filter "Category!=Live" --nologo
+
+  frontend:
+    name: Widget checks and admin panel build
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+          cache: npm
+          cache-dependency-path: admin-ui/package-lock.json
+      - name: Widget, text-catalog and tour checks
+        run: |
+          for f in tests/widget/*.test.js; do node "$f"; done
+          node tools/Scan-UiText.js --check
+      - name: Build the admin panel
+        working-directory: admin-ui
+        run: |
+          npm ci
+          npm run build
+
+  docker:
+    name: Docker image builds
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build
+        run: docker build -t crmnlquery:ci .

@@ -1,0 +1,105 @@
+# Local stack.
+#   docker compose up -d --build           service + PostgreSQL (pgvector); Ollama runs on the host
+#   docker compose --profile ollama up -d  also runs Ollama in a container (NVIDIA GPU needed)
+#   docker compose --profile vllm up -d    also runs vLLM (NVIDIA GPU needed; set LLM_PROVIDER=Vllm and VLLM_MODEL in .env)
+# With CRM_PASSWORD empty the service starts in setup mode: read the one-time code with "docker compose logs app", then open http://localhost:5080/setup
+# The admin panel is http://localhost:5080/admin-next/ (opened from the chat window once you are signed in).
+
+services:
+  postgres:
+    image: pgvector/pgvector:pg17
+    environment:
+      POSTGRES_USER: nlquery
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: nlquery
+    volumes:
+      - pgdata:/var/lib/postgresql/data
+    ports:
+      - "127.0.0.1:${POSTGRES_PORT:-5433}:5432"
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U nlquery -d nlquery"]
+      interval: 5s
+      timeout: 3s
+      retries: 20
+
+  app:
+    build: .
+    restart: unless-stopped
+    depends_on:
+      postgres:
+        condition: service_healthy
+    ports:
+      - "${BIND_ADDRESS:-127.0.0.1}:5080:5080"
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+    environment:
+      ASPNETCORE_ENVIRONMENT: Development
+      Service__Url: http://0.0.0.0:5080
+      AllowedHosts: "*"
+      Identity__Mode: ${IDENTITY_MODE:-Fixed}
+      Auth__SigningKey: ${AUTH_SIGNING_KEY:-}
+      Identity__FixedUser: ${DEV_USER:-CONTOSO\Administrator}
+      Admin__Bootstrap__0: ${DEV_USER:-CONTOSO\Administrator}
+      History__ConnectionString: Host=postgres;Port=5432;Username=nlquery;Password=${POSTGRES_PASSWORD:?Set POSTGRES_PASSWORD in .env};Database=nlquery
+      Crm__BaseUrl: ${CRM_BASE_URL:-http://crm.example.com/contoso}
+      Crm__Domain: ${CRM_DOMAIN:-CONTOSO}
+      Crm__Username: ${CRM_USERNAME:-Administrator}
+      Crm__Password: ${CRM_PASSWORD:-}
+      Crm__MetadataCacheDir: /data/metadata-cache
+      Llm__Provider: ${LLM_PROVIDER:-Ollama}
+      Llm__AllowCloud: ${LLM_ALLOW_CLOUD:-false}
+      Anthropic__ApiKey: ${ANTHROPIC_API_KEY:-}
+      Anthropic__Model: ${ANTHROPIC_MODEL:-claude-haiku-5-5}
+      Ollama__BaseUrl: ${OLLAMA_BASE_URL:-http://host.docker.internal:11434}
+      Ollama__TrustedHosts__0: host.docker.internal
+      Ollama__Model: ${OLLAMA_MODEL:-qwen3.6:27b}
+      Vllm__BaseUrl: ${VLLM_BASE_URL:-http://vllm:8000}
+      Vllm__Model: ${VLLM_MODEL:-}
+      Vllm__ApiKey: ${VLLM_API_KEY:-}
+      Vllm__TrustedHosts__0: vllm
+      Vllm__MaxModelLen: ${VLLM_MAX_MODEL_LEN:-16384}
+    volumes:
+      - appdata:/data
+
+  ollama:
+    profiles: ["ollama"]
+    image: ollama/ollama:latest
+    ports:
+      - "127.0.0.1:11434:11434"
+    volumes:
+      - ollama:/root/.ollama
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+  vllm:
+    profiles: ["vllm"]
+    image: vllm/vllm-openai:v0.19.1
+    command: >
+      --model ${VLLM_MODEL:-set-VLLM_MODEL-in-env}
+      --max-model-len ${VLLM_MAX_MODEL_LEN:-16384}
+      --gpu-memory-utilization ${VLLM_GPU_UTILIZATION:-0.85}
+      --reasoning-parser qwen3
+      --api-key ${VLLM_API_KEY:-set-VLLM_API_KEY-in-env}
+    ipc: host
+    ports:
+      - "127.0.0.1:8000:8000"
+    volumes:
+      - vllmcache:/root/.cache/huggingface
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              count: all
+              capabilities: [gpu]
+
+volumes:
+  pgdata:
+  appdata:
+  ollama:
+  vllmcache:
