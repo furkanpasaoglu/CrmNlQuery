@@ -73,6 +73,10 @@ All screenshots use fictional data and a local model. Questions run as the signe
 ![Audit trail](images/admin-audit-trail.jpg)
 ![Access log](images/admin-access-log.jpg)
 
+**Design assistant: a requirement written in plain words becomes a customization design that checks the existing schema first. It reads table and field names only and creates nothing in the CRM.**
+
+![Design assistant](images/admin-design-assistant.jpg)
+
 **Export, runtime settings and the identity page.**
 
 ![Export](images/admin-export.jpg)
